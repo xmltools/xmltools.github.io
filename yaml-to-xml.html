@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAML to XML Converter Online - Convert YAML to XML Free</title>
+    <meta name="description" content="Free online YAML to XML converter. Transform your YAML configuration files into structured XML documents instantly. Secure, browser-based conversion.">
+    <meta name="keywords" content="yaml to xml, convert yaml to xml, yaml to xml converter, online yaml to xml, yaml2xml, developer tools">
+    
+    <meta property="og:title" content="YAML to XML Converter Online - Convert YAML to XML Free">
+    <meta property="og:description" content="Transform your YAML configuration files into structured XML documents instantly with our free online converter.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/yaml-to-xml.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "YAML to XML Converter",
+          "url": "https://xmltools.github.io/yaml-to-xml.html",
+          "description": "A powerful online utility to convert YAML data into valid, hierarchical XML structure.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Convert YAML to XML",
+            "Customizable root element",
+            "Supports nested objects and arrays",
+            "Privacy-focused client-side conversion",
+            "Downloadable XML output"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "YAML to XML Data Tool",
+          "description": "Developer-centric tool for migrating YAML configurations to XML formats.",
+          "image": "assets/yaml-to-xml.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🏗️ YAML to XML</h1>
+                <p class="page-subtitle">Convert YAML data into structured XML documents</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label for="root-element">Root Element:</label>
+                        <input type="text" id="root-element" class="select-input" value="root" placeholder="root">
+                    </div>
+                    <button id="convert-btn" class="btn btn-primary">Convert to XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>YAML Input</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="yaml-input" placeholder="Paste your YAML code here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>XML Output</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="XML result will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Understanding the Transformation</h2>
+                <div class="description-content">
+                    <p>Converting YAML to XML is a common task when integrating modern YAML-based configurations into legacy SOAP web services or enterprise systems that strictly require XML schemas. While YAML is optimized for human readability, XML is optimized for machine validation and strict data typing.</p>
+                    
+                    
+                    
+                    <h3>Key Conversion Rules</h3>
+                    <ul>
+                        <li><strong>Key-Value Pairs:</strong> YAML keys become XML tags, and values become the inner text.</li>
+                        <li><strong>Arrays:</strong> YAML sequences are converted into repeating XML elements named after the parent key.</li>
+                        <li><strong>Nesting:</strong> Indentation in YAML is preserved as hierarchical nesting in XML.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/yaml-to-xml.js"></script>
+</body>
+</html>
