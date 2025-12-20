@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML to HTML Converter Online - Convert XML to HTML Table</title>
+    <meta name="description" content="Free online XML to HTML converter. Transform your XML data into clean, responsive HTML tables instantly. Perfect for data presentation and web reports.">
+    <meta name="keywords" content="xml to html, convert xml to html, xml to html table, online xml converter, xml data to web, developer tools">
+    
+    <meta property="og:title" content="XML to HTML Converter Online - Convert XML to HTML Table">
+    <meta property="og:description" content="Transform your XML data into clean, responsive HTML tables instantly with our free online converter.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-to-html.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML to HTML Converter",
+          "url": "https://xmltools.github.io/xml-to-html.html",
+          "description": "An online developer tool to convert XML data structures into clean HTML tables for web display.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Convert XML to HTML Table",
+            "Responsive table generation",
+            "Real-time transformation",
+            "Browser-based privacy",
+            "One-click copy and download"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML to HTML Transformation Tool",
+          "description": "Professional-grade converter for translating XML data into presentation-ready HTML formats.",
+          "image": "assets/xml-to-html.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🌐 XML to HTML</h1>
+                <p class="page-subtitle">Transform raw XML data into clean, readable HTML tables</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="convert-btn" class="btn btn-primary">Generate HTML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>XML Input</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML data here (e.g., a list of items)..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>HTML Table Output</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy Code</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="html-output" placeholder="HTML code will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+                
+                <div id="preview-section" style="margin-top: 30px; display: none;">
+                    <h3>Live Preview</h3>
+                    <div id="html-preview" class="description-content" style="background: white; border: 3px solid var(--black); padding: 1.5rem; overflow-x: auto;"></div>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Visualizing Data Hierarchies</h2>
+                <div class="description-content">
+                    <p>XML is an excellent format for data exchange, but it isn't designed for human eyes. Converting <strong>XML to HTML</strong> allows you to present structured data in a way that is easily digestible for users, stakeholders, or for use in internal reports.</p>
+                    
+                    
+
+                    <h3>Standard Mapping</h3>
+                    <p>Our converter identifies repetitive structures within your XML (such as a list of users or products) and maps the element names to table headers and the text content to table cells.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-to-html.js"></script>
+</body>
+</html>
