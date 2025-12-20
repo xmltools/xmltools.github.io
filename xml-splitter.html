@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Splitter Online - Split Large XML Files Free</title>
+    <meta name="description" content="Free online XML splitter. Divide large XML documents into multiple smaller files based on specific tags. Secure, browser-based XML splitting tool.">
+    <meta name="keywords" content="xml splitter, split xml online, divide xml file, xml chunker, large xml tool, developer tools">
+    
+    <meta property="og:title" content="XML Splitter Online - Split Large XML Files Free">
+    <meta property="og:description" content="Break down large XML files into smaller, manageable pieces instantly with our free online splitter.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-splitter.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Splitter",
+          "url": "https://xmltools.github.io/xml-splitter.html",
+          "description": "An online utility to divide large XML documents into multiple files based on a user-defined split element.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Split by element name",
+            "Batch file generation",
+            "Maintains XML well-formedness",
+            "Privacy-focused client-side processing",
+            "Zip download support"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML Data Partitioning Tool",
+          "description": "Professional tool for segmenting massive XML datasets into smaller, valid XML instances.",
+          "image": "assets/xml-splitter.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">✂️ XML Splitter</h1>
+                <p class="page-subtitle">Divide large XML datasets into smaller, valid XML files</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label for="split-element">Split by Element:</label>
+                        <input type="text" id="split-element" class="select-input" placeholder="e.g. 'item' or 'user'">
+                    </div>
+                    <button id="split-btn" class="btn btn-primary">Split XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Large XML Input</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your large XML content here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Generated Chunks</h3>
+                        </div>
+                        <div id="chunks-container" class="viewer-display" style="background: white; border: 3px solid var(--black); padding: 1rem; min-height: 300px; max-height: 500px; overflow-y: auto;">
+                            <span style="color: var(--gray-medium);">Split results will appear here as a list of files...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Understanding XML Splitting</h2>
+                <div class="description-content">
+                    <p>Large XML files (often used for database exports or product feeds) can become too heavy for standard editors or memory-limited applications. An <strong>XML Splitter</strong> takes a massive document and partitions it into multiple valid XML files based on a repeating child element.</p>
+                    
+                    
+                    
+                    <h3>Why Split XML?</h3>
+                    <ul>
+                        <li><strong>Memory Management:</strong> Smaller files are easier to parse without crashing applications.</li>
+                        <li><strong>Parallel Processing:</strong> Break a large task into segments that can be processed simultaneously.</li>
+                        <li><strong>Upload Limits:</strong> Meet the file size requirements of various APIs and web services.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-splitter.js"></script>
+</body>
+</html>
