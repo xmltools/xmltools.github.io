@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Unescape Online - Convert Entities to Characters | XML Tools</title>
+    <meta name="description" content="Free online XML unescaper. Convert XML entities like &amp;lt; and &amp;amp; back into their original characters instantly. Clean up escaped XML strings for better readability.">
+    <meta name="keywords" content="xml unescape, unescape xml, xml entity converter, decode xml, xml string decoder, online xml unescaper">
+    
+    <meta property="og:title" content="XML Unescape Online - Convert Entities to Characters">
+    <meta property="og:description" content="Convert XML entities back to their original characters instantly with our free online unescape tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-unescape.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Unescape Tool",
+          "url": "https://xmltools.github.io/xml-unescape.html",
+          "description": "An online developer tool to decode XML-escaped characters (entities) back into plain text.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Convert &lt; to <",
+            "Convert &amp; to &",
+            "Real-time decoding",
+            "Browser-based privacy",
+            "Copy to clipboard"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML Unescaper Utility",
+          "description": "Professional string decoder for XML entities and special characters.",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🔓 XML Unescape</h1>
+                <p class="page-subtitle">Convert escaped XML entities back to plain text characters</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="unescape-btn" class="btn btn-primary">Unescape XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Escaped XML Input</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your escaped XML here (e.g. &amp;lt;tag&amp;gt;)..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Unescaped Output</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="Decoded XML will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">What is XML Unescaping?</h2>
+                <div class="description-content">
+                    <p>XML Unescaping is the process of converting predefined XML entities back into their original characters. In XML, certain characters have special meanings and must be "escaped" to avoid breaking the document structure.</p>
+                    
+                    <h3>Common Conversions</h3>
+                    <table style="width: 100%; border-collapse: collapse; border: 3px solid var(--black); margin-bottom: var(--spacing-lg);">
+                        <thead>
+                            <tr style="background: var(--yellow);">
+                                <th style="padding: 10px; border: 2px solid var(--black);">Entity</th>
+                                <th style="padding: 10px; border: 2px solid var(--black);">Character</th>
+                                <th style="padding: 10px; border: 2px solid var(--black);">Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px; border: 2px solid var(--black); font-family: monospace;">&amp;lt;</td>
+                                <td style="padding: 10px; border: 2px solid var(--black); font-family: monospace;"><</td>
+                                <td style="padding: 10px; border: 2px solid var(--black);">Less Than</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 2px solid var(--black); font-family: monospace;">&amp;gt;</td>
+                                <td style="padding: 10px; border: 2px solid var(--black); font-family: monospace;">></td>
+                                <td style="padding: 10px; border: 2px solid var(--black);">Greater Than</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 2px solid var(--black); font-family: monospace;">&amp;amp;</td>
+                                <td style="padding: 10px; border: 2px solid var(--black); font-family: monospace;">&</td>
+                                <td style="padding: 10px; border: 2px solid var(--black);">Ampersand</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-unescape.js"></script>
+</body>
+</html>
