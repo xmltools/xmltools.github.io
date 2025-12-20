@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Sorter Online - Sort XML Elements & Attributes</title>
+    <meta name="description" content="Free online XML sorter. Alphabetically sort XML elements and attributes to organize your data and improve readability. Secure, browser-based processing.">
+    <meta name="keywords" content="xml sorter, sort xml online, alphabetize xml, xml organizer, xml attribute sorter, developer tools">
+    
+    <meta property="og:title" content="XML Sorter Online - Sort XML Elements & Attributes">
+    <meta property="og:description" content="Alphabetically organize your XML elements and attributes instantly with our free online sorting tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-sorter.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Sorter",
+          "url": "https://xmltools.github.io/xml-sorter.html",
+          "description": "An online utility to alphabetically sort XML tags and attributes for better data organization.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Sort elements alphabetically",
+            "Sort attributes by name",
+            "Recursive sorting support",
+            "Privacy-focused local processing",
+            "Formatted output"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML Alphabetical Organizer",
+          "description": "Professional-grade tool for cleaning and organizing XML schema structures.",
+          "image": "assets/xml-sorter.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">⚖️ XML Sorter</h1>
+                <p class="page-subtitle">Alphabetize elements and attributes for organized XML data</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label>Sort Target:</label>
+                        <select id="sort-type" class="select-input">
+                            <option value="elements">Elements</option>
+                            <option value="attributes">Attributes</option>
+                            <option value="both">Both</option>
+                        </select>
+                    </div>
+                    <button id="sort-btn" class="btn btn-primary">Sort XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Unsorted XML</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste messy XML here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Sorted Result</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="Organized XML will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Why Sort Your XML?</h2>
+                <div class="description-content">
+                    <p>When working with large XML configuration files or data exports, elements often appear in a random order based on when they were created. An <strong>XML Sorter</strong> helps you alphabetize these entries, making it significantly easier to perform "diffs" between files and find specific keys quickly.</p>
+                    
+                    
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Element Sorting:</strong> Rearranges sibling tags alphabetically by their tag name.</li>
+                        <li><strong>Attribute Sorting:</strong> Reorders attributes within a single tag (e.g., &lt;user id="1" name="Alice"&gt;).</li>
+                        <li><strong>Deep Sorting:</strong> Recursively applies sorting logic to every nested level of the document.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-sorter.js"></script>
+</body>
+</html>
