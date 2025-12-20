@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Parser Online - Inspect XML Node Structure</title>
+    <meta name="description" content="Free online XML parser. Break down your XML into its component parts, including elements, attributes, and text nodes. Analyze XML structure for debugging.">
+    <meta name="keywords" content="xml parser, parse xml online, xml inspector, xml node analyzer, developer tools, xml debugger">
+    
+    <meta property="og:title" content="XML Parser Online - Inspect XML Node Structure">
+    <meta property="og:description" content="Analyze and inspect the internal node structure of your XML documents with our free online parser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-parser.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Parser",
+          "url": "https://xmltools.github.io/xml-parser.html",
+          "description": "An online developer tool that parses XML strings into a detailed object model for structural analysis.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Detailed Node Analysis",
+            "Attribute mapping",
+            "Syntax validation",
+            "Client-side execution",
+            "Expandable result view"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML Structural Parser",
+          "description": "Professional-grade tool for decomposing XML documents into DOM nodes and attributes.",
+          "image": "assets/xml-parser.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🔍 XML Parser</h1>
+                <p class="page-subtitle">Deconstruct XML into a detailed node-based object model</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="parse-btn" class="btn btn-primary">Parse XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Input XML</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML code here to parse..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Parsed Object Model</h3>
+                            <button id="copy-btn" class="btn-small">Copy JSON</button>
+                        </div>
+                        <textarea id="json-output" placeholder="The parsed tree structure will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">How the XML Parser Works</h2>
+                <div class="description-content">
+                    <p>An <strong>XML Parser</strong> reads the raw string of an XML document and converts it into a logical tree known as the Document Object Model (DOM). This allows developers to see exactly how a browser or a server interprets the data.</p>
+                    
+                    
+
+                    <h3>Parsing Results Include:</h3>
+                    <ul>
+                        <li><strong>Element Nodes:</strong> The primary tags that define your data structure.</li>
+                        <li><strong>Attributes:</strong> Key-value pairs associated with element nodes.</li>
+                        <li><strong>Text Nodes:</strong> The actual data content stored within the tags.</li>
+                        <li><strong>Nesting Depth:</strong> The hierarchical level of each component.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-parser.js"></script>
+</body>
+</html>
