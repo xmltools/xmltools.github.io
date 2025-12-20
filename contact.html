@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - XML Tools</title>
+    <link rel="stylesheet" href="styles.css">    
+   
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">✉️ Contact Us</h1>
+                <p class="page-subtitle">Have a suggestion or found a bug? Let us know.</p>
+            </div>
+
+            <div class="tool-interface" style="max-width: 600px; margin: 0 auto;">
+                <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+                    <div class="control-group">
+                        <label>Your Email:</label>
+                        <input type="email" class="select-input" placeholder="developer@example.com" required>
+                    </div>
+                    <div class="control-group">
+                        <label>Subject:</label>
+                        <input type="text" class="select-input" placeholder="Feature Request" required>
+                    </div>
+                    <div class="input-section">
+                        <label>Message:</label>
+                        <textarea style="min-height: 150px;" placeholder="Tell us how we can improve..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+                <div id="form-status" style="margin-top: 20px; display: none;" class="error-message"></div>
+            </div>
+        </main>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            status.style.display = 'block';
+            status.style.background = 'var(--green)';
+            status.style.color = 'white';
+            status.textContent = 'Message sent successfully! (Demo only)';
+        });
+    </script>
+</body>
+</html>
