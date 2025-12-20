@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML to JSON Converter Online Free | XML Tools</title>
+    <meta name="description" content="Convert XML to JSON online instantly. Free XML to JSON converter with beautiful formatting. Transform XML data to JSON format in seconds.">
+    <meta name="keywords" content="xml to json, convert xml to json, xml json converter, xml to json online, xml parser, json converter">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="XML to JSON Converter Online Free">
+    <meta property="og:description" content="Convert XML to JSON online instantly. Free XML to JSON converter with beautiful formatting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-to-json.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XML to JSON Converter Online Free">
+    <meta name="twitter:description" content="Convert XML to JSON online instantly with beautiful formatting.">
+    <meta name="twitter:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML to JSON Converter",
+          "url": "https://xmltools.github.io/xml-to-json.html",
+          "description": "Free online XML to JSON converter tool. Convert XML data to JSON format instantly with proper formatting and structure.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Convert XML to JSON instantly",
+            "Beautiful JSON formatting",
+            "Preserve data structure",
+            "Download JSON file",
+            "Copy to clipboard",
+            "Handle complex XML"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "XML to JSON Converter Tool",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Professional XML to JSON conversion tool for developers and data analysts"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🔄 XML to JSON Converter</h1>
+                <p class="page-subtitle">Convert XML data to JSON format instantly</p>
+            </div>
+
+            <!-- Tool Interface -->
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="compact-mode" class="checkbox-input">
+                            Compact JSON
+                        </label>
+                    </div>
+                    <button id="convert-btn" class="btn btn-primary">Convert to JSON</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Input XML</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Output JSON</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="json-output" placeholder="JSON output will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <!-- How To Section -->
+            <section class="content-section">
+                <h2 class="section-title">How to Convert XML to JSON</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Input XML</h3>
+                        <p>Paste or type your XML data into the input textarea on the left side.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Choose Format</h3>
+                        <p>Select compact mode for minified JSON or leave unchecked for readable formatting.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Convert</h3>
+                        <p>Click "Convert to JSON" button to transform your XML data to JSON format.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Use Result</h3>
+                        <p>Copy the JSON output or download it as a .json file for your application.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="content-section">
+                <h2 class="section-title">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast Conversion</h3>
+                        <p>Convert XML to JSON in milliseconds, even with large files.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Structure Preserved</h3>
+                        <p>Maintains the hierarchical structure and relationships from your XML.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Multiple Formats</h3>
+                        <p>Choose between pretty-printed or compact JSON output.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure & Private</h3>
+                        <p>All conversion happens locally in your browser. No data is sent to servers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Complex XML Support</h3>
+                        <p>Handles attributes, nested elements, arrays, and mixed content.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Easy Export</h3>
+                        <p>Download converted JSON as a file or copy to clipboard instantly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long Description -->
+            <section class="content-section">
+                <h2 class="section-title">About XML to JSON Converter</h2>
+                <div class="description-content">
+                    <p>The XML to JSON Converter is a powerful online tool designed to seamlessly transform XML (Extensible Markup Language) data into JSON (JavaScript Object Notation) format. This conversion is essential in modern web development, where JSON has become the preferred data interchange format due to its lightweight nature and native JavaScript compatibility.</p>
+                    
+                    <h3>Why Convert XML to JSON?</h3>
+                    <p>There are many compelling reasons to convert XML to JSON. JSON is the standard format for RESTful APIs and modern web services, making it essential for frontend applications. It's more compact than XML, resulting in smaller file sizes and faster data transmission. JSON integrates seamlessly with JavaScript applications, requiring no additional parsing libraries. It's also easier to read and write, making debugging and development more efficient.</p>
+                    
+                    <p>Many legacy systems and enterprise applications still use XML for data storage and communication. When integrating these systems with modern web applications, converting XML to JSON becomes necessary. Our tool bridges this gap, allowing developers to work with familiar JSON structures while maintaining compatibility with XML-based systems.</p>
+                    
+                    <h3>Common Use Cases</h3>
+                    <p>Our XML to JSON converter is widely used across various scenarios. API development teams use it to transform XML responses from legacy services into JSON for modern frontends. Data migration projects rely on it to convert XML databases to JSON-compatible formats. Configuration file updates use it to modernize XML config files to JSON for frameworks like Node.js. Frontend developers use it to work with XML data from external sources in their JavaScript applications, and testing teams use it to prepare test data in different formats.</p>
+                    
+                    <h3>Conversion Algorithm</h3>
+                    <p>Our converter uses an intelligent algorithm to transform XML structure into JSON format. XML elements become JSON objects or arrays depending on whether they repeat. XML attributes are converted to JSON properties with an @ prefix to distinguish them from element content. Text content within elements becomes a JSON property, and nested XML elements are converted to nested JSON objects, preserving the hierarchical structure.</p>
+                    
+                    <h3>Handling Complex XML</h3>
+                    <p>The tool is designed to handle various XML complexities including mixed content (elements with both text and child elements), CDATA sections, XML namespaces, empty elements, and multiple child elements with the same name (converted to JSON arrays). This comprehensive support ensures accurate conversion regardless of your XML structure's complexity.</p>
+                    
+                    <h3>Performance and Privacy</h3>
+                    <p>All XML to JSON conversion is performed entirely in your browser using JavaScript. This client-side processing approach means your data never leaves your device, ensuring complete privacy and security. It also provides instant conversion without network latency, making it suitable for processing sensitive data and large files without concerns about data transmission or storage on external servers.</p>
+                    
+                    <h3>Best Practices</h3>
+                    <p>When converting XML to JSON, it's important to validate your XML before conversion to ensure clean results, understand how XML attributes map to JSON properties in the output, test with sample data first if working with large files, and use compact mode when file size matters for transmission or storage. Our tool follows JSON RFC specifications to ensure compatibility with all JSON parsers and consumers.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-to-json.js"></script>
+</body>
+</html>

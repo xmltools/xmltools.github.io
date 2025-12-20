@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Formatter Online - Format & Beautify XML Free | XML Tools</title>
+    <meta name="description" content="Free online XML formatter and beautifier. Format, beautify and indent XML code instantly. Clean up messy XML with proper indentation and structure.">
+    <meta name="keywords" content="xml formatter, xml beautifier, format xml, beautify xml, xml pretty print, xml indent, xml online tool">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="XML Formatter Online - Format & Beautify XML Free">
+    <meta property="og:description" content="Free online XML formatter and beautifier. Format, beautify and indent XML code instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-formatter.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XML Formatter Online - Format & Beautify XML Free">
+    <meta name="twitter:description" content="Free online XML formatter and beautifier. Format, beautify and indent XML code instantly.">
+    <meta name="twitter:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Formatter",
+          "url": "https://xmltools.github.io/xml-formatter.html",
+          "description": "Free online XML formatter and beautifier tool to format, beautify and indent XML code instantly with proper structure.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Format XML instantly",
+            "Beautify messy XML",
+            "Indent XML with 2 or 4 spaces",
+            "Syntax highlighting",
+            "Download formatted XML",
+            "Copy to clipboard"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "XML Formatter Tool",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Professional XML formatting tool for developers"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🎨 XML Formatter</h1>
+                <p class="page-subtitle">Format and beautify your XML code with proper indentation</p>
+            </div>
+
+            <!-- Tool Interface -->
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label for="indent-size">Indent Size:</label>
+                        <select id="indent-size" class="select-input">
+                            <option value="2">2 Spaces</option>
+                            <option value="4" selected>4 Spaces</option>
+                            <option value="tab">Tab</option>
+                        </select>
+                    </div>
+                    <button id="format-btn" class="btn btn-primary">Format XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Input XML</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Formatted XML</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="Formatted XML will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <!-- How To Section -->
+            <section class="content-section">
+                <h2 class="section-title">How to Use XML Formatter</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Paste XML</h3>
+                        <p>Copy your unformatted or messy XML code and paste it into the input textarea above.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Choose Indent</h3>
+                        <p>Select your preferred indentation size (2 spaces, 4 spaces, or tab) from the dropdown menu.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Format</h3>
+                        <p>Click the "Format XML" button to instantly beautify and structure your XML code.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Copy or Download</h3>
+                        <p>Copy the formatted XML to clipboard or download it as a file for later use.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="content-section">
+                <h2 class="section-title">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Formatting</h3>
+                        <p>Format your XML code in milliseconds with our fast processing engine.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Smart Indentation</h3>
+                        <p>Automatically detects and applies proper indentation to all XML elements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Customizable</h3>
+                        <p>Choose between 2 spaces, 4 spaces, or tab indentation based on your preference.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>All processing happens in your browser. Your XML data never leaves your device.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>One-Click Copy</h3>
+                        <p>Copy formatted XML to clipboard with a single click for easy sharing.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Download Option</h3>
+                        <p>Download formatted XML as a .xml file directly to your computer.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long Description -->
+            <section class="content-section">
+                <h2 class="section-title">About XML Formatter</h2>
+                <div class="description-content">
+                    <p>Our XML Formatter is a powerful, free online tool designed to help developers, data analysts, and IT professionals format and beautify XML (Extensible Markup Language) code quickly and efficiently. Whether you're working with configuration files, data exports, API responses, or any other XML document, our formatter makes your code clean, readable, and properly structured.</p>
+                    
+                    <h3>Why Format XML?</h3>
+                    <p>XML formatting is essential for several reasons. First, it dramatically improves code readability by adding proper indentation and line breaks, making it easier to understand the document's hierarchical structure. When XML is minified or exported from systems, it often comes in a single line or with inconsistent formatting, making it nearly impossible to read and debug.</p>
+                    
+                    <p>Second, formatted XML is crucial for collaboration. When working in teams, having consistently formatted XML files ensures that everyone can easily read and understand the code. It also makes version control systems like Git more effective, as properly formatted files show meaningful diffs when changes are made.</p>
+                    
+                    <h3>Who Uses XML Formatters?</h3>
+                    <p>XML formatters are used by a wide range of professionals including software developers working with web services and APIs, database administrators handling XML data exports, system administrators managing configuration files, data analysts processing XML datasets, and technical writers creating documentation.</p>
+                    
+                    <h3>Key Benefits</h3>
+                    <p>Our XML formatter offers several advantages over manual formatting. It saves time by instantly formatting thousands of lines of XML code, ensures consistency by applying uniform indentation rules throughout the document, reduces errors by maintaining proper XML structure, and enhances debugging by making it easier to spot issues in the XML hierarchy.</p>
+                    
+                    <h3>Privacy and Security</h3>
+                    <p>We take your data privacy seriously. All XML formatting happens entirely in your browser using JavaScript. Your XML data is never uploaded to our servers, stored, or transmitted anywhere. This client-side processing ensures complete privacy and security for sensitive XML documents, making our tool safe for enterprise and personal use.</p>
+                    
+                    <h3>Best Practices</h3>
+                    <p>When formatting XML, it's recommended to use consistent indentation (either 2 or 4 spaces is standard in most organizations), maintain proper element nesting, use meaningful element and attribute names, and include comments for complex sections. Our formatter helps you achieve all these best practices automatically.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-formatter.js"></script>
+</body>
+</html>

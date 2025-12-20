@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Minifier Online - Compress & Minify XML Free | XML Tools</title>
+    <meta name="description" content="Free online XML minifier. Compress and minify XML files to reduce size. Remove whitespace, line breaks, and comments instantly.">
+    <meta name="keywords" content="xml minifier, minify xml, compress xml, xml compressor, reduce xml size, xml optimizer">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="XML Minifier Online - Compress & Minify XML Free">
+    <meta property="og:description" content="Free online XML minifier. Compress and minify XML files to reduce size instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-minifier.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XML Minifier Online - Compress & Minify XML Free">
+    <meta name="twitter:description" content="Compress and minify XML files to reduce size instantly.">
+    <meta name="twitter:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Minifier",
+          "url": "https://xmltools.github.io/xml-minifier.html",
+          "description": "Free online XML minifier tool to compress and minify XML files by removing whitespace, line breaks, and unnecessary characters.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Minify XML instantly",
+            "Remove whitespace",
+            "Compress file size",
+            "Remove comments",
+            "Download minified XML",
+            "Show size reduction"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "XML Minifier Tool",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Professional XML compression and minification tool"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🗜️ XML Minifier</h1>
+                <p class="page-subtitle">Compress and minify XML to reduce file size</p>
+            </div>
+
+            <!-- Tool Interface -->
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="remove-comments" class="checkbox-input" checked>
+                            Remove Comments
+                        </label>
+                    </div>
+                    <button id="minify-btn" class="btn btn-primary">Minify XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Input XML</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Minified XML</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="Minified XML will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="stats" class="stats-panel" style="display: none;">
+                    <div class="stat-item">
+                        <span class="stat-label">Original Size:</span>
+                        <span id="original-size" class="stat-value">0 bytes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Minified Size:</span>
+                        <span id="minified-size" class="stat-value">0 bytes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Reduced By:</span>
+                        <span id="reduction" class="stat-value">0%</span>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <!-- How To Section -->
+            <section class="content-section">
+                <h2 class="section-title">How to Minify XML</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Paste XML</h3>
+                        <p>Copy your formatted XML code and paste it into the input textarea.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Set Options</h3>
+                        <p>Choose whether to remove comments from your XML during minification.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Minify</h3>
+                        <p>Click "Minify XML" to compress your XML by removing unnecessary whitespace.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Use Result</h3>
+                        <p>View size reduction stats and copy or download your minified XML.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="content-section">
+                <h2 class="section-title">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast Compression</h3>
+                        <p>Minify large XML files in milliseconds with our optimized algorithm.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📉</div>
+                        <h3>Size Reduction</h3>
+                        <p>See exact file size reduction percentage and byte savings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Comment Removal</h3>
+                        <p>Option to remove XML comments for additional size reduction.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Client-Side Only</h3>
+                        <p>All minification happens in your browser. No server uploads.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3>Preserves Structure</h3>
+                        <p>Maintains XML structure and validity while removing whitespace.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Easy Export</h3>
+                        <p>Download minified XML or copy to clipboard instantly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long Description -->
+            <section class="content-section">
+                <h2 class="section-title">About XML Minifier</h2>
+                <div class="description-content">
+                    <p>The XML Minifier is a specialized tool designed to compress XML files by removing unnecessary whitespace, line breaks, and optional elements while preserving the document's structure and validity. Minification is crucial for optimizing XML files used in web applications, APIs, and data transmission, where file size directly impacts loading times and bandwidth usage.</p>
+                    
+                    <h3>Why Minify XML?</h3>
+                    <p>XML minification offers several important benefits for modern web development. Smaller file sizes mean faster data transmission over networks, which is especially important for mobile users or slow connections. Reduced bandwidth usage lowers hosting costs for high-traffic applications. Faster parsing times improve application performance since smaller files are quicker to process. In production environments, minified XML is standard practice for APIs, configuration files, and data feeds.</p>
+                    
+                    <h3>What Gets Removed?</h3>
+                    <p>The minification process removes several types of unnecessary content from XML documents. All whitespace between tags is eliminated, including spaces, tabs, and line breaks. Indentation used for human readability is removed. Optional XML comments can be stripped out. Multiple consecutive spaces within text content are reduced to single spaces. However, the minifier preserves all essential content including element names, attributes, attribute values, text content within elements, and the overall document structure.</p>
+                    
+                    <h3>Use Cases</h3>
+                    <p>XML minification is widely used across various scenarios. API responses benefit from minification to reduce payload size and improve response times. Configuration files in production environments are minified to optimize loading. Data feeds and RSS feeds are compressed to reduce bandwidth for subscribers. SOAP web services use minified XML messages to improve performance. XML exports from databases are minified before storage or transmission. Mobile applications minify XML to reduce data usage on cellular networks.</p>
+                    
+                    <h3>Size Reduction</h3>
+                    <p>The amount of size reduction achieved through minification varies depending on the original XML formatting. Well-formatted XML with extensive indentation can see 30-50% size reduction. XML with comments and documentation can achieve even greater compression when comments are removed. However, already compact XML will see minimal reduction. Our tool provides detailed statistics showing original size, minified size, and percentage reduction so you can see the exact impact.</p>
+                    
+                    <h3>When Not to Minify</h3>
+                    <p>While minification is beneficial for production, there are situations where you should avoid it. Development and debugging benefit from formatted XML that's easier to read. Documentation and educational materials should remain human-readable. Configuration files that humans need to edit regularly should stay formatted. Version control systems work better with formatted files that show meaningful diffs. The best practice is to use formatted XML during development and minify only for production deployment.</p>
+                    
+                    <h3>Performance Impact</h3>
+                    <p>Minifying XML can have significant performance benefits in real-world applications. For example, a 100KB formatted XML file might minify to 65KB, saving 35KB of bandwidth. Over thousands of API calls, this adds up to substantial bandwidth savings and faster load times. The minification process itself is extremely fast, taking only milliseconds even for large files, so there's no performance penalty for the compression step.</p>
+                    
+                    <h3>Security and Privacy</h3>
+                    <p>Our XML Minifier operates entirely within your web browser using JavaScript. No XML data is uploaded to servers or stored anywhere. This client-side approach ensures complete privacy and security for sensitive XML documents, making it safe for use with proprietary data, confidential information, and enterprise applications.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-minifier.js"></script>
+</body>
+</html>

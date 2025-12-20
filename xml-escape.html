@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Escape & Unescape Tool Online Free | XML Tools</title>
+    <meta name="description" content="Free online XML escape and unescape tool. Encode and decode XML special characters instantly. Convert &lt; &gt; &amp; and other characters.">
+    <meta name="keywords" content="xml escape, xml unescape, escape xml characters, xml encoder, xml decoder, xml special characters">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="XML Escape & Unescape Tool Online Free">
+    <meta property="og:description" content="Free online XML escape and unescape tool. Encode and decode XML special characters instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-escape.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XML Escape & Unescape Tool Online Free">
+    <meta name="twitter:description" content="Encode and decode XML special characters instantly.">
+    <meta name="twitter:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Escape & Unescape Tool",
+          "url": "https://xmltools.github.io/xml-escape.html",
+          "description": "Free online tool to escape and unescape XML special characters. Encode and decode &lt;, &gt;, &amp;, quotes and other XML entities.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Escape XML characters",
+            "Unescape XML entities",
+            "Bidirectional conversion",
+            "Handle all XML entities",
+            "Copy to clipboard",
+            "Download result"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "XML Escape Tool",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Professional XML character escaping and unescaping tool"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🔐 XML Escape & Unescape</h1>
+                <p class="page-subtitle">Encode and decode XML special characters</p>
+            </div>
+
+            <!-- Tool Interface -->
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="escape-btn" class="btn btn-primary">Escape XML</button>
+                    <button id="unescape-btn" class="btn btn-primary">Unescape XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Input Text</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="text-input" placeholder="Paste your text here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Output Result</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="text-output" placeholder="Result will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+
+                <div class="info-panel">
+                    <h3>XML Entities Reference</h3>
+                    <div class="entities-grid">
+                        <div class="entity-item"><code>&lt;</code> = <code>&amp;lt;</code></div>
+                        <div class="entity-item"><code>&gt;</code> = <code>&amp;gt;</code></div>
+                        <div class="entity-item"><code>&amp;</code> = <code>&amp;amp;</code></div>
+                        <div class="entity-item"><code>"</code> = <code>&amp;quot;</code></div>
+                        <div class="entity-item"><code>'</code> = <code>&amp;apos;</code></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How To Section -->
+            <section class="content-section">
+                <h2 class="section-title">How to Use XML Escape Tool</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Paste Text</h3>
+                        <p>Copy your text containing XML characters and paste it into the input area.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Choose Action</h3>
+                        <p>Click "Escape XML" to encode characters or "Unescape XML" to decode entities.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>View Result</h3>
+                        <p>See the converted text in the output area with all characters properly encoded or decoded.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Copy or Download</h3>
+                        <p>Copy the result to clipboard or download it as a text file for your use.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="content-section">
+                <h2 class="section-title">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Conversion</h3>
+                        <p>Escape or unescape XML characters in milliseconds with one click.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Bidirectional</h3>
+                        <p>Convert in both directions - escape to entities or unescape back to characters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Complete Coverage</h3>
+                        <p>Handles all five XML predefined entities: &lt;, &gt;, &amp;, &quot;, &apos;</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure Processing</h3>
+                        <p>All conversion happens in your browser. No data is sent to servers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Quick Reference</h3>
+                        <p>Built-in reference table showing all XML entity conversions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Easy Export</h3>
+                        <p>Copy result to clipboard or download as text file instantly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long Description -->
+            <section class="content-section">
+                <h2 class="section-title">About XML Escape & Unescape Tool</h2>
+                <div class="description-content">
+                    <p>The XML Escape and Unescape Tool is an essential utility for developers working with XML documents and data. XML has five special characters that have reserved meanings in the markup language syntax: less than (&lt;), greater than (&gt;), ampersand (&amp;), double quote ("), and single quote ('). When these characters need to appear as actual text content rather than markup, they must be escaped using XML entities.</p>
+                    
+                    <h3>Why Escape XML Characters?</h3>
+                    <p>Escaping XML characters is necessary to prevent parsing errors and ensure data integrity. When special characters like &lt; and &gt; appear in text content, XML parsers interpret them as the start and end of tags. This causes parsing errors and data corruption. By converting these characters to their entity equivalents (&amp;lt; and &amp;gt;), you ensure they're treated as literal text content rather than markup instructions.</p>
+                    
+                    <p>For example, if you want to display the text "5 &lt; 10" in an XML document, you must write it as "5 &amp;lt; 10". Otherwise, the parser will interpret &lt; as the beginning of an XML tag, causing a parsing error. Similarly, the ampersand character must be escaped as &amp;amp; because it signals the start of an entity reference.</p>
+                    
+                    <h3>The Five Predefined Entities</h3>
+                    <p>XML defines five predefined entities that must be escaped in specific contexts. The less than sign (&lt;) becomes &amp;lt;, the greater than sign (&gt;) becomes &amp;gt;, the ampersand (&amp;) becomes &amp;amp;, the double quote (") becomes &amp;quot;, and the apostrophe (') becomes &amp;apos;. These entities are recognized by all XML parsers and are essential for creating well-formed XML documents.</p>
+                    
+                    <h3>When to Escape Characters</h3>
+                    <p>Different contexts require different escaping rules. In element content (text between tags), you must escape &lt;, &gt;, and &amp;. In attribute values enclosed in double quotes, you must escape &lt;, &amp;, and ". In attribute values enclosed in single quotes, you must escape &lt;, &amp;, and '. The &gt; character technically only needs escaping after ]]&gt; sequences, but it's often escaped for consistency and safety.</p>
+                    
+                    <h3>Common Use Cases</h3>
+                    <p>XML escaping is used in many scenarios. API development requires escaping user input before inserting it into XML payloads. Data serialization needs proper escaping when converting objects to XML format. HTML entities in XML documents must be properly escaped since XML doesn't recognize HTML entities. Code samples and technical documentation often contain code snippets with special characters that need escaping. Configuration files with XML format require escaping of special characters in values.</p>
+                    
+                    <h3>Unescaping XML Entities</h3>
+                    <p>Unescaping is the reverse process of converting XML entities back to their original characters. This is necessary when you need to display XML content to users, process XML data in applications, convert XML to other formats like JSON or plain text, or debug XML documents by viewing the actual content. Our tool handles both escaping and unescaping, making it easy to convert in either direction.</p>
+                    
+                    <h3>Best Practices</h3>
+                    <p>When working with XML characters, follow these best practices: always escape user input before including it in XML documents to prevent injection attacks, use CDATA sections for large blocks of text containing multiple special characters instead of escaping each character, validate XML after escaping to ensure well-formedness, be consistent in your use of quotes in attributes (either all double or all single), and remember that proper escaping is crucial for XML security and prevents XML injection vulnerabilities.</p>
+                    
+                    <h3>Security Considerations</h3>
+                    <p>Proper XML escaping is not just about preventing parsing errors—it's also a critical security measure. Failure to properly escape user input can lead to XML injection attacks where malicious users insert arbitrary XML markup into your documents. This can result in data theft, unauthorized access, or denial of service. Always escape user-provided data before including it in XML documents, especially in web applications and APIs.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-escape.js"></script>
+</body>
+</html>
