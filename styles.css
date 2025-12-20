@@ -160,9 +160,9 @@ body {
 /* Layout */
 .layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-xl);
+  grid-template-columns: 300px 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 /* Hero Section */
@@ -687,12 +687,18 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .sidebar {
     position: static;
     margin-bottom: var(--spacing-lg);
+    order: 2;
+  }
+
+  .main-content {
+    order: 1;
   }
 
   .hero-title {
