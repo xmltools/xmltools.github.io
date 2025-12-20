@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPath Tester Online - Evaluate XPath Expressions</title>
+    <meta name="description" content="Free online XPath tester and evaluator. Test your XPath expressions against XML documents instantly. Supports multiple result types and error highlighting.">
+    <meta name="keywords" content="xpath tester, xpath evaluator, test xpath, xml xpath, online xpath tool, xpath query">
+    
+    <meta property="og:title" content="XPath Tester Online - Evaluate XPath Expressions">
+    <meta property="og:description" content="Test and evaluate your XPath queries against XML data instantly with our free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xpath-tester.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XPath Tester",
+          "url": "https://xmltools.github.io/xpath-tester.html",
+          "description": "An online utility to test and evaluate XPath expressions against XML documents with real-time results.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Evaluate XPath queries",
+            "Support for nodes and attributes",
+            "Real-time XML parsing",
+            "Error highlighting",
+            "One-click result copying"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XPath Evaluator Tool",
+          "description": "Professional tool for debugging and verifying XPath expressions.",
+          "image": "assets/xpath-tester.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🔍 XPath Tester</h1>
+                <p class="page-subtitle">Test and evaluate XPath expressions against your XML data</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group full-width">
+                        <label for="xpath-input">XPath Expression:</label>
+                        <input type="text" id="xpath-query" class="text-input" placeholder="e.g., //book[price > 35]/title" spellcheck="false">
+                    </div>
+                    <button id="test-btn" class="btn btn-primary">Test XPath</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Source XML</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Results</h3>
+                            <button id="copy-btn" class="btn-small">Copy Results</button>
+                        </div>
+                        <textarea id="test-results" placeholder="Results will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">How to Test XPath</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Input XML</h3>
+                        <p>Paste your source XML document into the input area.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Enter Query</h3>
+                        <p>Type your XPath expression in the top input field.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Evaluate</h3>
+                        <p>Click "Test XPath" to find all nodes or values matching your query.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">About XPath Evaluation</h2>
+                <div class="description-content">
+                    <p>XPath (XML Path Language) is a major element in the XSLT standard. It is used to navigate through elements and attributes in an XML document. Our <strong>XPath Tester</strong> allows you to verify your queries instantly without writing any code.</p>
+                    
+                    <h3>Privacy & Processing</h3>
+                    <p>Just like our other tools, all XPath evaluation happens locally in your browser. Your data is never transmitted to any server.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xpath-tester.js"></script>
+</body>
+</html>
