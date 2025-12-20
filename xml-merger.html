@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Merger Online - Combine Multiple XML Files</title>
+    <meta name="description" content="Free online XML merger. Combine two or more XML documents into a single file instantly. Merge tags, elements, and attributes in your browser.">
+    <meta name="keywords" content="xml merger, combine xml files, merge xml online, join xml documents, xml tool, free xml utilities">
+    
+    <meta property="og:title" content="XML Merger Online - Combine Multiple XML Files">
+    <meta property="og:description" content="Combine multiple XML documents into a single structured file with our free online XML merger.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-merger.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Merger",
+          "url": "https://xmltools.github.io/xml-merger.html",
+          "description": "An online developer tool to merge multiple XML documents into a unified structure.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Merge multiple XML strings",
+            "Customizable root element",
+            "Recursive node merging",
+            "Privacy-focused local processing",
+            "Downloadable merged output"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML Document Consolidation Tool",
+          "description": "Professional-grade utility for joining and consolidating disparate XML data sources.",
+          "image": "assets/xml-merger.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🔗 XML Merger</h1>
+                <p class="page-subtitle">Combine multiple XML sources into one unified document</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label for="merge-root">New Root Tag:</label>
+                        <input type="text" id="merge-root" class="select-input" value="merged_root" placeholder="merged_root">
+                    </div>
+                    <button id="merge-btn" class="btn btn-primary">Merge Documents</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>XML Source 1</h3>
+                        </div>
+                        <textarea id="xml-input-1" placeholder="Paste first XML document here..." spellcheck="false"></textarea>
+                        
+                        <div class="section-header" style="margin-top: 15px;">
+                            <h3>XML Source 2</h3>
+                        </div>
+                        <textarea id="xml-input-2" placeholder="Paste second XML document here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Merged Output</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="The consolidated XML result will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">How XML Merging Works</h2>
+                <div class="description-content">
+                    <p>Merging XML is the process of taking two or more independent data structures and wrapping them under a shared parent element. This is essential for data aggregation, API response consolidation, and report generation.</p>
+                    
+                    
+                    
+                    <h3>Consolidation Rules</h3>
+                    <ul>
+                        <li><strong>Root Wrapping:</strong> Since valid XML can only have one root element, the tool creates a new container tag (defined by you) to hold all merged elements.</li>
+                        <li><strong>Namespaces:</strong> Our merger preserves existing namespaces and tag hierarchies within the individual documents.</li>
+                        <li><strong>Data Integrity:</strong> Each document is imported as a distinct branch of the new root, ensuring no data collision occurs.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-merger.js"></script>
+</body>
+</html>
