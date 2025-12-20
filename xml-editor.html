@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Editor Online - Edit & Debug XML with Real-time Validation</title>
+    <meta name="description" content="Free online XML editor. Edit, format, and validate your XML code in real-time. Features syntax highlighting, well-formedness checks, and one-click formatting.">
+    <meta name="keywords" content="xml editor, online xml editor, edit xml, xml debugger, xml code editor, xml tool, free xml editor">
+    
+    <meta property="og:title" content="XML Editor Online - Edit & Debug XML with Real-time Validation">
+    <meta property="og:description" content="A professional online editor for XML data. Write, validate, and beautify your XML instantly in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-editor.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Editor",
+          "url": "https://xmltools.github.io/xml-editor.html",
+          "description": "An interactive online XML editor with real-time syntax checking, formatting, and validation features.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Real-time syntax validation",
+            "Auto-formatting/Beautification",
+            "Line numbering",
+            "Browser-based privacy",
+            "Download as .xml"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "Professional XML Code Editor",
+          "description": "Browser-based IDE for XML development and troubleshooting.",
+          "image": "assets/xml-editor.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">📝 XML Editor</h1>
+                <p class="page-subtitle">A powerful environment to compose and debug XML data</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="format-btn" class="btn btn-primary">Beautify</button>
+                    <button id="validate-btn" class="btn btn-secondary">Check Syntax</button>
+                    <button id="download-btn" class="btn-small">Save File</button>
+                    <button id="clear-btn" class="btn-small">Clear</button>
+                </div>
+
+                <div class="editor-container" style="position: relative; border: 3px solid var(--black); background: #fdfdfd;">
+                    <div class="editor-toolbar" style="background: var(--black); color: white; padding: 5px 15px; font-size: 0.8rem; display: flex; justify-content: space-between;">
+                        <span>main.xml</span>
+                        <span id="status-indicator">Ready</span>
+                    </div>
+                    <textarea id="xml-editor" placeholder="Start typing your XML here..." spellcheck="false" style="width: 100%; min-height: 500px; padding: 20px; font-family: 'Courier New', monospace; border: none; outline: none; resize: vertical; line-height: 1.5;"></textarea>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Editor Features</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Real-time Validation</h3>
+                        <p>Our editor checks your syntax as you type, highlighting structural issues immediately.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>One-Click Format</h3>
+                        <p>Instantly turn messy, single-line XML into a clean, readable hierarchy.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Local Storage</h3>
+                        <p>Your work is saved locally in your browser so you don't lose progress on refresh.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Why Use an XML Editor?</h2>
+                <div class="description-content">
+                    <p>Writing XML in a standard text editor can be error-prone. Tags must be perfectly balanced, and nesting must follow strict rules. Using a specialized <strong>XML Editor</strong> provides the necessary guardrails to ensure your data is "well-formed" and compliant with XML standards.</p>
+                    
+                    
+
+                    <h3>Privacy First</h3>
+                    <p>Unlike other online editors, we don't process your data on a server. Every keystroke stays within your browser's local sandbox, ensuring your configuration files and data remains private.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-editor.js"></script>
+</body>
+</html>
