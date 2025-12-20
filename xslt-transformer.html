@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSLT Transformer Online - Transform XML with XSLT</title>
+    <meta name="description" content="Free online XSLT transformer. Apply XSLT stylesheets to XML documents to transform them into HTML, XML, or text instantly in your browser.">
+    <meta name="keywords" content="xslt transformer, xslt processor, transform xml, xslt online, xml to html, xslt tester">
+    
+    <meta property="og:title" content="XSLT Transformer Online - Transform XML with XSLT">
+    <meta property="og:description" content="Apply XSLT stylesheets to XML documents instantly with our free online transformer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xslt-transformer.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XSLT Transformer",
+          "url": "https://xmltools.github.io/xslt-transformer.html",
+          "description": "An online tool to transform XML documents using XSLT stylesheets directly in the browser.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Transform XML to HTML/XML/Text",
+            "Real-time XSLT processing",
+            "Browser-based privacy",
+            "Error reporting",
+            "Copy and Download results"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XSLT Transformation Tool",
+          "description": "Professional-grade XSLT engine for testing and executing XML transformations.",
+          "image": "assets/xslt-transformer.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">⚙️ XSLT Transformer</h1>
+                <p class="page-subtitle">Transform XML documents using XSLT stylesheets</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="transform-btn" class="btn btn-primary">Transform XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear All</button>
+                </div>
+
+                <div class="io-container-triple">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Source XML</h3>
+                            <button id="paste-xml-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your source XML here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>XSLT Stylesheet</h3>
+                            <button id="paste-xslt-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xslt-input" placeholder="Paste your XSLT code here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Transformed Output</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="transformation-output" placeholder="Transformed result will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">How to Use XSLT Transformer</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Load XML</h3>
+                        <p>Paste the XML data you want to transform into the first input area.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Load XSLT</h3>
+                        <p>Paste your XSLT (Extensible Stylesheet Language Transformations) code into the second input area.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Transform</h3>
+                        <p>Click "Transform XML" to process the data and view the result in the output panel.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Why use XSLT?</h2>
+                <div class="description-content">
+                    <p>XSLT is a powerful language used for transforming XML documents into other formats like HTML for web display, plain text, or even different XML structures. It is widely used in data integration and web publishing workflows.</p>
+                    
+                    <h3>Secure & Private</h3>
+                    <p>Transformation happens entirely within your browser's XSLT engine. Your sensitive data and logic never leave your computer.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xslt-transformer.js"></script>
+</body>
+</html>
