@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV to XML Converter Online - Convert CSV to XML Free</title>
+    <meta name="description" content="Free online CSV to XML converter. Easily transform your CSV data or Excel files into well-structured XML documents instantly in your browser.">
+    <meta name="keywords" content="csv to xml, convert csv to xml, csv to xml converter, online csv to xml, excel to xml, csv data transformer">
+    
+    <meta property="og:title" content="CSV to XML Converter Online - Convert CSV to XML Free">
+    <meta property="og:description" content="Easily transform your CSV data into well-structured XML documents instantly with our free online converter.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/csv-to-xml.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "CSV to XML Converter",
+          "url": "https://xmltools.github.io/csv-to-xml.html",
+          "description": "A free online utility to convert CSV (Comma Separated Values) data into structured XML format.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Convert CSV to XML",
+            "Custom Root and Row element naming",
+            "Auto-detection of headers",
+            "Client-side processing for privacy",
+            "Downloadable XML output"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "CSV to XML Transformation Tool",
+          "description": "Professional-grade data converter for transforming flat CSV files into hierarchical XML structures.",
+          "image": "assets/csv-to-xml.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">📊 CSV to XML Converter</h1>
+                <p class="page-subtitle">Convert your flat CSV data into structured XML format</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label for="root-name">Root Element:</label>
+                        <input type="text" id="root-name" class="select-input" value="root">
+                    </div>
+                    <div class="control-group">
+                        <label for="row-name">Row Element:</label>
+                        <input type="text" id="row-name" class="select-input" value="row">
+                    </div>
+                    <button id="convert-btn" class="btn btn-primary">Convert to XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Input CSV</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="csv-input" placeholder="Paste your CSV data here (First row should be headers)..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>XML Output</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="Generated XML will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">How to Convert CSV to XML</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Input CSV</h3>
+                        <p>Paste your comma-separated data. Ensure the first row contains the column names.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Configure</h3>
+                        <p>Optionally change the Root and Row element names to suit your requirements.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Convert</h3>
+                        <p>Click "Convert to XML" to generate the hierarchical structure instantly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Why Convert CSV to XML?</h2>
+                <div class="description-content">
+                    <p>While CSV is excellent for simple data storage, XML provides a hierarchical structure that is often required by web services, configuration systems, and data exchange protocols. Our tool makes this migration seamless.</p>
+                    
+                    <h3>Local & Private</h3>
+                    <p>Your data privacy is our priority. All conversions are performed locally in your browser; no CSV data is ever uploaded to our servers.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/csv-to-xml.js"></script>
+</body>
+</html>
