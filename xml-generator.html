@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Generator Online - Create Sample XML Data</title>
+    <meta name="description" content="Free online XML generator. Quickly create sample XML documents for testing and development. Customize elements, nesting, and data points instantly.">
+    <meta name="keywords" content="xml generator, create sample xml, xml data generator, online xml creator, test xml data, developer tools">
+    
+    <meta property="og:title" content="XML Generator Online - Create Sample XML Data">
+    <meta property="og:description" content="Generate custom sample XML documents for testing and development with our free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-generator.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Generator",
+          "url": "https://xmltools.github.io/xml-generator.html",
+          "description": "An online utility to generate mock XML data structures for software testing and API development.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Template-based generation",
+            "Custom root element naming",
+            "Adjustable record counts",
+            "Instant syntax highlighting",
+            "Direct file download"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML Sample Data Creator",
+          "description": "Professional-grade tool for generating large-scale XML datasets for performance testing.",
+          "image": "assets/xml-generator.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🏗️ XML Generator</h1>
+                <p class="page-subtitle">Create structured sample XML data for testing and development</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label for="root-name">Root Element:</label>
+                        <input type="text" id="root-name" class="select-input" value="catalog" style="width: 120px;">
+                    </div>
+                    <div class="control-group">
+                        <label for="record-count">Records:</label>
+                        <input type="number" id="record-count" class="select-input" value="3" min="1" max="100" style="width: 80px;">
+                    </div>
+                    <button id="generate-btn" class="btn btn-primary">Generate XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Template Definition (JSON)</h3>
+                        </div>
+                        <textarea id="template-input" placeholder='Define fields: {"item": {"id": "number", "name": "string"}}' spellcheck="false">{
+  "product": {
+    "id": "101",
+    "name": "Sample Item",
+    "category": "Testing",
+    "price": "29.99"
+  }
+}</textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Generated XML</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="Generated sample XML will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Why Use Sample XML?</h2>
+                <div class="description-content">
+                    <p>When building applications that consume XML feeds, you often need varied data to test edge cases. An <strong>XML Generator</strong> allows you to create mock datasets without manually typing every tag.</p>
+                    
+                    
+
+                    <h3>Flexible Testing</h3>
+                    <p>Whether you need a single configuration file or a list of 100 database records, this tool automates the repetitive parts of XML creation. Simply define your object structure in the template box, and the generator will wrap it in the appropriate tags.</p>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-generator.js"></script>
+</body>
+</html>
