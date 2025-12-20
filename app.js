@@ -15,9 +15,13 @@ async function loadComponent(elementId, filePath) {
 // Initialize all components
 async function initializeComponents() {
   await Promise.all([
+    loadComponent("header-placeholder", "header.html"),
     loadComponent("header-container", "header.html"),
+    loadComponent("footer-placeholder", "footer.html"),
     loadComponent("footer-container", "footer.html"),
+    loadComponent("sidebar-placeholder", "sidebar.html"),
     loadComponent("sidebar-container", "sidebar.html"),
+    loadComponent("alltools-placeholder", "alltools.html"),
     loadComponent("alltools-container", "alltools.html"),
   ])
 
