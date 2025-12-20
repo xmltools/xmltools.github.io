@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Viewer Online - Interactive XML Tree Explorer</title>
+    <meta name="description" content="Free online XML viewer. Explore and visualize your XML documents in an interactive tree structure. Expand and collapse nodes for better data analysis.">
+    <meta name="keywords" content="xml viewer, xml tree viewer, explore xml, xml visualizer, online xml viewer, read xml online">
+    
+    <meta property="og:title" content="XML Viewer Online - Interactive XML Tree Explorer">
+    <meta property="og:description" content="Explore your XML documents in a clean, interactive tree structure with our free online XML viewer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-viewer.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Viewer",
+          "url": "https://xmltools.github.io/xml-viewer.html",
+          "description": "An interactive online tool to visualize and explore XML data in an expandable tree format.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Interactive Tree View",
+            "Expand and Collapse Nodes",
+            "Syntax Highlighting",
+            "Browser-based local processing",
+            "Support for large XML files"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "Interactive XML Visualizer",
+          "description": "Professional-grade XML exploration tool for debugging complex data structures.",
+          "image": "assets/xml-viewer.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        .viewer-display {
+            background: white;
+            border: 3px solid var(--black);
+            padding: var(--spacing-md);
+            min-height: 400px;
+            overflow: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
+        .xml-node { margin-left: 20px; }
+        .xml-tag { color: #880000; font-weight: bold; cursor: pointer; }
+        .xml-attr { color: #ee0000; }
+        .xml-val { color: #0000ff; }
+        .toggle-btn { cursor: pointer; margin-right: 5px; user-select: none; font-weight: bold; }
+        .collapsed > .xml-content { display: none; }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🌳 XML Viewer</h1>
+                <p class="page-subtitle">Visualize and navigate complex XML structures interactively</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="view-btn" class="btn btn-primary">Visualize XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Source XML</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML here to visualize the tree..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Tree View</h3>
+                        </div>
+                        <div id="viewer-output" class="viewer-display">
+                            <span style="color: var(--gray-medium);">Interactive tree will appear here...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Understanding the XML Tree</h2>
+                <div class="description-content">
+                    <p>XML documents are inherently hierarchical. An <strong>XML Viewer</strong> helps you visualize this hierarchy as a tree structure, making it much easier to understand parent-child relationships within large datasets.</p>
+                    
+                    
+                    
+                    <h3>Interactive Features</h3>
+                    <ul>
+                        <li><strong>Folding:</strong> Click on tags or arrows to collapse entire branches, allowing you to focus on specific sections.</li>
+                        <li><strong>Color Coding:</strong> Tags, attributes, and values are color-coded for instant recognition.</li>
+                        <li><strong>Attribute Viewing:</strong> See element properties inline without messy string formatting.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-viewer.js"></script>
+</body>
+</html>
