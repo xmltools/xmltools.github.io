@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Beautifier Online - Make XML Readable & Clean</title>
+    <meta name="description" content="Free online XML beautifier. Transform messy, minified XML into a clean, human-readable format. Supports custom indentation and instant copy-paste.">
+    <meta name="keywords" content="xml beautifier, xml pretty printer, clean xml, readable xml, xml structure, online xml tool">
+    
+    <meta property="og:title" content="XML Beautifier Online - Make XML Readable & Clean">
+    <meta property="og:description" content="Transform messy, minified XML into a clean, human-readable format instantly with our free online beautifier.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-beautifier.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Beautifier",
+          "url": "https://xmltools.github.io/xml-beautifier.html",
+          "description": "A powerful online tool to beautify and pretty-print XML code, making it human-readable and well-structured.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Convert minified XML to pretty-print",
+            "Customizable indentation levels",
+            "Real-time processing",
+            "Browser-based privacy",
+            "One-click copy and download"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XML Beautifier Tool",
+          "description": "Professional-grade XML pretty printer for cleaning up raw XML data strings.",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">✨ XML Beautifier</h1>
+                <p class="page-subtitle">Turn raw, minified XML into clean, readable code</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <div class="control-group">
+                        <label for="indent-size">Indentation:</label>
+                        <select id="indent-size" class="select-input">
+                            <option value="2">2 Spaces</option>
+                            <option value="4" selected>4 Spaces</option>
+                            <option value="tab">Tab Character</option>
+                        </select>
+                    </div>
+                    <button id="beautify-btn" class="btn btn-primary">Beautify XML</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>Raw XML Input</h3>
+                            <button id="paste-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your messy or minified XML here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="section-header">
+                            <h3>Beautified XML</h3>
+                            <div class="btn-group">
+                                <button id="copy-btn" class="btn-small">Copy</button>
+                                <button id="download-btn" class="btn-small">Download</button>
+                            </div>
+                        </div>
+                        <textarea id="xml-output" placeholder="Beautified XML will appear here..." spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">What is an XML Beautifier?</h2>
+                <div class="description-content">
+                    <p>An <strong>XML Beautifier</strong> (also known as an XML Pretty Printer) is a tool that takes "raw" or minified XML data and reformats it with proper line breaks and indentation. This process transforms a dense block of text into a hierarchical structure that is easy for humans to read and analyze.</p>
+                    
+                    <h3>Why use our Beautifier?</h3>
+                    <p>When APIs or databases return XML, they often remove all whitespace to save bandwidth. While this is great for machines, it's impossible for developers to debug. Our tool restores the logical structure of your data in seconds.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Fast & Reliable</h3>
+                        <p>Processes large XML files instantly without lagging your browser.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>No data is sent to our servers. All beautification happens locally on your device.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>Custom Tabs</h3>
+                        <p>Choose between space-based or tab-based indentation to match your coding standards.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-beautifier.js"></script>
+</body>
+</html>
