@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8570XQ6PQ4');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Schema Validator - Validate XML against XSD Online</title>
+    <meta name="description" content="Free online XML Schema (XSD) validator. Validate your XML documents against XSD schemas instantly in your browser to ensure data integrity and compliance.">
+    <meta name="keywords" content="xml schema validator, xsd validator, validate xml online, xml xsd check, xsd verification, developer tools">
+    
+    <meta property="og:title" content="XML Schema Validator - Validate XML against XSD Online">
+    <meta property="og:description" content="Ensure your XML documents are valid and compliant with XSD schemas using our free online validator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xmltools.github.io/xml-schema-validator.html">
+    <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "XML Schema Validator",
+          "url": "https://xmltools.github.io/xml-schema-validator.html",
+          "description": "An online utility to validate XML documents against XSD (XML Schema Definition) files.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "XSD 1.0/1.1 Validation support",
+            "Real-time error reporting",
+            "Line number error tracking",
+            "Privacy-focused client-side logic",
+            "No data storage"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "XSD Validation Tool",
+          "description": "Professional-grade XML compliance tool for verifying documents against schema definitions.",
+          "image": "assets/xml-schema-validator.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "XML Tools"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="container-layout">
+        <div id="sidebar-placeholder"></div>
+        
+        <main class="main-content">
+            <div class="tool-header">
+                <h1 class="page-title">🛡️ XML Schema Validator</h1>
+                <p class="page-subtitle">Validate XML instances against XSD definitions</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="tool-controls">
+                    <button id="validate-btn" class="btn btn-primary">Validate Now</button>
+                    <button id="clear-btn" class="btn btn-secondary">Clear All</button>
+                </div>
+
+                <div class="io-container">
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>XML Instance</h3>
+                            <button id="paste-xml-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xml-input" placeholder="Paste your XML document here..." spellcheck="false"></textarea>
+                    </div>
+
+                    <div class="input-section">
+                        <div class="section-header">
+                            <h3>XSD Schema</h3>
+                            <button id="paste-xsd-btn" class="btn-small">Paste</button>
+                        </div>
+                        <textarea id="xsd-input" placeholder="Paste your XSD schema here..." spellcheck="false"></textarea>
+                    </div>
+                </div>
+
+                <div id="validation-result" class="result-panel" style="display: none; margin-top: 20px; padding: 1.5rem; border: 3px solid var(--black);">
+                    <h3 id="result-status"></h3>
+                    <p id="result-details" style="font-family: monospace; white-space: pre-wrap; margin-top: 10px;"></p>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <section class="content-section">
+                <h2 class="section-title">Understanding XML Validation</h2>
+                <div class="description-content">
+                    <p>Validation is the process of checking whether an XML document conforms to a specific <strong>XML Schema Definition (XSD)</strong>. While a "well-formed" XML document only follows basic syntax rules, a "valid" document must adhere to the data types, elements, and attributes defined in its schema.</p>
+                    
+                    
+                    
+                    <h3>Why Validate?</h3>
+                    <ul>
+                        <li><strong>Data Integrity:</strong> Ensures that required fields are present and contain correct data formats.</li>
+                        <li><strong>API Compliance:</strong> Verifies that data sent between systems meets agreed-upon specifications.</li>
+                        <li><strong>Structure Enforcement:</strong> Guarantees that elements appear in the correct sequence.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div id="alltools-placeholder"></div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="app.js"></script>
+    <script src="tools/xml-schema-validator.js"></script>
+</body>
+</html>
