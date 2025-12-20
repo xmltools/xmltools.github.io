@@ -87,6 +87,19 @@ body {
   gap: var(--spacing-sm);
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
+}
+
 .logo {
   width: 48px;
   height: 48px;
@@ -691,13 +704,13 @@ body {
     flex-direction: column;
   }
 
-  .sidebar {
+  .layout .sidebar {
     position: static;
     margin-bottom: var(--spacing-lg);
     order: 2;
   }
 
-  .main-content {
+  .layout .main-content {
     order: 1;
   }
 
