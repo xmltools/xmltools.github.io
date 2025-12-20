@@ -1259,7 +1259,16 @@ textarea:focus {
 /* Responsive for Tool Pages */
 @media (max-width: 1024px) {
   .container-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-layout .sidebar {
+    order: 2;
+  }
+
+  .container-layout .main-content {
+    order: 1;
   }
 
   .io-container {
