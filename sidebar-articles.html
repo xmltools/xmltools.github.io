@@ -1,98 +1,50 @@
-<div class="sidebar-content">
-    <div class="sidebar-section">
-        <h3 class="sidebar-title">FEATURED ARTICLES</h3>
-        <div class="sidebar-menu">
-            <a href="mastering-xml.html" class="sidebar-article-link">
-                <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800" alt="XML Basics" class="thumb">
-                <div class="article-info">
-                    <span class="article-text">Mastering XML: Basics to Advanced</span>
-                    <span class="article-meta">Jan 15, 2026</span>
-                </div>
-            </a>
-            <a href="xml-vs-json.html" class="sidebar-article-link">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800" alt="JSON vs XML" class="thumb">
-                <div class="article-info">
-                    <span class="article-text">XML vs JSON: Format Comparison</span>
-                    <span class="article-meta">Jan 12, 2026</span>
-                </div>
-            </a>
-            <a href="xpath-tutorial.html" class="sidebar-article-link">
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800" alt="XPath Tutorial" class="thumb">
-                <div class="article-info">
-                    <span class="article-text">Demystifying XPath Navigation</span>
-                    <span class="article-meta">Jan 10, 2026</span>
-                </div>
-            </a>
+<aside class="right-sidebar">
+    <div id="articles-sidebar-container" class="sidebar-content">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">FEATURED ARTICLES</h3>
+            <div class="sidebar-menu">
+                <a href="mastering-xml.html" class="sidebar-article-link">
+                    <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800" alt="XML Basics" class="thumb">
+                    <div class="article-info">
+                        <span class="article-text">Mastering XML: Basics to Advanced</span>
+                        <span class="article-meta">Jan 15, 2026</span>
+                    </div>
+                </a>
+                <a href="xml-vs-json.html" class="sidebar-article-link">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800" alt="JSON vs XML" class="thumb">
+                    <div class="article-info">
+                        <span class="article-text">XML vs JSON: Format Comparison</span>
+                        <span class="article-meta">Jan 12, 2026</span>
+                    </div>
+                </a>
+                <a href="xpath-tutorial.html" class="sidebar-article-link">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800" alt="XPath Tutorial" class="thumb">
+                    <div class="article-info">
+                        <span class="article-text">Demystifying XPath Navigation</span>
+                        <span class="article-meta">Jan 10, 2026</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">POPULAR POSTS</h3>
+            <div class="sidebar-menu">
+                <a href="top-10-tools.html" class="sidebar-article-link">
+                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=800" alt="Web Services" class="thumb">
+                    <div class="article-info">
+                        <span class="article-text">Top 10 XML Developer Tools</span>
+                        <span class="article-meta">Jan 08, 2026</span>
+                    </div>
+                </a>
+                <a href="optimizing-performance.html" class="sidebar-article-link">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800" alt="Code Performance" class="thumb">
+                    <div class="article-info">
+                        <span class="article-text">Optimizing XML Performance</span>
+                        <span class="article-meta">Jan 05, 2026</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-
-    <div class="sidebar-section">
-        <h3 class="sidebar-title">POPULAR POSTS</h3>
-        <div class="sidebar-menu">
-            <a href="top-10-tools.html" class="sidebar-article-link">
-                <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=800" alt="Web Services" class="thumb">
-                <div class="article-info">
-                    <span class="article-text">Top 10 XML Developer Tools</span>
-                    <span class="article-meta">Jan 08, 2026</span>
-                </div>
-            </a>
-            <a href="optimizing-performance.html" class="sidebar-article-link">
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800" alt="Code Performance" class="thumb">
-                <div class="article-info">
-                    <span class="article-text">Optimizing XML Performance</span>
-                    <span class="article-meta">Jan 05, 2026</span>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-
-<style>
-/* Sidebar Article Specific Styles */
-.sidebar-article-link {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-xs);
-    margin-bottom: var(--spacing-sm);
-    text-decoration: none;
-    color: var(--black);
-    border: 3px solid transparent;
-    border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
-}
-
-.sidebar-article-link:hover {
-    background: var(--yellow);
-    border-color: var(--black);
-    transform: translateX(5px);
-}
-
-.sidebar-article-link .thumb {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border: 2px solid var(--black);
-    border-radius: var(--radius-sm);
-    flex-shrink: 0;
-}
-
-.article-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar-article-link .article-text {
-    font-size: 0.875rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 2px;
-}
-
-.sidebar-article-link .article-meta {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--gray-medium);
-    text-transform: uppercase;
-}
-</style>
+</aside>
