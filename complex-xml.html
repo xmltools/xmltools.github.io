@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8570XQ6PQ4');
+    </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://xmltools.github.io/complex-xml"
+  },
+  "headline": "Demystifying XPath: Navigating Complex XML Documents",
+  "description": "A technical guide to using XPath for querying and navigating complex XML tree structures efficiently.",
+  "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800",
+  "author": {
+    "@type": "Organization",
+    "name": "XML Tools"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "XML Tools",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://xmltools.github.io/assets/favicon.jpg"
+    }
+  },
+  "datePublished": "2026-01-10",
+  "dateModified": "2026-01-10"
+}
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Demystifying XPath: Navigating Complex XML Documents | XML Tools</title>
+    <meta name="description" content="Learn how to use XPath to navigate and query complex XML data structures. Master axes, predicates, and functions for efficient data extraction.">
+    <meta name="author" content="XML Tools">
+    
+    <meta property="og:title" content="Demystifying XPath: Navigating Complex XML Documents">
+    <meta property="og:description" content="Master the art of XML navigation. A deep dive into XPath axes and logic.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://xmltools.github.io/complex-xml">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .three-column-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 300px;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .article-body {
+            background: var(--cream-white);
+            border: 6px solid var(--black);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-brutal);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border: 4px solid var(--black);
+            border-radius: var(--radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .code-block {
+            background: var(--black);
+            color: var(--yellow);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: var(--spacing-md) 0;
+            border-left: 8px solid var(--purple);
+        }
+
+        @media (max-width: 1200px) {
+            .three-column-layout { grid-template-columns: 280px 1fr; }
+            .right-sidebar { display: none; }
+        }
+
+        @media (max-width: 900px) {
+            .three-column-layout { display: flex; flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="container">
+        <div class="three-column-layout">
+            <aside id="sidebar-container" class="sidebar"></aside>
+            
+            <article class="main-content">
+                <div class="article-body">
+                    <span class="post-meta" style="font-weight:900; color:var(--blue); text-transform:uppercase;">Published: January 10, 2026</span>
+                    <h1 class="page-title">Demystifying XPath: Navigating Complex XML Documents</h1>
+                    
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800" alt="Complex logic and code" class="featured-image">
+
+                    <div class="description-content">
+                        <p>When XML documents grow in size and complexity, simple tag searching isn't enough. XPath (XML Path Language) provides a powerful syntax for selecting nodes within an XML document by navigating through its tree structure.</p>
+                        
+                        <h3>Understanding XPath Axes</h3>
+                        <p>Axes allow you to find nodes based on their relationship to the current node. This is essential for deep-nested data structures where position matters.</p>
+                        
+                        
+
+                        <ul>
+                            <li><strong>child::</strong> Selects all children of the current node.</li>
+                            <li><strong>parent::</strong> Selects the parent of the current node.</li>
+                            <li><strong>descendant::</strong> Selects all descendants (children, grandchildren, etc.).</li>
+                            <li><strong>following-sibling::</strong> Selects all nodes after the current node at the same level.</li>
+                        </ul>
+
+                        <h3>Using Predicates for Precision</h3>
+                        <p>Predicates are used to find a specific node or a node that contains a specific value. They are always embedded in square brackets.</p>
+                        
+                        <div class="code-block">
+                            //book[price > 35.00]/title
+                        </div>
+
+                        <p>In the example above, the XPath query selects the titles of all books that have a price greater than 35.00. Mastering these filters is the key to efficient data extraction from massive enterprise XML files.</p>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="right-sidebar">
+                <div id="articles-sidebar-container">
+                    </div>
+            </aside>
+        </div>
+    </main>
+    
+    <div id="footer-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>
