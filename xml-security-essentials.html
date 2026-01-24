@@ -8,7 +8,7 @@
       gtag('js', new Date());
       gtag('config', 'G-8570XQ6PQ4');
     </script>
- <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -94,6 +94,13 @@
             .three-column-layout {
                 display: flex;
                 flex-direction: column;
+            }
+            /* Fix: Force sidebar to bottom and article to top */
+            #sidebar-container {
+                order: 2;
+            }
+            .main-content {
+                order: 1;
             }
         }
     </style>
