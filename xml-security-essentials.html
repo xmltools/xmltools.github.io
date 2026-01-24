@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8570XQ6PQ4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>XML Security Essentials: Protecting Your Data | XML Tools</title>
+    <meta name="description" content="A guide to XML security. Learn how to defend against XXE attacks, implement XML Encryption, and use Digital Signatures.">
+    <meta name="author" content="XML Tools Team">
+    
+    <meta property="og:title" content="XML Security Essentials: Protecting Your Data">
+    <meta property="og:description" content="Critical security practices for XML, including preventing XXE attacks and securing data transmission.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://xmltools.github.io/xml-security-essentials">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800">
+    
+    <link rel="stylesheet" href="styles.css">    
+    <style>
+        .three-column-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 300px;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .article-body {
+            background: var(--cream-white);
+            border: 6px solid var(--black);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-brutal);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border: 4px solid var(--black);
+            border-radius: var(--radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .post-meta {
+            font-weight: 900;
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-xs);
+            display: block;
+        }
+
+        @media (max-width: 1200px) {
+            .three-column-layout {
+                grid-template-columns: 280px 1fr;
+            }
+            .right-sidebar { display: none; }
+        }
+
+        @media (max-width: 900px) {
+            .three-column-layout {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="container">
+        <div class="three-column-layout">
+            <aside id="sidebar-container" class="sidebar"></aside>
+            
+            <article class="main-content">
+                <div class="article-body">
+                    <span class="post-meta">Published: January 24, 2026</span>
+                    <h1 class="page-title">XML Security Essentials: Protecting Your Data</h1>
+                    
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" alt="Cybersecurity and data protection concept" class="featured-image">
+
+                    <div class="description-content">
+                        <p>As XML powers critical financial and healthcare systems, its security cannot be an afterthought. Because XML parsers are highly flexible, they can be vulnerable to specific exploits if not properly configured.</p>
+                        
+                        <h3>Preventing XXE (XML External Entity) Attacks</h3>
+                        <p>One of the most common threats is the XXE attack, where an attacker includes a reference to an external entity to disclose local files or perform Server-Side Request Forgery (SSRF). Disabling DTDs (Document Type Definitions) is the most effective defense.</p>
+                        
+                        <pre><code>// Example: Disabling DTDs in a Java DocumentBuilderFactory
+dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);</code></pre>
+
+                        <h3>Encryption and Digital Signatures</h3>
+                        <p>To ensure data integrity and confidentiality, developers use <strong>XML Encryption (XMLEnc)</strong> to hide sensitive portions of a document and <strong>XML Signature (XMLDSig)</strong> to verify the sender's identity and ensure the content hasn't been tampered with.</p>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="right-sidebar">
+                <div id="articles-sidebar-container" class="sidebar-content">
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <div id="footer-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>
