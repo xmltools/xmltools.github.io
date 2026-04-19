@@ -3,9 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - XML Tools</title>
-    <link rel="stylesheet" href="styles.css">    
-   
+    <title>Contact Us | XML Tools – Get in Touch with Waqas Bukhari</title>
+    <meta name="description" content="Contact XML Tools support. Reach out to Waqas Bukhari (Developer & SEO Expert) for feature requests, bug reports, collaborations, or any inquiries. Fast response guaranteed.">
+    <meta name="author" content="Waqas Bukhari">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* additional inline styling for contact page consistency */
+        .container-layout {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .main-content {
+            flex: 3;
+            min-width: 260px;
+        }
+        #sidebar-placeholder {
+            flex: 1;
+            min-width: 200px;
+        }
+        .tool-header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 1rem;
+        }
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #334155;
+        }
+        .tool-interface {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            padding: 2rem;
+            transition: all 0.2s ease;
+        }
+        .control-group, .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .control-group label, .input-section label {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 0.9rem;
+            letter-spacing: -0.2px;
+        }
+        .select-input, .input-section input, .input-section textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.75rem;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            font-family: inherit;
+            background: #fefefe;
+        }
+        .select-input:focus, .input-section textarea:focus, .input-section input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 0.85rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.05s;
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: scale(0.99);
+        }
+        .contact-card {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.2rem;
+            margin-top: 2rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .contact-card p {
+            margin: 0.3rem 0;
+            color: #1e293b;
+        }
+        .contact-card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            background: #ef4444;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        .success-message {
+            background: #10b981;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .container-layout { flex-direction: column; }
+            .tool-interface { padding: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -14,40 +139,116 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">✉️ Contact Us</h1>
-                <p class="page-subtitle">Have a suggestion or found a bug? Let us know.</p>
+                <p class="page-subtitle">Have a suggestion, bug report, or partnership idea? Let's connect.</p>
             </div>
 
-            <div class="tool-interface" style="max-width: 600px; margin: 0 auto;">
-                <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+            <div class="tool-interface">
+                <form id="contact-form" style="display: flex; flex-direction: column; gap: 0px;">
                     <div class="control-group">
-                        <label>Your Email:</label>
-                        <input type="email" class="select-input" placeholder="developer@example.com" required>
+                        <label>Your Name *</label>
+                        <input type="text" class="select-input" id="contact-name" placeholder="e.g., Alex Johnson" required>
                     </div>
                     <div class="control-group">
-                        <label>Subject:</label>
-                        <input type="text" class="select-input" placeholder="Feature Request" required>
+                        <label>Your Email *</label>
+                        <input type="email" class="select-input" id="contact-email" placeholder="hello@example.com" required>
+                    </div>
+                    <div class="control-group">
+                        <label>Subject *</label>
+                        <input type="text" class="select-input" id="contact-subject" placeholder="Feature Request / Bug Report / Collaboration" required>
                     </div>
                     <div class="input-section">
-                        <label>Message:</label>
-                        <textarea style="min-height: 150px;" placeholder="Tell us how we can improve..." required></textarea>
+                        <label>Message *</label>
+                        <textarea id="contact-message" style="min-height: 140px;" placeholder="Tell us how we can improve XML Tools, report an issue, or just say hi..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Send Message ✨</button>
                 </form>
-                <div id="form-status" style="margin-top: 20px; display: none;" class="error-message"></div>
+                <div id="form-status" style="margin-top: 1.5rem; display: none;"></div>
+                
+                <!-- Developer & SEO Expert contact info card -->
+                <div class="contact-card">
+                    <p>🔧 <strong>Managed by Waqas Bukhari</strong> — Developer & SEO Expert</p>
+                    <p>📧 Direct inquiries: <a href="mailto:nolushac@gmail.com">nolushac@gmail.com</a></p>
+                    <p>🌐 Available for technical consulting, XML tooling feedback, and SEO audits.</p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">⚡ Response within 24-48 hours on business days.</p>
+                </div>
             </div>
         </main>
     </div>
     <div id="footer-placeholder"></div>
     <script src="app.js"></script>
     <script>
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const status = document.getElementById('form-status');
-            status.style.display = 'block';
-            status.style.background = 'var(--green)';
-            status.style.color = 'white';
-            status.textContent = 'Message sent successfully! (Demo only)';
-        });
+        (function() {
+            const form = document.getElementById('contact-form');
+            const statusDiv = document.getElementById('form-status');
+            
+            async function handleSubmit(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('contact-name').value.trim();
+                const email = document.getElementById('contact-email').value.trim();
+                const subject = document.getElementById('contact-subject').value.trim();
+                const message = document.getElementById('contact-message').value.trim();
+                
+                // Basic validation
+                if (!name || !email || !subject || !message) {
+                    statusDiv.style.display = 'block';
+                    statusDiv.className = 'error-message';
+                    statusDiv.textContent = '❌ Please fill in all fields before sending.';
+                    setTimeout(() => {
+                        statusDiv.style.display = 'none';
+                    }, 4000);
+                    return;
+                }
+                
+                if (!email.includes('@') || !email.includes('.')) {
+                    statusDiv.style.display = 'block';
+                    statusDiv.className = 'error-message';
+                    statusDiv.textContent = '📧 Please enter a valid email address.';
+                    setTimeout(() => {
+                        statusDiv.style.display = 'none';
+                    }, 4000);
+                    return;
+                }
+                
+                // Simulate email sending (client-side demo with mailto fallback + success simulation)
+                // Since this is a static frontend, we'll show success and also prepare a mailto link for actual contact.
+                // This gives the user the option to directly email Waqas Bukhari (nolushac@gmail.com) with pre-filled data.
+                const mailtoLink = `mailto:nolushac@gmail.com?subject=${encodeURIComponent(`[XML Tools] ${subject}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                
+                statusDiv.style.display = 'block';
+                statusDiv.className = 'success-message';
+                statusDiv.innerHTML = `✅ Message ready! <strong>${name}</strong>, your request has been prepared. <br> 📨 <a href="${mailtoLink}" style="color: white; text-decoration: underline;">Click here to send via email</a> (or we'll simulate delivery).`;
+                
+                // Additionally, log to console for developer
+                console.log('Contact form submitted by:', name, email);
+                console.log('Mailto preview:', mailtoLink);
+                
+                // Optionally reset after 6 seconds? no, but keep the message visible
+                // Also provide secondary notice
+                setTimeout(() => {
+                    if (statusDiv.className === 'success-message') {
+                        // add small note after a while
+                        const existingNote = statusDiv.querySelector('.extra-note');
+                        if (!existingNote) {
+                            const note = document.createElement('div');
+                            note.className = 'extra-note';
+                            note.style.fontSize = '0.85rem';
+                            note.style.marginTop = '8px';
+                            note.innerHTML = '🔔 You can also copy the email address: <strong>nolushac@gmail.com</strong>';
+                            statusDiv.appendChild(note);
+                        }
+                    }
+                }, 2000);
+                
+                // Clear only status after very long period? we keep but not automatically remove to preserve mailto option.
+                // Do not reset form to allow resubmit if needed, but user can edit.
+            }
+            
+            if (form) {
+                form.addEventListener('submit', handleSubmit);
+            }
+        })();
     </script>
 </body>
 </html>
