@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - XML Tools</title>
-    <meta name="description" content="Privacy Policy for XML Tools. We value your privacy: all XML processing happens locally in your browser.">
-    <link rel="stylesheet" href="styles.css">  
-    
+    <title>Privacy Policy | XML Tools – Zero Data Collection, Local Processing</title>
+    <meta name="description" content="XML Tools Privacy Policy: no server-side collection, all XML/JSON processing stays in your browser. Read about local storage, cookies, and your absolute data ownership.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container-layout { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 2rem; }
+        .main-content { flex: 3; min-width: 260px; }
+        #sidebar-placeholder { flex: 1; min-width: 200px; }
+        .tool-header { margin-bottom: 2rem; border-bottom: 2px solid #e9ecef; padding-bottom: 1rem; }
+        .page-title { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 0.5rem; color: #0f172a; }
+        .page-subtitle { font-size: 1.1rem; color: #334155; }
+        .content-section { background: #ffffff; border-radius: 1rem; box-shadow: 0 6px 14px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.03); padding: 1.8rem; }
+        .description-content h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1.8rem; margin-bottom: 0.8rem; color: #0c4a6e; border-left: 4px solid #0891b2; padding-left: 1rem; }
+        .description-content h3:first-of-type { margin-top: 0; }
+        .description-content p { line-height: 1.6; color: #1e293b; margin-bottom: 1.1rem; }
+        .description-content ul { margin: 0.5rem 0 1.2rem 1.8rem; }
+        .description-content li { margin: 0.4rem 0; }
+        .description-content code { background: #eef2ff; padding: 0.2rem 0.45rem; border-radius: 6px; font-size: 0.9rem; font-family: monospace; color: #0f3b5c; }
+        .privacy-badge { background: #ecfdf5; border-left: 4px solid #10b981; padding: 1rem; border-radius: 12px; margin: 1.5rem 0; font-weight: 500; }
+        .legal-note { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.85rem; color: #475569; text-align: center; }
+        @media (max-width: 768px) { .container-layout { flex-direction: column; } .content-section { padding: 1.2rem; } }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -15,21 +32,49 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">🔒 Privacy Policy</h1>
-                <p class="page-subtitle">Your data never leaves your computer.</p>
+                <p class="page-subtitle">Your privacy is non-negotiable. Zero server-side logging, zero data retention.</p>
             </div>
 
             <section class="content-section">
                 <div class="description-content">
-                    <h3>1. No Data Collection</h3>
-                    <p>At XML Tools, we believe in absolute privacy. We do not collect, store, or share any of the XML, JSON, or HTML data you paste into our tools. All processing is performed client-side using JavaScript.</p>
+                    <div class="privacy-badge">
+                        ✅ <strong>Client-side first promise:</strong> All XML, JSON, HTML, and text transformations happen inside your browser. No uploads — no tracking of your sensitive data.
+                    </div>
                     
+                    <h3>1. Our Commitment to Absolute Privacy</h3>
+                    <p>XML Tools (“we”, “us”, “our”) operates under a strict zero-knowledge architecture. We do not operate any backend servers that receive, process, store, or log the XML, JSON, XSLT, HTML, or any other data you submit through our validators, formatters, editors, or converters. Every operation — including validation, formatting, minification, tree visualization, XPath evaluation, and schema validation — is executed entirely client-side using JavaScript and WebAssembly where applicable. Your files and pasted content <strong>never leave your device</strong>.</p>
+
+                    <h3>2. No Data Collection & Serverless Architecture</h3>
+                    <p>We explicitly do not collect, store, sell, or share any personal data, usage metadata tied to your content, or processed documents. There are no registration requirements, no user profiles, and no analytics that trace specific XML structures back to you. Even error logs (if any) are anonymized and exclude any identifiable content or file fragments. Our hosting infrastructure only serves static assets (HTML, CSS, JS, images) and does not process API requests containing user documents. Therefore, we cannot access, disclose, or lose your data because we simply never receive it.</p>
+
+                    <h3>3. Local Storage & Browser Persistence</h3>
+                    <p>To improve your experience, some tools — such as the XML Editor, JSON Diff, or session-aware formatters — may optionally store your work-in-progress or editor settings using browser storage mechanisms: <code>localStorage</code>, <code>sessionStorage</code>, or <code>IndexedDB</code>. This data stays exclusively on your device and is never transmitted to XML Tools servers. You can clear this data at any time via your browser’s “Clear Site Data” or “Delete Local Storage” options. We have no ability to retrieve, view, or recover this information. XML Tools does not use any third-party storage or cloud sync features unless you explicitly initiate an export or save-to-file action.</p>
+
+                    <h3>4. Cookies and Anonymous Analytics</h3>
+                    <p>We respect your right to choose. XML Tools uses <strong>minimal, privacy-preserving analytics</strong> to understand general traffic patterns — such as number of visits, page views, and aggregate tool usage — without creating individual profiles. We do not use persistent tracking cookies for advertising, remarketing, or cross-site tracking. Any analytics implemented are either self-hosted (e.g., plausible, umami, or similar cookieless analytics) or configured to mask IP addresses and avoid collecting any part of your input data. You can block all cookies via browser settings without affecting tool functionality. Third-party cookies are never placed by XML Tools.</p>
+
+                    <h3>5. Children’s Privacy</h3>
+                    <p>Our services are not directed to individuals under the age of 13, and we do not knowingly collect any personal information from children. Since we collect no data at all, no special treatment is required, but we encourage parents and guardians to supervise children’s online activities. If you believe a child under 13 has inadvertently sent us any information, please contact us, and we will ensure no residual data remains (though again, our server logs contain no user content).</p>
+
+                    <h3>6. Data Retention & Your Ownership</h3>
+                    <p>Because we do not store any files on our servers, the concept of data retention does not apply to your documents. Any XML or JSON that you process is held temporarily in your browser’s memory only during the active session. Once you close the tab or refresh the page, the data is cleared from RAM. For features using <code>localStorage</code>, that data persists only until you or your browser deletes it. You retain full ownership, copyright, and control over any data processed using XML Tools. We claim no intellectual property rights over your inputs, outputs, or transformed files.</p>
+
+                    <h3>7. Third-Party Links & Embedded Services</h3>
+                    <p>Our website may contain links to external resources, documentation, or open-source projects for reference. Once you leave XML Tools, this Privacy Policy no longer applies. We are not responsible for the privacy practices or content of third-party websites. Additionally, our tools never embed external scripts that could exfiltrate your data. All dependencies (like syntax highlighters or XML parsers) are loaded from trusted CDNs with integrity checks, but they still execute client-side; nonetheless, we recommend reviewing their privacy policies if you have concerns.</p>
+
+                    <h3>8. Security Measures</h3>
+                    <p>While your data never traverses our network, we secure the delivery of our website via HTTPS/TLS encryption to prevent man-in-the-middle attacks. We also employ Content Security Policy (CSP) headers to mitigate cross-site scripting (XSS) and other injection risks. However, as with any web application, you should ensure your browser and operating system are up-to-date. XML Tools cannot be held liable for local malware or browser vulnerabilities that compromise your local environment.</p>
+
+                    <h3>9. Changes to This Privacy Policy</h3>
+                    <p>We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory changes. The “Last Updated” date at the bottom of this page will indicate when the latest revision occurred. In case of material changes that affect the core promise of zero-data-collection, we will notify users via a notice on our homepage or a banner. Your continued use of XML Tools after such modifications constitutes acknowledgment of the updated policy.</p>
+
+                    <h3>10. Your Rights & Contact</h3>
+                    <p>Given our complete absence of data collection, there is no personal information to access, rectify, erase, or port. Nonetheless, if you have any concerns, questions, or requests related to privacy, please reach out to our Data Protection Officer (DPO) at <strong>nolushac@gmail.com</strong>. We will respond within a reasonable timeframe. For verified requests concerning any residual metadata (e.g., anonymized usage counters), we will provide transparency reports upon request. You also have the right to lodge a complaint with your local data protection authority, though our compliance with GDPR/CCPA is inherent due to processing zero personal data.</p>
                     
-
-                    <h3>2. Local Storage</h3>
-                    <p>Some tools (like the XML Editor) may use your browser's <code>localStorage</code> to save your progress. This data stays on your device and is never transmitted to us.</p>
-
-                    <h3>3. Cookies and Analytics</h3>
-                    <p>We may use minimal, privacy-compliant analytics to understand site traffic. These do not track your personal data or the content you process.</p>
+                    <p><strong>Summary for GDPR/CCPA visitors:</strong> XML Tools acts as a “processor” only in name — since no data is collected, there is no controller-to-processor relationship. Your data is never exposed to us. For absolute peace of mind, use our tools offline by downloading the repository; we are 100% transparent.</p>
+                </div>
+                <div class="legal-note">
+                    🔒 Last revised: April 19, 2026 — No data, no tracking, no surprises.
                 </div>
             </section>
         </main>
