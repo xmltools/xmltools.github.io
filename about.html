@@ -3,17 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - XML Tools</title>
+    <title>About XML Tools | Waqas Bukhari – Developer & SEO Expert</title>
+    <meta name="description" content="Learn about XML Tools – a privacy-first suite of 23+ XML utilities built by Waqas Bukhari, Developer and SEO Expert. Client-side processing, brutalist design, and 100% security.">
+    <meta name="author" content="Waqas Bukhari">
     <link rel="stylesheet" href="styles.css">
-    
+    <style>
+        .container-layout {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .main-content {
+            flex: 3;
+            min-width: 260px;
+        }
+        #sidebar-placeholder {
+            flex: 1;
+            min-width: 200px;
+        }
+        .tool-header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 1rem;
+        }
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0b2b3b;
+        }
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #4a627a;
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+            padding: 1.8rem;
+        }
+        .description-content p {
+            line-height: 1.6;
+            color: #2c3e4e;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+        .description-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #0f3b5c;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+        .step-card {
+            flex: 1;
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.6rem;
+            text-align: center;
+            transition: all 0.2s;
+            border: 1px solid #eef2ff;
+        }
+        .step-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .step-card h3 {
+            font-size: 1.4rem;
+            margin: 0.5rem 0;
+            color: #1e293b;
+            border-left: none;
+            padding-left: 0;
+        }
+        .step-card p {
+            color: #475569;
+        }
+        .creator-badge {
+            background: linear-gradient(135deg, #eef2ff 0%, #ffffff 100%);
+            border-radius: 1rem;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0 0.5rem;
+            border: 1px solid #cbdff2;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .creator-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .creator-icon {
+            font-size: 2.5rem;
+        }
+        .creator-text strong {
+            font-size: 1.2rem;
+            color: #0f172a;
+        }
+        .creator-text p {
+            margin: 0;
+            color: #334155;
+        }
+        .creator-email a {
+            background: #1e293b;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            transition: 0.2s;
+            display: inline-block;
+        }
+        .creator-email a:hover {
+            background: #2563eb;
+        }
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            justify-content: space-between;
+        }
+        .stat-item {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 0.8rem 1.2rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            flex: 1;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2563eb;
+        }
+        @media (max-width: 768px) {
+            .container-layout { flex-direction: column; }
+            .steps-container { flex-direction: column; }
+            .creator-badge { flex-direction: column; text-align: center; }
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
+      "name": "About XML Tools",
+      "description": "XML Tools is a collection of privacy-first XML utilities built by Waqas Bukhari, developer and SEO expert. All tools run client-side with zero tracking.",
       "mainEntity": {
-        "@type": "Organization",
-        "name": "XML Tools",
-        "description": "A collection of 23+ lightweight, privacy-focused XML utilities for developers."
+        "@type": "Person",
+        "name": "Waqas Bukhari",
+        "jobTitle": "Developer & SEO Expert",
+        "email": "nolushac@gmail.com",
+        "url": "https://xmltools.com/about",
+        "knowsAbout": ["XML technologies", "Frontend development", "SEO optimization", "Web performance"]
       }
     }
     </script>
@@ -25,28 +186,65 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">🚀 About XML Tools</h1>
-                <p class="page-subtitle">Built for developers, by developers.</p>
+                <p class="page-subtitle">Built for developers, by a developer & SEO expert — privacy-first, fast, and reliable.</p>
             </div>
 
             <section class="content-section">
                 <div class="description-content">
-                    <p>XML Tools was created to provide a fast, no-nonsense environment for handling XML data. Tired of bloated tools with heavy tracking, we built this platform using <strong>Brutalist Design</strong> principles: speed, functionality, and transparency.</p>
+                    <p><strong>XML Tools</strong> was born from a simple frustration: most online XML utilities are bloated, slow, and riddled with trackers. That's why <strong>Waqas Bukhari</strong> (Developer & SEO Expert) created a complete suite of client-side tools that respect your privacy while delivering instant performance. No uploads, no server logs, no hidden costs — just pure XML, JSON, and HTML processing directly inside your browser.</p>
                     
                     <h3>Our Mission</h3>
-                    <p>To provide the most comprehensive suite of XML utilities on the web while maintaining 100% client-side security.</p>
+                    <p>To provide the most comprehensive, lightning-fast suite of XML utilities on the web while maintaining 100% client-side security and zero data retention. Whether you're a developer debugging complex XSLT, a data analyst reformatting huge XML feeds, or a student learning XML Schema — our tools are designed to empower you without compromising confidentiality.</p>
                     
+                    <div class="stats-row">
+                        <div class="stat-item"><div class="stat-number">23+</div><div>XML/HTML Tools</div></div>
+                        <div class="stat-item"><div class="stat-number">100%</div><div>Client-side</div></div>
+                        <div class="stat-item"><div class="stat-number">0</div><div>Tracking scripts</div></div>
+                    </div>
+
                     <div class="steps-container">
                         <div class="step-card">
                             <div class="step-number">⚡</div>
-                            <h3>Fast</h3>
-                            <p>No server round-trips. Instant results.</p>
+                            <h3>Blazing Fast</h3>
+                            <p>No server round-trips. Process megabytes of XML locally with sub-second validation and formatting.</p>
                         </div>
                         <div class="step-card">
                             <div class="step-number">🛡️</div>
-                            <h3>Secure</h3>
-                            <p>Browser-only processing for total privacy.</p>
+                            <h3>Bank-Level Privacy</h3>
+                            <p>Your XML never leaves your device. Perfect for sensitive data like legal docs, financial records, or proprietary schemas.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">🎨</div>
+                            <h3>Brutalist Design</h3>
+                            <p>No fluff, no distractions. Every button, every formatter, every validator is built for maximum utility and minimalism.</p>
                         </div>
                     </div>
+                    
+                    <h3>Why XML Tools stands out</h3>
+                    <p>Unlike other platforms that secretly upload your data to unknown servers, we've built everything using modern Web APIs: native XML parsers, XPath evaluators, XSLT processors, and JSON converters — all running inside a sandboxed environment. Even advanced features like XML to JSON conversion, minification, and syntax highlighting happen offline. Additionally, Waqas Bukhari (SEO specialist) ensures the platform follows best-in-class performance metrics and core web vitals, making XML Tools fast even on slow connections.</p>
+                    
+                    <h3>Who is behind XML Tools?</h3>
+                    <p><strong>Waqas Bukhari</strong> — a seasoned full-stack developer and certified SEO expert with over 8 years of experience in web technologies. Waqas has contributed to open-source XML tooling, built enterprise-level data transformation pipelines, and now focuses on creating ethical, no-tracking utilities for the global dev community. With a passion for clean code and transparent privacy policies, XML Tools represents his commitment to a better web.</p>
+                    
+                    <!-- Creator badge with direct contact info as provided -->
+                    <div class="creator-badge">
+                        <div class="creator-info">
+                            <div class="creator-icon">👨‍💻</div>
+                            <div class="creator-text">
+                                <strong>Waqas Bukhari</strong>
+                                <p>Developer & SEO Expert | XML & Web Performance Advocate</p>
+                                <p style="font-size: 0.85rem;">📧 nolushac@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="creator-email">
+                            <a href="mailto:nolushac@gmail.com?subject=XML%20Tools%20Inquiry">✉️ Contact Waqas</a>
+                        </div>
+                    </div>
+                    
+                    <h3>Open Source & Future Vision</h3>
+                    <p>XML Tools is continuously evolving. Upcoming features include: advanced XQuery sandbox, diff/merge for XML documents, CSV-to-XML converter, and real-time schema validation (XSD). We also plan to release a PWA version for offline use. Since privacy is core, all future features will remain client-side. Contributions, feedback, and bug reports are always welcome — reach out directly to Waqas via email: <strong>nolushac@gmail.com</strong>.</p>
+                    
+                    <p style="margin-top: 1.2rem; font-style: italic; border-left: 2px solid #cbd5e1; padding-left: 1rem;">“Your data belongs to you. Our code just helps you shape it.” — Waqas Bukhari</p>
                 </div>
             </section>
         </main>
