@@ -1,151 +1,861 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9759808041159779"
-     crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9759808041159779" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8570XQ6PQ4');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xmltools.github.io/xml-security-essentials"},
+    "headline": "XML Security Essentials: Protecting Your Data from XXE, Injection, and More",
+    "description": "A comprehensive guide to XML security. Learn how to prevent XXE attacks, XML injection, billion laughs DoS attacks, and implement XML encryption and digital signatures.",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200",
+    "author": {"@type": "Organization", "name": "XML Tools"},
+    "publisher": {"@type": "Organization", "name": "XML Tools", "logo": {"@type": "ImageObject", "url": "https://xmltools.github.io/assets/favicon.jpg"}},
+    "datePublished": "2026-01-24",
+    "dateModified": "2026-04-19"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is an XXE attack?", "acceptedAnswer": {"@type": "Answer", "text": "An XXE (XML External Entity) attack exploits XML parsers that process external entity references. Attackers can use it to read local files, perform server-side request forgery (SSRF), or cause denial of service. The defense is to disable DTD processing in your XML parser."}},
+      {"@type": "Question", "name": "How do I prevent XML injection?", "acceptedAnswer": {"@type": "Answer", "text": "Prevent XML injection by validating and sanitizing all user-supplied input before embedding it in XML, escaping special characters (&, <, >, ', \"), using parameterized XML construction rather than string concatenation, and validating output against a strict XML schema."}},
+      {"@type": "Question", "name": "What is XML Signature used for?", "acceptedAnswer": {"@type": "Answer", "text": "XML Signature (XMLDSig) is used to digitally sign XML documents or specific portions of them. It verifies the signer's identity and ensures the signed content has not been tampered with. It is widely used in SAML, SOAP security, and financial data exchange."}},
+      {"@type": "Question", "name": "What is the Billion Laughs attack?", "acceptedAnswer": {"@type": "Answer", "text": "The Billion Laughs attack (also called XML bomb) is a denial-of-service attack that uses deeply nested entity expansions in a DTD to cause exponential memory consumption. A small XML file can expand to gigabytes in memory. The defense is to disable entity expansion or limit expansion depth."}}
+    ]
+  }
+  </script>
 
-  gtag('config', 'G-8570XQ6PQ4');
-</script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://xmltools.github.io/xml-security-essentials"
-  },
-  "headline": "XML Security Essentials: Protecting Your Data",
-  "description": "Learn critical security practices for XML, including preventing XXE attacks and securing data transmission.",
-  "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800",
-  "author": {
-    "@type": "Organization",
-    "name": "XML Tools"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "XML Tools",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://xmltools.github.io/assets/favicon.jpg"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XML Security Essentials: XXE, Injection &amp; Encryption Guide (2026) | XML Tools</title>
+  <meta name="description" content="The complete XML security guide for developers. Learn to prevent XXE attacks, XML injection, Billion Laughs DoS, and implement XML Encryption and Digital Signatures with practical code examples.">
+  <meta name="keywords" content="xml security, xxe attack, xml external entity, xml injection, xml encryption, xml digital signature, xmldsig, xmlenc, xml security vulnerabilities, xxe prevention 2026">
+  <meta name="author" content="XML Tools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://xmltools.github.io/xml-security-essentials">
+
+  <meta property="og:title" content="XML Security Essentials: XXE, Injection &amp; Encryption Guide (2026)">
+  <meta property="og:description" content="Prevent XXE attacks, XML injection, and DoS. Implement XML encryption and digital signatures.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://xmltools.github.io/xml-security-essentials">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr 280px;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      align-items: start;
     }
-  },
-  "datePublished": "2026-01-24",
-  "dateModified": "2026-01-24"
-}
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>XML Security Essentials: Protecting Your Data | XML Tools</title>
-    <meta name="description" content="A guide to XML security. Learn how to defend against XXE attacks, implement XML Encryption, and use Digital Signatures.">
-    <meta name="author" content="XML Tools Team">
-    
-    <meta property="og:title" content="XML Security Essentials: Protecting Your Data">
-    <meta property="og:description" content="Critical security practices for XML, including preventing XXE attacks and securing data transmission.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://xmltools.github.io/xml-security-essentials">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800">
-    
-    <link rel="stylesheet" href="styles.css">    
-    <style>
-        .three-column-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr 300px;
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-xl);
-        }
+    .article-body {
+      background: var(--cream-white);
+      border: 6px solid var(--black);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-brutal);
+    }
+    .featured-image {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      margin-bottom: var(--spacing-lg);
+      display: block;
+    }
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--spacing-md);
+    }
+    .meta-badge {
+      padding: 4px 12px;
+      border: 3px solid var(--black);
+      border-radius: var(--radius);
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .meta-date { background: var(--yellow); color: var(--black); }
+    .meta-read { background: var(--red); color: white; }
+    .meta-cat { background: var(--black); color: var(--cream-white); }
 
-        .article-body {
-            background: var(--cream-white);
-            border: 6px solid var(--black);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            box-shadow: var(--shadow-brutal);
-        }
+    .toc {
+      background: rgba(255,51,51,0.08);
+      border: 5px solid var(--red);
+      border-radius: var(--radius);
+      padding: var(--spacing-lg);
+      margin: var(--spacing-xl) 0;
+      box-shadow: 6px 6px 0 var(--black);
+    }
+    .toc-title { font-size: 1.25rem; font-weight: 900; margin-bottom: var(--spacing-md); border-bottom: 3px solid var(--black); padding-bottom: var(--spacing-xs); }
+    .toc ol { padding-left: 1.5rem; }
+    .toc li { margin-bottom: 0.5rem; }
+    .toc a { color: var(--black); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--black); }
+    .toc a:hover { background: var(--red); color: white; padding: 0 4px; }
 
-        .featured-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border: 4px solid var(--black);
-            border-radius: var(--radius);
-            margin-bottom: var(--spacing-lg);
-        }
+    /* Threat Level Badge */
+    .threat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border: 3px solid var(--black);
+      border-radius: var(--radius);
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-left: var(--spacing-sm);
+      vertical-align: middle;
+    }
+    .threat-critical { background: var(--red); color: white; }
+    .threat-high { background: #ff6600; color: white; }
+    .threat-medium { background: var(--yellow); color: var(--black); }
 
-        .post-meta {
-            font-weight: 900;
-            color: var(--blue);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: var(--spacing-xs);
-            display: block;
-        }
+    /* Attack cards */
+    .attack-card {
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 6px 6px 0 var(--black);
+      margin: var(--spacing-lg) 0;
+    }
+    .attack-header {
+      padding: var(--spacing-md) var(--spacing-lg);
+      background: var(--red);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .attack-header h3 { font-size: 1.25rem; font-weight: 900; margin: 0; color: white; }
+    .attack-body { padding: var(--spacing-lg); background: rgba(255,51,51,0.04); }
 
-        @media (max-width: 1200px) {
-            .three-column-layout {
-                grid-template-columns: 280px 1fr;
-            }
-            .right-sidebar { display: none; }
-        }
+    /* Defense card */
+    .defense-card {
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 6px 6px 0 var(--black);
+      margin: var(--spacing-lg) 0;
+    }
+    .defense-header {
+      padding: var(--spacing-md) var(--spacing-lg);
+      background: var(--green);
+      color: white;
+    }
+    .defense-header h3 { font-size: 1.25rem; font-weight: 900; margin: 0; color: white; }
+    .defense-body { padding: var(--spacing-lg); background: rgba(0,204,102,0.05); }
 
-        @media (max-width: 900px) {
-            .three-column-layout {
-                display: flex;
-                flex-direction: column;
-            }
-            /* Fix: Force sidebar to bottom and article to top */
-            #sidebar-container {
-                order: 2;
-            }
-            .main-content {
-                order: 1;
-            }
-        }
-    </style>
+    .code-block {
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 5px 5px 0 var(--black);
+      margin: var(--spacing-md) 0;
+    }
+    .code-header {
+      padding: var(--spacing-xs) var(--spacing-md);
+      font-weight: 900;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 3px solid var(--black);
+    }
+    .code-header.danger { background: var(--red); color: white; }
+    .code-header.safe { background: var(--green); color: white; }
+    .code-header.neutral { background: var(--black); color: var(--yellow); }
+    .code-block pre {
+      margin: 0;
+      padding: var(--spacing-md);
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: "Courier New", monospace;
+      font-size: 0.875rem;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    .callout {
+      padding: var(--spacing-lg);
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      margin: var(--spacing-lg) 0;
+    }
+    .callout-tip { background: rgba(0,204,102,0.1); border-color: var(--green); }
+    .callout-warn { background: rgba(255,51,51,0.08); border-color: var(--red); border-left-width: 8px; }
+    .callout-info { background: rgba(0,102,255,0.08); border-color: var(--blue); }
+    .callout-label {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 3px solid var(--black);
+      border-radius: var(--radius-sm);
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: var(--spacing-sm);
+    }
+    .callout-tip .callout-label { background: var(--green); color: white; }
+    .callout-warn .callout-label { background: var(--red); color: white; }
+    .callout-info .callout-label { background: var(--blue); color: white; }
+
+    /* Checklist */
+    .security-checklist {
+      list-style: none;
+      padding: 0;
+      margin: var(--spacing-md) 0;
+    }
+    .security-checklist li {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 3px solid var(--black);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--spacing-xs);
+      background: white;
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-sm);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .security-checklist li .check { font-size: 1.25rem; flex-shrink: 0; }
+    .security-checklist li.critical { border-left: 6px solid var(--red); }
+    .security-checklist li.high { border-left: 6px solid #ff6600; }
+    .security-checklist li.medium { border-left: 6px solid var(--yellow); }
+
+    /* Language tabs */
+    .lang-tabs { display: flex; gap: 0; border-bottom: 3px solid var(--black); margin-top: var(--spacing-lg); }
+    .lang-tab {
+      padding: 8px 20px;
+      border: 3px solid var(--black);
+      border-bottom: none;
+      font-weight: 900;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      background: var(--gray-light);
+      margin-right: -1px;
+    }
+    .lang-tab.active { background: var(--black); color: var(--yellow); }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+
+    .faq-item {
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      margin-bottom: var(--spacing-md);
+      overflow: hidden;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .faq-q {
+      padding: var(--spacing-md) var(--spacing-lg);
+      background: var(--black);
+      color: var(--cream-white);
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-q .faq-icon { font-size: 1.5rem; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      padding: var(--spacing-lg);
+      background: var(--cream-white);
+      display: none;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      border-top: 3px solid var(--black);
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    .internal-links {
+      background: var(--black);
+      color: var(--cream-white);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius);
+      margin: var(--spacing-xl) 0;
+      border: 5px solid var(--black);
+      box-shadow: 6px 6px 0 var(--red);
+    }
+    .internal-links h3 { font-size: 1.125rem; font-weight: 900; color: var(--yellow); margin-bottom: var(--spacing-md); letter-spacing: 1px; }
+    .internal-links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm); }
+    .internal-link-item {
+      display: block;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 3px solid var(--yellow);
+      border-radius: var(--radius-sm);
+      color: var(--cream-white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .internal-link-item:hover { background: var(--yellow); color: var(--black); transform: translateX(4px); }
+
+    .right-sidebar { position: sticky; top: 120px; height: fit-content; }
+    .rs-card {
+      background: var(--cream-white);
+      border: 5px solid var(--black);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-brutal);
+      margin-bottom: var(--spacing-lg);
+    }
+    .rs-title { font-size: 0.875rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-xs); border-bottom: 3px solid var(--yellow); }
+    .rs-link { display: block; padding: var(--spacing-sm) 0; border-bottom: 2px solid var(--gray-light); text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.875rem; line-height: 1.4; transition: color 0.2s; }
+    .rs-link:hover { color: var(--blue); }
+    .rs-link:last-child { border-bottom: none; }
+
+    .description-content h2 {
+      font-size: 2rem; font-weight: 900; margin: var(--spacing-xl) 0 var(--spacing-md);
+      padding-bottom: var(--spacing-xs); border-bottom: 5px solid var(--black);
+      letter-spacing: -1px; scroll-margin-top: 100px;
+    }
+    .description-content h3 { font-size: 1.4rem; font-weight: 900; margin: var(--spacing-lg) 0 var(--spacing-sm); scroll-margin-top: 100px; }
+    .description-content p { margin-bottom: var(--spacing-md); font-size: 1rem; line-height: 1.8; }
+    .description-content ul, .description-content ol { padding-left: 1.5rem; margin-bottom: var(--spacing-lg); }
+    .description-content li { margin-bottom: 0.5rem; line-height: 1.7; font-size: 0.975rem; }
+    .description-content strong { font-weight: 900; }
+    .description-content code { background: var(--yellow); padding: 2px 8px; border-radius: 4px; border: 2px solid var(--black); font-family: "Courier New", monospace; font-weight: 700; font-size: 0.9em; }
+
+    @media (max-width: 1200px) { .article-layout { grid-template-columns: 260px 1fr; } .right-sidebar { display: none; } }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } #sidebar-container { display: none; } .featured-image { height: 220px; } .internal-links-grid { grid-template-columns: 1fr; } .article-body { padding: var(--spacing-lg); } }
+    @media (max-width: 600px) { .article-body { padding: var(--spacing-md); border-width: 4px; } .description-content h2 { font-size: 1.5rem; } .code-block pre { font-size: 0.8rem; } }
+  </style>
 </head>
 <body>
-    <div id="header-container"></div>
-    
-    <main class="container">
-        <div class="three-column-layout">
-            <aside id="sidebar-container" class="sidebar"></aside>
-            
-            <article class="main-content">
-                <div class="article-body">
-                    <span class="post-meta">Published: January 24, 2026</span>
-                    <h1 class="page-title">XML Security Essentials: Protecting Your Data</h1>
-                    
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" alt="Cybersecurity and data protection concept" class="featured-image">
-
-                    <div class="description-content">
-                        <p>As XML powers critical financial and healthcare systems, its security cannot be an afterthought. Because XML parsers are highly flexible, they can be vulnerable to specific exploits if not properly configured.</p>
-                        
-                        <h3>Preventing XXE (XML External Entity) Attacks</h3>
-                        <p>One of the most common threats is the XXE attack, where an attacker includes a reference to an external entity to disclose local files or perform Server-Side Request Forgery (SSRF). Disabling DTDs (Document Type Definitions) is the most effective defense.</p>
-                        
-                        <pre><code>// Example: Disabling DTDs in a Java DocumentBuilderFactory
-dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);</code></pre>
-
-                        <h3>Encryption and Digital Signatures</h3>
-                        <p>To ensure data integrity and confidentiality, developers use <strong>XML Encryption (XMLEnc)</strong> to hide sensitive portions of a document and <strong>XML Signature (XMLDSig)</strong> to verify the sender's identity and ensure the content hasn't been tampered with.</p>
-                    </div>
-                </div>
-            </article>
-
-            <aside class="right-sidebar">
-                <div id="articles-sidebar-container" class="sidebar-content">
-                </div>
-            </aside>
+  <div id="header-container">
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-section">
+          <a href="/" class="logo-link">
+            <img src="assets/favicon.jpg" alt="XML Tools Logo" class="logo">
+            <span class="logo-text">XML<strong>TOOLS</strong></span>
+          </a>
         </div>
-    </main>
-    
-    <div id="footer-container"></div>
-    <script src="app.js"></script>
+        <nav class="nav">
+          <a href="/" class="nav-link">HOME</a>
+          <a href="/#tools" class="nav-link">TOOLS</a>
+          <a href="xml-security-essentials" class="nav-link" aria-current="page">BLOG</a>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main class="container">
+    <div class="article-layout">
+      <aside id="sidebar-container" class="sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-section">
+            <h2 class="sidebar-title">XML TOOLS</h2>
+            <ul class="sidebar-menu">
+              <li><a href="xml-validator" class="sidebar-link">XML Validator</a></li>
+              <li><a href="xml-formatter" class="sidebar-link">XML Formatter</a></li>
+              <li><a href="xml-to-json" class="sidebar-link">XML to JSON</a></li>
+              <li><a href="xpath-tester" class="sidebar-link">XPath Tester</a></li>
+              <li><a href="xslt-transformer" class="sidebar-link">XSLT Transformer</a></li>
+              <li><a href="xml-minifier" class="sidebar-link">XML Minifier</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <h2 class="sidebar-title">RELATED ARTICLES</h2>
+            <ul class="sidebar-menu">
+              <li><a href="mastering-xml" class="sidebar-link">Mastering XML</a></li>
+              <li><a href="xml-vs-json" class="sidebar-link">XML vs JSON</a></li>
+              <li><a href="top-10-xml-tools" class="sidebar-link">Top 10 XML Tools</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <article class="main-content">
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="meta-badge meta-date">April 1, 2026</span>
+            <span class="meta-badge meta-read">14 MIN READ</span>
+            <span class="meta-badge meta-cat">SECURITY</span>
+          </div>
+
+          <h1 class="page-title" style="font-size:2.75rem; font-weight:900; letter-spacing:-1.5px; line-height:1.1; margin-bottom:var(--spacing-lg);">
+            XML Security Essentials: Protecting Your Data from XXE, Injection &amp; More
+          </h1>
+
+          <img
+            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200"
+            alt="Cybersecurity and XML data protection — shields and locks"
+            class="featured-image"
+            width="1200" height="380"
+            loading="eager"
+          >
+
+          <nav class="toc" aria-label="Table of contents">
+            <div class="toc-title">🔒 TABLE OF CONTENTS</div>
+            <ol>
+              <li><a href="#why-security-matters">Why XML Security Matters in 2026</a></li>
+              <li><a href="#xxe">XXE (XML External Entity) Attacks</a></li>
+              <li><a href="#injection">XML Injection Attacks</a></li>
+              <li><a href="#billion-laughs">Billion Laughs: XML DoS Attacks</a></li>
+              <li><a href="#xpath-injection">XPath Injection</a></li>
+              <li><a href="#encryption">XML Encryption (XMLEnc)</a></li>
+              <li><a href="#signatures">XML Digital Signatures (XMLDSig)</a></li>
+              <li><a href="#parser-hardening">Parser Hardening by Language</a></li>
+              <li><a href="#checklist">XML Security Checklist</a></li>
+              <li><a href="#faq">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+          <div class="description-content">
+
+            <h2 id="why-security-matters">Why XML Security Matters in 2026</h2>
+            <p>XML underpins some of the most sensitive data flows in existence: healthcare records (HL7 FHIR), financial transactions (ISO 20022, XBRL), identity federation (SAML), e-commerce (EDI), and enterprise integrations. A vulnerability in XML processing can expose confidential data, allow server compromise, or take down critical systems.</p>
+            <p>XML security vulnerabilities remain in <strong>OWASP's Top 10</strong> list and consistently rank among the most impactful vulnerabilities in enterprise applications. XXE attacks alone have been used to breach major financial institutions, healthcare providers, and government systems. Understanding and mitigating these risks is not optional for any developer working with XML.</p>
+
+            <div class="callout callout-warn">
+              <span class="callout-label">Critical Warning</span>
+              <p>Many XML parsers are configured to process external entities by default — even in 2026. Simply upgrading your library version is not sufficient. You must explicitly configure your parser to disable dangerous features. See the <a href="#parser-hardening">Parser Hardening</a> section for specific instructions.</p>
+            </div>
+
+            <h2 id="xxe">XXE (XML External Entity) Attacks <span class="threat-badge threat-critical">CRITICAL</span></h2>
+
+            <div class="attack-card">
+              <div class="attack-header">
+                <h3>🚨 Attack: XXE — XML External Entity Injection</h3>
+                <span style="font-size:0.8rem; font-weight:700; letter-spacing:1px;">OWASP A05 / CVE-CRITICAL</span>
+              </div>
+              <div class="attack-body">
+                <p>XXE attacks exploit XML parsers that process <strong>external entity references</strong> defined in a DTD (Document Type Definition). An attacker embeds a malicious entity declaration in submitted XML, causing the server to resolve the reference and potentially:</p>
+                <ul>
+                  <li>Read arbitrary local files (including <code>/etc/passwd</code>, credentials, private keys)</li>
+                  <li>Perform Server-Side Request Forgery (SSRF) to reach internal networks</li>
+                  <li>Execute denial-of-service via infinite loops</li>
+                  <li>Scan internal network ports and services</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header danger">⚠️ DANGEROUS: XXE ATTACK PAYLOAD</div>
+              <pre><code>&lt;!-- Attacker submits this XML to your API --&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE foo [
+  &lt;!ENTITY xxe SYSTEM "file:///etc/passwd"&gt;
+]&gt;
+&lt;userQuery&gt;
+  &lt;username&gt;&amp;xxe;&lt;/username&gt;
+&lt;/userQuery&gt;
+
+&lt;!-- If your parser resolves external entities, --&gt;
+&lt;!-- it will substitute &amp;xxe; with the contents --&gt;
+&lt;!-- of /etc/passwd and return them in the response --&gt;</code></pre>
+            </div>
+
+            <div class="defense-card">
+              <div class="defense-header"><h3>✅ Defense: Disable External Entity Processing</h3></div>
+              <div class="defense-body">
+                <p>The most effective defense is to <strong>completely disable DTD processing</strong>. If DTDs are required for your use case, at minimum disable external entity resolution and external document type declarations.</p>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header safe">✅ JAVA — SECURE PARSER CONFIGURATION</div>
+              <pre><code>// Disable external entities in DocumentBuilderFactory (Java)
+DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
+// Completely disable DTD processing (recommended)
+dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+
+// If DTDs are needed, at minimum disable these:
+dbf.setFeature("http://xml.org/sax/features/external-general-entities", false);
+dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+dbf.setXIncludeAware(false);
+dbf.setExpandEntityReferences(false);
+
+DocumentBuilder db = dbf.newDocumentBuilder();
+Document doc = db.parse(inputStream);</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header safe">✅ PYTHON — SECURE PARSER CONFIGURATION</div>
+              <pre><code># Python: Use defusedxml library (pip install defusedxml)
+# This library patches all standard XML parsers to be safe by default
+import defusedxml.ElementTree as ET
+
+# defusedxml raises DTDForbidden, EntitiesForbidden, ExternalReferenceForbidden
+# for any potentially dangerous XML constructs
+tree = ET.parse('data.xml')  # Safe by default
+
+# Or if using lxml:
+from lxml import etree
+parser = etree.XMLParser(
+    resolve_entities=False,
+    no_network=True,
+    load_dtd=False
+)
+tree = etree.parse('data.xml', parser)</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header safe">✅ NODE.JS — SECURE PARSING</div>
+              <pre><code>// Node.js: Use fast-xml-parser with secure settings
+const { XMLParser } = require("fast-xml-parser");
+
+const parser = new XMLParser({
+  processEntities: false,   // Disable entity processing
+  htmlEntities: false,       // Disable HTML entities
+  ignoreDeclaration: true,   // Ignore XML declarations
+  allowBooleanAttributes: false,
+});
+
+const result = parser.parse(xmlString);
+
+// Alternatively, for SAX parsing use saxes or sax-js:
+// Both do NOT support external entity resolution by default</code></pre>
+            </div>
+
+            <h2 id="injection">XML Injection Attacks <span class="threat-badge threat-high">HIGH</span></h2>
+            <p>XML injection occurs when an attacker injects malicious XML markup into data that is used to construct an XML document. Unlike SQL injection, the goal is to alter the XML structure rather than query a database — but the impact can be equally severe.</p>
+            <p>Consider a login system that constructs an XML query from user input:</p>
+
+            <div class="code-block">
+              <div class="code-header danger">⚠️ VULNERABLE: XML CONSTRUCTED FROM USER INPUT</div>
+              <pre><code>// BAD: Directly interpolating user input into XML
+const xmlQuery = `
+  &lt;user&gt;
+    &lt;username&gt;${userInput}&lt;/username&gt;
+    &lt;role&gt;standard&lt;/role&gt;
+  &lt;/user&gt;
+`;
+
+// If attacker inputs: alice&lt;/username&gt;&lt;role&gt;admin&lt;/role&gt;&lt;junk&gt;
+// The resulting XML becomes:
+// &lt;user&gt;
+//   &lt;username&gt;alice&lt;/username&gt;
+//   &lt;role&gt;admin&lt;/role&gt;
+//   &lt;junk&gt;&lt;/junk&gt;
+//   &lt;role&gt;standard&lt;/role&gt;
+// &lt;/user&gt;
+// The parser may use the first &lt;role&gt; value: admin!</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header safe">✅ DEFENSE: ESCAPE INPUT AND USE DOM CONSTRUCTION</div>
+              <pre><code>// GOOD: Use DOM APIs to build XML — never string concatenation
+const doc = document.implementation.createDocument(null, "user");
+const root = doc.documentElement;
+
+const usernameEl = doc.createElement("username");
+usernameEl.textContent = userInput; // DOM API escapes automatically
+root.appendChild(usernameEl);
+
+const roleEl = doc.createElement("role");
+roleEl.textContent = "standard"; // Hard-coded, not from user input
+root.appendChild(roleEl);
+
+// If you MUST use string concatenation, escape ALL special characters:
+function escapeXml(str) {
+  return str.replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&apos;');
+}</code></pre>
+            </div>
+
+            <h2 id="billion-laughs">Billion Laughs: XML DoS Attacks <span class="threat-badge threat-high">HIGH</span></h2>
+            <p>The <strong>Billion Laughs attack</strong> (also called an XML bomb) is a denial-of-service attack using deeply nested entity definitions. A tiny XML file can cause exponential memory expansion when the parser resolves all entities:</p>
+
+            <div class="code-block">
+              <div class="code-header danger">⚠️ BILLION LAUGHS ATTACK (~1 KB → GIGABYTES IN MEMORY)</div>
+              <pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE lol [
+  &lt;!ENTITY lol "lol"&gt;
+  &lt;!ENTITY lol2 "&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;&amp;lol;"&gt;
+  &lt;!ENTITY lol3 "&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;&amp;lol2;"&gt;
+  &lt;!ENTITY lol4 "&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;&amp;lol3;"&gt;
+  &lt;!ENTITY lol5 "&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;&amp;lol4;"&gt;
+  &lt;!ENTITY lol6 "&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;&amp;lol5;"&gt;
+  &lt;!ENTITY lol7 "&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;&amp;lol6;"&gt;
+  &lt;!ENTITY lol8 "&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;&amp;lol7;"&gt;
+  &lt;!ENTITY lol9 "&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;&amp;lol8;"&gt;
+]&gt;
+&lt;lolz&gt;&amp;lol9;&lt;/lolz&gt;
+
+&lt;!-- This expands to 10^9 "lol" strings — roughly 3 GB in memory --&gt;</code></pre>
+            </div>
+
+            <div class="callout callout-tip">
+              <span class="callout-label">Defense</span>
+              <p>Disabling DTD processing (the same defense used against XXE) also prevents Billion Laughs attacks. Additionally, modern parsers like libxml2 have built-in entity expansion limits. Configure your parser with a maximum entity expansion depth and size.</p>
+            </div>
+
+            <h2 id="xpath-injection">XPath Injection <span class="threat-badge threat-medium">MEDIUM</span></h2>
+            <p>XPath injection is analogous to SQL injection, but targets XML databases and XPath queries. If user input is directly interpolated into an XPath expression, an attacker can manipulate the query to bypass authentication or extract unauthorized data.</p>
+
+            <div class="code-block">
+              <div class="code-header danger">⚠️ VULNERABLE XPATH QUERY</div>
+              <pre><code>// BAD: User input directly in XPath
+const xpath = `//user[username='${username}' and password='${password}']`;
+// If attacker enters username: ' or '1'='1
+// Query becomes: //user[username='' or '1'='1' and password='...']
+// This returns ALL users — authentication bypassed!</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header safe">✅ DEFENSE: PARAMETERIZED XPATH</div>
+              <pre><code">// GOOD: Use parameterized XPath (supported by most XPath 2.0+ engines)
+// Example in Java with Saxon:
+XPathCompiler compiler = processor.newXPathCompiler();
+XPathExecutable exec = compiler.compile(
+    "//user[username=$user and password=$pass]"
+);
+XPathSelector selector = exec.load();
+selector.setVariable(new QName("user"), XdmValue.makeValue(username));
+selector.setVariable(new QName("pass"), XdmValue.makeValue(password));
+XdmValue result = selector.evaluate();</code></pre>
+            </div>
+
+            <h2 id="encryption">XML Encryption (XMLEnc) <span class="threat-badge threat-medium">PROTECT</span></h2>
+            <p>XML Encryption (W3C XMLEnc) allows you to encrypt specific elements or the entire content of an XML document, ensuring confidentiality for sensitive data during storage or transmission. Unlike transport-level encryption (TLS/HTTPS), XML Encryption provides element-level protection that persists even after the document leaves its transport channel.</p>
+            <p>The encrypted data is represented using the <code>&lt;xenc:EncryptedData&gt;</code> element:</p>
+
+            <div class="code-block">
+              <div class="code-header neutral">STRUCTURE OF XML ENCRYPTED DATA</div>
+              <pre><code>&lt;xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+    Type="http://www.w3.org/2001/04/xmlenc#Element"&gt;
+
+  &lt;xenc:EncryptionMethod
+      Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/&gt;
+
+  &lt;ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+    &lt;xenc:EncryptedKey&gt;
+      &lt;xenc:EncryptionMethod
+          Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/&gt;
+      &lt;xenc:CipherData&gt;
+        &lt;xenc:CipherValue&gt;Gj7MU1kI3Nz...==&lt;/xenc:CipherValue&gt;
+      &lt;/xenc:CipherData&gt;
+    &lt;/xenc:EncryptedKey&gt;
+  &lt;/ds:KeyInfo&gt;
+
+  &lt;xenc:CipherData&gt;
+    &lt;xenc:CipherValue&gt;RmxhZ3NhcmU...==&lt;/xenc:CipherValue&gt;
+  &lt;/xenc:CipherData&gt;
+
+&lt;/xenc:EncryptedData&gt;</code></pre>
+            </div>
+
+            <p>XMLEnc is commonly used in SOAP/WS-Security for protecting sensitive message parts (e.g., credit card numbers in a payment body) without encrypting the entire SOAP envelope.</p>
+
+            <h2 id="signatures">XML Digital Signatures (XMLDSig) <span class="threat-badge threat-medium">PROTECT</span></h2>
+            <p><strong>XML Signature</strong> (W3C XMLDSig) allows you to digitally sign XML documents or specific elements within them. It serves two purposes: <strong>authentication</strong> (verifying the signer's identity) and <strong>integrity</strong> (ensuring the signed content hasn't been modified).</p>
+            <p>XMLDSig is the backbone of SAML-based Single Sign-On, where identity providers sign assertions about authenticated users, and service providers verify those signatures before granting access.</p>
+
+            <div class="code-block">
+              <div class="code-header neutral">STRUCTURE OF AN XML DIGITAL SIGNATURE</div>
+              <pre><code>&lt;Signature xmlns="http://www.w3.org/2000/09/xmldsig#"&gt;
+
+  &lt;SignedInfo&gt;
+    &lt;CanonicalizationMethod
+        Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+    &lt;SignatureMethod
+        Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/&gt;
+    &lt;Reference URI="#order-12345"&gt;
+      &lt;DigestMethod
+          Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/&gt;
+      &lt;DigestValue&gt;8Vfho3L7Zx...==&lt;/DigestValue&gt;
+    &lt;/Reference&gt;
+  &lt;/SignedInfo&gt;
+
+  &lt;SignatureValue&gt;KwIXh0oQ2...==&lt;/SignatureValue&gt;
+
+  &lt;KeyInfo&gt;
+    &lt;X509Data&gt;
+      &lt;X509Certificate&gt;MIIBvTCC...&lt;/X509Certificate&gt;
+    &lt;/X509Data&gt;
+  &lt;/KeyInfo&gt;
+
+&lt;/Signature&gt;</code></pre>
+            </div>
+
+            <div class="callout callout-warn">
+              <span class="callout-label">Security Gotcha</span>
+              <p>A common XMLDSig vulnerability is <strong>signature wrapping</strong>: an attacker keeps the signature valid but moves the signed element elsewhere in the document and injects a malicious replacement in the position the application expects. Always reference elements by ID and verify that the signed element is the one your application processes.</p>
+            </div>
+
+            <h2 id="parser-hardening">Parser Hardening by Language</h2>
+            <p>Default XML parser configurations are often insecure. Here's a concise hardening reference for the most common languages and frameworks:</p>
+
+            <div class="code-block">
+              <div class="code-header safe">✅ C# / .NET — SECURE XMLREADER</div>
+              <pre><code">// .NET: Use XmlReaderSettings with restrictions
+XmlReaderSettings settings = new XmlReaderSettings();
+settings.DtdProcessing = DtdProcessing.Prohibit; // Disallow DTDs entirely
+settings.MaxCharactersFromEntities = 0;           // Disable entity expansion
+settings.XmlResolver = null;                       // Disable external resolution
+
+using (XmlReader reader = XmlReader.Create(inputStream, settings)) {
+    // Safe parsing
+    while (reader.Read()) { /* ... */ }
+}</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header safe">✅ PHP — SECURE LIBXML OPTIONS</div>
+              <pre><code">&lt;?php
+// Disable entity loading before parsing
+libxml_disable_entity_loader(true);  // PHP &lt; 8.0
+
+// PHP 8.0+: entity loading is disabled by default
+// Use LIBXML_NOENT flag ONLY if you need entity substitution for known-safe docs
+
+$dom = new DOMDocument();
+// Do NOT use LIBXML_NOENT for untrusted input
+$dom-&gt;loadXML($xmlString, LIBXML_NONET | LIBXML_NOERROR);
+?&gt;</code></pre>
+            </div>
+
+            <h2 id="checklist">XML Security Checklist</h2>
+            <p>Use this checklist as a code review reference and security audit guide for any system that processes XML from external sources:</p>
+
+            <ul class="security-checklist">
+              <li class="critical"><span class="check">🚨</span><div><strong>Disable DTD/entity processing</strong> in your XML parser. This single measure prevents XXE, Billion Laughs, and SSRF via XML in one step.</div></li>
+              <li class="critical"><span class="check">🚨</span><div><strong>Never build XML via string concatenation</strong> with user-supplied data. Always use DOM APIs or a serialization library to construct XML programmatically.</div></li>
+              <li class="critical"><span class="check">🚨</span><div><strong>Validate all XML against a strict schema</strong> (XSD or RELAX NG) before processing. Use our <a href="xml-validator">XML Validator</a> during development.</div></li>
+              <li class="high"><span class="check">⚠️</span><div><strong>Use parameterized XPath queries</strong> for any XPath expressions that include user-supplied values.</div></li>
+              <li class="high"><span class="check">⚠️</span><div><strong>Limit XML document size</strong> at the application layer. Reject documents above a configured size threshold before parsing.</div></li>
+              <li class="high"><span class="check">⚠️</span><div><strong>Set entity expansion limits</strong> if DTD support is required. Limit nesting depth and total expansion size.</div></li>
+              <li class="high"><span class="check">⚠️</span><div><strong>Verify XML Digital Signatures</strong> include the elements your application processes — not just any element in the document (signature wrapping defense).</div></li>
+              <li class="medium"><span class="check">ℹ️</span><div><strong>Use XMLEnc for sensitive element-level data</strong> in SOAP messages or documents that persist beyond their transport channel.</div></li>
+              <li class="medium"><span class="check">ℹ️</span><div><strong>Log and monitor XML parsing errors</strong> — unusual parser errors may indicate attempted injection or fuzzing.</div></li>
+              <li class="medium"><span class="check">ℹ️</span><div><strong>Keep XML libraries updated</strong>. XXE vulnerabilities are frequently patched — outdated parsers are a common root cause of real-world breaches.</div></li>
+              <li class="medium"><span class="check">ℹ️</span><div><strong>Use canonicalization (C14N)</strong> before signing or hashing XML to ensure consistent serialization across systems.</div></li>
+            </ul>
+
+            <div class="internal-links">
+              <h3>🔧 RELATED TOOLS &amp; ARTICLES</h3>
+              <div class="internal-links-grid">
+                <a href="xml-validator" class="internal-link-item">→ XML Validator (XSD/DTD)</a>
+                <a href="xml-formatter" class="internal-link-item">→ XML Formatter</a>
+                <a href="mastering-xml" class="internal-link-item">→ Mastering XML Guide</a>
+                <a href="xml-vs-json" class="internal-link-item">→ XML vs JSON Guide</a>
+                <a href="xpath-tester" class="internal-link-item">→ XPath Tester</a>
+                <a href="top-10-xml-tools" class="internal-link-item">→ Top 10 XML Tools</a>
+                <a href="xml-to-json" class="internal-link-item">→ XML to JSON Converter</a>
+                <a href="xslt-transformer" class="internal-link-item">→ XSLT Transformer</a>
+              </div>
+            </div>
+
+            <h2 id="faq">Frequently Asked Questions</h2>
+
+            <div class="faq-section">
+              <div class="faq-item open">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is an XXE attack and how does it work? <span class="faq-icon">+</span></div>
+                <div class="faq-a">An XXE (XML External Entity) attack exploits XML parsers that process entity references defined in a DTD. The attacker includes a malicious DTD in submitted XML that defines an entity pointing to a sensitive local file (like <code>/etc/passwd</code>) or an internal network service. When the parser resolves the entity reference, it reads that file and the contents appear in the parser's output, which the attacker can then extract. The fix is to disable DTD processing in your XML parser configuration.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">How do I prevent XML injection? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Prevent XML injection by never using string concatenation to embed user input in XML. Instead, use DOM APIs (like <code>createElement</code> and <code>textContent</code>) to construct XML programmatically — the DOM will escape all special characters automatically. If you must use string building, escape all five XML special characters: <code>&amp;</code> → <code>&amp;amp;</code>, <code>&lt;</code> → <code>&amp;lt;</code>, <code>&gt;</code> → <code>&amp;gt;</code>, <code>"</code> → <code>&amp;quot;</code>, <code>'</code> → <code>&amp;apos;</code>. Finally, validate the resulting XML against a strict schema before processing.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is the Billion Laughs attack? <span class="faq-icon">+</span></div>
+                <div class="faq-a">The Billion Laughs attack (also called an XML bomb) is a denial-of-service attack using deeply nested XML entity references. The attacker defines entities that reference other entities repeatedly, creating exponential expansion. A 1 KB XML file can cause the parser to consume gigabytes of memory, crashing the server. The defense is the same as for XXE: disable DTD processing entirely, or set strict entity expansion limits in your parser configuration.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is the difference between XML Encryption and HTTPS? <span class="faq-icon">+</span></div>
+                <div class="faq-a">HTTPS (TLS) encrypts data in transit between two endpoints — once the data arrives at its destination, it is decrypted and stored in plaintext. XML Encryption (XMLEnc) encrypts specific elements within the XML document itself, providing protection that persists even after transport. This is useful when a document passes through multiple systems or intermediaries where you only want some parties to see some data. In practice, both are often used together: TLS for transport security and XMLEnc for message-level security in SOAP/WS-Security environments.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">Is Python's built-in XML parser safe? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Python's built-in XML parsers (<code>xml.etree.ElementTree</code>, <code>xml.dom.minidom</code>, etc.) are vulnerable to XXE and Billion Laughs attacks when processing untrusted XML. The Python documentation explicitly warns about this. The recommended solution is to use the <code>defusedxml</code> library (<code>pip install defusedxml</code>), which is a drop-in replacement for all Python XML modules that disables all dangerous features by default. For new projects, <code>lxml</code> with explicit security settings is also a good choice.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">How can I validate XML online to catch security issues? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Our free <a href="xml-validator">XML Validator</a> checks your XML for well-formedness errors and can validate it against an XSD schema. Validating against a strict schema is one of the best defenses against malformed or malicious XML — if the input doesn't conform to your expected structure, it's rejected before any business logic processes it. Use the validator during development and integrate schema validation into your production code.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <aside class="right-sidebar">
+        <div class="rs-card" style="background: rgba(255,51,51,0.05); border-color: var(--red);">
+          <div class="rs-title" style="border-bottom-color:var(--red);">⚠️ THREAT SUMMARY</div>
+          <div style="font-size:0.875rem;">
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:2px solid var(--gray-light);">
+              <span style="font-weight:700;">XXE Attack</span>
+              <span style="background:var(--red);color:white;padding:2px 8px;border-radius:4px;font-weight:900;font-size:0.75rem;">CRITICAL</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:2px solid var(--gray-light);">
+              <span style="font-weight:700;">XML Injection</span>
+              <span style="background:#ff6600;color:white;padding:2px 8px;border-radius:4px;font-weight:900;font-size:0.75rem;">HIGH</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:2px solid var(--gray-light);">
+              <span style="font-weight:700;">Billion Laughs DoS</span>
+              <span style="background:#ff6600;color:white;padding:2px 8px;border-radius:4px;font-weight:900;font-size:0.75rem;">HIGH</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;">
+              <span style="font-weight:700;">XPath Injection</span>
+              <span style="background:var(--yellow);color:var(--black);padding:2px 8px;border-radius:4px;font-weight:900;font-size:0.75rem;">MEDIUM</span>
+            </div>
+          </div>
+        </div>
+        <div class="rs-card">
+          <div class="rs-title">🛠 FREE XML TOOLS</div>
+          <a href="xml-validator" class="rs-link">XML Validator</a>
+          <a href="xml-formatter" class="rs-link">XML Formatter</a>
+          <a href="xpath-tester" class="rs-link">XPath Tester</a>
+          <a href="xml-to-json" class="rs-link">XML to JSON</a>
+        </div>
+        <div class="rs-card">
+          <div class="rs-title">📖 MORE ARTICLES</div>
+          <a href="mastering-xml" class="rs-link">Mastering XML: Full Guide</a>
+          <a href="xml-vs-json" class="rs-link">XML vs JSON</a>
+          <a href="top-10-xml-tools" class="rs-link">Top 10 XML Tools</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer style="background:var(--black); border-top:6px solid var(--yellow); padding:var(--spacing-xl) 0; margin-top:var(--spacing-xl);">
+    <div class="container" style="text-align:center;">
+      <p style="color:var(--cream-white); font-weight:900; font-size:1.25rem; margin-bottom:var(--spacing-sm);">XML<strong style="color:var(--yellow);">TOOLS</strong></p>
+      <p style="color:#888; font-size:0.875rem;">Free online XML utilities for developers. No signup required.</p>
+      <div style="margin-top:var(--spacing-md); display:flex; gap:var(--spacing-md); justify-content:center; flex-wrap:wrap;">
+        <a href="/" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">Home</a>
+        <a href="xml-validator" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">Validator</a>
+        <a href="xml-formatter" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">Formatter</a>
+        <a href="xml-to-json" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">XML to JSON</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFAQ(el) {
+      el.parentElement.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
