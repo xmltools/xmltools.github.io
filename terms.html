@@ -3,14 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - XML Tools</title>
+    <title>Terms of Service | XML Tools</title>
+    <meta name="description" content="Terms of Service for XML Tools – clear guidelines, acceptable use, liability limitations, and service rules for all users.">
     <link rel="stylesheet" href="styles.css">
-    
+    <style>
+        /* Minimal inline reset for consistency – assumes global styles.css exists */
+        .container-layout { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 2rem; }
+        .main-content { flex: 3; min-width: 260px; }
+        #sidebar-placeholder { flex: 1; min-width: 200px; }
+        .tool-header { margin-bottom: 2rem; border-bottom: 2px solid #e9ecef; padding-bottom: 1rem; }
+        .page-title { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 0.5rem; color: #1f2d3d; }
+        .page-subtitle { font-size: 1.1rem; color: #4a627a; }
+        .content-section { background: #ffffff; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); padding: 1.8rem; transition: all 0.2s; }
+        .description-content h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1.8rem; margin-bottom: 0.75rem; color: #0b2b3b; border-left: 4px solid #3b82f6; padding-left: 1rem; }
+        .description-content h3:first-of-type { margin-top: 0; }
+        .description-content p { line-height: 1.6; color: #2c3e4e; margin-bottom: 1.2rem; }
+        .description-content ul, .description-content ol { margin: 0.75rem 0 1.2rem 1.8rem; color: #2c3e4e; }
+        .description-content li { margin: 0.4rem 0; line-height: 1.5; }
+        .description-content code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 6px; font-family: 'SF Mono', monospace; font-size: 0.9rem; }
+        .legal-note { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.85rem; color: #5b6e8c; text-align: center; }
+        @media (max-width: 768px) { .container-layout { flex-direction: column; } .content-section { padding: 1.2rem; } }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Terms of Service"
+      "name": "Terms of Service - XML Tools",
+      "description": "Official terms of service for XML Tools. Read about usage rules, prohibited activities, warranty disclaimers, and liability limitations.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.xmltools.com/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Terms of Service"
+        }]
+      }
     }
     </script>
 </head>
@@ -21,19 +53,49 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">⚖️ Terms of Service</h1>
-                <p class="page-subtitle">Simple rules for using our free tools.</p>
+                <p class="page-subtitle">Clear rules, mutual respect, and safe usage for all XML Tools visitors.</p>
             </div>
 
             <section class="content-section">
                 <div class="description-content">
                     <h3>1. Acceptance of Terms</h3>
-                    <p>By using XML Tools, you agree to these terms. Our tools are provided "as-is" without any warranties of any kind.</p>
+                    <p>By accessing or using any service, tool, or feature provided by XML Tools (“we”, “us”, or “our”), including but not limited to XML formatters, validators, XSLT transformers, JSON converters, and HTML cleaners, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service (“Terms”). If you do not agree with any part of these Terms, you must discontinue use of our website and tools immediately. We reserve the right to update or modify these Terms at any time without prior notice, and your continued use of the platform constitutes acceptance of the revised Terms.</p>
 
-                    <h3>2. Prohibited Use</h3>
-                    <p>You may not use our tools to automate malicious activity or attempt to disrupt the service for other users.</p>
+                    <h3>2. Use of Tools & License Grant</h3>
+                    <p>XML Tools grants you a limited, non-exclusive, non-transferable, revocable license to access and use our web-based utilities for personal, educational, and commercial purposes, subject to these Terms. All tools are provided free of charge unless otherwise specified. You may not reproduce, duplicate, copy, sell, resell, or exploit any portion of the Service without express written permission. Any attempt to reverse-engineer, decompile, or extract the source code of our client-side logic (except where permitted by law) is strictly prohibited.</p>
 
-                    <h3>3. Limitation of Liability</h3>
-                    <p>XML Tools is not responsible for any data loss or damages resulting from the use of our converters or validators. Always keep backups of your original files.</p>
+                    <h3>3. Prohibited Conduct & Acceptable Use Policy</h3>
+                    <p>You agree not to misuse the XML Tools services. Prohibited activities include, but are not limited to: (a) using automated scripts, bots, or crawlers to overload our infrastructure or extract content at an unreasonable rate; (b) uploading, processing, or generating any material that violates applicable laws, contains malware, ransomware, or other harmful code; (c) attempting to bypass security measures, rate limits, or access restricted areas; (d) interfering with other users’ ability to use the tools (e.g., denial-of-service attacks); (e) using our validators or converters to test or exploit security vulnerabilities of third-party systems without authorization; (f) scraping or harvesting any user interface elements for competitive purposes. Violation may lead to immediate termination of access and reporting to relevant authorities.</p>
+
+                    <h3>4. Intellectual Property Rights</h3>
+                    <p>All content, features, and functionality on XML Tools—including but not limited to user interface design, graphics, logos, tool workflows, and underlying JavaScript code—are owned by XML Tools or its licensors and are protected by international copyright, trademark, and other intellectual property laws. You retain all ownership rights to any XML, JSON, or other data you input into the tools. However, by using the services, you grant XML Tools a worldwide, royalty-free license to host, cache, and transmit your data solely for the purpose of performing the requested operations (processing occurs locally in your browser; no data is stored on our servers unless explicitly stated).</p>
+
+                    <h3>5. Disclaimer of Warranties</h3>
+                    <p>THE SERVICES AND ALL TOOLS ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, XML TOOLS DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE TOOLS WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ANY OUTPUT OR TRANSFORMATION GENERATED BY OUR UTILITIES IS PROVIDED FOR CONVENIENCE; YOU ASSUME FULL RESPONSIBILITY FOR VALIDATING THE ACCURACY OF RESULTS.</p>
+
+                    <h3>6. Limitation of Liability</h3>
+                    <p>IN NO EVENT SHALL XML TOOLS, ITS OWNERS, AFFILIATES, OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE TOOLS, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOST PROFITS, BUSINESS INTERRUPTION, CORRUPTION OF XML FILES, OR UNAUTHORIZED ACCESS TO YOUR INPUTS. THIS LIMITATION APPLIES EVEN IF XML TOOLS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU, BUT OUR TOTAL LIABILITY SHALL NOT EXCEED FIFTY DOLLARS ($50.00) OR THE AMOUNT YOU PAID US (IF ANY) IN THE PAST SIX MONTHS.</p>
+
+                    <h3>7. Data Processing & Local-First Policy</h3>
+                    <p>We prioritize your privacy: all XML, JSON, HTML, and text data you process using formatters, validators, or editors remains strictly on your local device. Our client-side JavaScript performs operations inside your browser; no files or content are uploaded to our servers unless you explicitly use a cloud-based export feature (if any). Nonetheless, you agree that you are solely responsible for backing up critical data. XML Tools is not liable for any accidental data loss caused by browser refresh, tool malfunction, or local storage corruption. For features that use <code>localStorage</code> or <code>IndexedDB</code> (e.g., session persistence), that data never leaves your machine.</p>
+
+                    <h3>8. Indemnification</h3>
+                    <p>You agree to indemnify, defend, and hold harmless XML Tools and its affiliates, partners, and employees from any claim, demand, loss, liability, or expense (including reasonable attorneys’ fees) arising out of or related to your violation of these Terms, your misuse of the tools, or your infringement of any third-party rights, including intellectual property or privacy rights.</p>
+
+                    <h3>9. Termination & Suspension</h3>
+                    <p>We reserve the right to suspend or terminate your access to all or part of the XML Tools website, without notice, for conduct that we believe violates these Terms or is harmful to other users, our business, or third parties. Upon termination, your right to use the tools ceases immediately. Provisions that by their nature should survive termination (including limitations of liability, indemnity, and intellectual property provisions) shall remain in effect.</p>
+
+                    <h3>10. Governing Law & Dispute Resolution</h3>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law principles. Any dispute arising from or relating to these Terms or your use of XML Tools shall be resolved through binding arbitration administered by the American Arbitration Association (AAA) in accordance with its Consumer Arbitration Rules, unless otherwise agreed by the parties. The arbitration shall take place in Wilmington, Delaware, and judgment on the award may be entered in any court having jurisdiction. You waive any right to participate in a class action or class-wide arbitration.</p>
+
+                    <h3>11. Changes to Terms</h3>
+                    <p>We may revise these Terms from time to time, and the most current version will always be posted at this URL. Material changes will be notified via a notice on the website or by email (if you have subscribed). By continuing to access or use the Service after those revisions become effective, you agree to be bound by the updated Terms.</p>
+
+                    <h3>12. Contact Information</h3>
+                    <p>If you have any questions about these Terms, please contact us at: <strong>nolushac@gmail.com</strong> or via our contact form available on the main website. For urgent security or abuse reports, please use: <strong>security@xmltools.com</strong>.</p>
+                </div>
+                <div class="legal-note">
+                    ⚖️ Last updated: April 19, 2026 | Effective for all users.
                 </div>
             </section>
         </main>
