@@ -1,151 +1,843 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9759808041159779"
-     crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8570XQ6PQ4');
-    </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9759808041159779" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8570XQ6PQ4');
+  </script>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://xmltools.github.io/complex-xml"
-  },
-  "headline": "Demystifying XPath: Navigating Complex XML Documents",
-  "description": "A technical guide to using XPath for querying and navigating complex XML tree structures efficiently.",
-  "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800",
-  "author": {
-    "@type": "Organization",
-    "name": "XML Tools"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "XML Tools",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://xmltools.github.io/assets/favicon.jpg"
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xmltools.github.io/complex-xml"},
+    "headline": "Demystifying XPath: The Complete Guide to Navigating Complex XML Documents",
+    "description": "Master XPath axes, predicates, functions, and advanced expressions for efficient XML data extraction. Includes a full reference, code examples in multiple languages, and interactive tips.",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200",
+    "author": {"@type": "Organization", "name": "XML Tools"},
+    "publisher": {"@type": "Organization", "name": "XML Tools", "logo": {"@type": "ImageObject", "url": "https://xmltools.github.io/assets/favicon.jpg"}},
+    "datePublished": "2026-01-10",
+    "dateModified": "2026-04-01"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is XPath used for?", "acceptedAnswer": {"@type": "Answer", "text": "XPath is used to navigate and query XML documents, selecting specific nodes, attributes, or values based on location, content, or relationship to other nodes. It is the foundation of XSLT transformations, XQuery, and XML validation with Schematron."}},
+      {"@type": "Question", "name": "What is the difference between XPath 1.0 and XPath 2.0?", "acceptedAnswer": {"@type": "Answer", "text": "XPath 2.0 adds a rich type system based on XML Schema, sequences instead of node sets, a much larger function library (including string manipulation, date/time, and math functions), and support for conditional expressions (if/then/else) and quantified expressions (some/every)."}},
+      {"@type": "Question", "name": "How do I select an element by attribute value in XPath?", "acceptedAnswer": {"@type": "Answer", "text": "Use a predicate with the @ symbol: //element[@attribute='value']. For example, //book[@category='fiction'] selects all book elements with a category attribute equal to 'fiction'. For partial matches, use contains(): //book[contains(@category,'fic')]."}},
+      {"@type": "Question", "name": "What is the // shorthand in XPath?", "acceptedAnswer": {"@type": "Answer", "text": "The // shorthand is an abbreviation for the descendant-or-self axis. //book selects all book elements anywhere in the document, regardless of their depth in the tree. It is equivalent to /descendant-or-self::node()/book."}}
+    ]
+  }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPath Complete Guide: Navigating Complex XML Documents (2026) | XML Tools</title>
+  <meta name="description" content="Master XPath from basics to advanced. Learn axes, predicates, functions, namespaces, and XPath 2.0 features with practical code examples in Java, Python, JavaScript, and C#.">
+  <meta name="keywords" content="xpath tutorial, xpath guide, xpath axes, xpath predicates, xpath functions, xpath examples, navigate xml xpath, xpath 2.0 vs 1.0, xpath cheat sheet, complex xml queries 2026">
+  <meta name="author" content="XML Tools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://xmltools.github.io/complex-xml">
+
+  <meta property="og:title" content="XPath Complete Guide: Navigating Complex XML Documents (2026)">
+  <meta property="og:description" content="Master XPath axes, predicates, functions, and advanced expressions. Full reference with code examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://xmltools.github.io/complex-xml">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr 280px;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      align-items: start;
     }
-  },
-  "datePublished": "2026-01-10",
-  "dateModified": "2026-01-10"
-}
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Demystifying XPath: Navigating Complex XML Documents | XML Tools</title>
-    <meta name="description" content="Learn how to use XPath to navigate and query complex XML data structures. Master axes, predicates, and functions for efficient data extraction.">
-    <meta name="author" content="XML Tools">
-    
-    <meta property="og:title" content="Demystifying XPath: Navigating Complex XML Documents">
-    <meta property="og:description" content="Master the art of XML navigation. A deep dive into XPath axes and logic.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://xmltools.github.io/complex-xml">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800">
-    
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .three-column-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr 300px;
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-xl);
-        }
+    .article-body {
+      background: var(--cream-white);
+      border: 6px solid var(--black);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-brutal);
+    }
+    .featured-image {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      margin-bottom: var(--spacing-lg);
+      display: block;
+    }
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--spacing-md);
+    }
+    .meta-badge {
+      padding: 4px 12px;
+      border: 3px solid var(--black);
+      border-radius: var(--radius);
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .meta-date { background: var(--yellow); color: var(--black); }
+    .meta-read { background: var(--purple); color: white; }
+    .meta-cat { background: var(--black); color: var(--cream-white); }
 
-        .article-body {
-            background: var(--cream-white);
-            border: 6px solid var(--black);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            box-shadow: var(--shadow-brutal);
-        }
+    /* TOC */
+    .toc {
+      background: rgba(153,51,255,0.06);
+      border: 5px solid var(--purple);
+      border-radius: var(--radius);
+      padding: var(--spacing-lg);
+      margin: var(--spacing-xl) 0;
+      box-shadow: 6px 6px 0 var(--black);
+    }
+    .toc-title { font-size: 1.25rem; font-weight: 900; margin-bottom: var(--spacing-md); border-bottom: 3px solid var(--black); padding-bottom: var(--spacing-xs); }
+    .toc ol { padding-left: 1.5rem; }
+    .toc li { margin-bottom: 0.5rem; }
+    .toc a { color: var(--black); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--black); }
+    .toc a:hover { background: var(--purple); color: white; padding: 0 4px; }
 
-        .featured-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border: 4px solid var(--black);
-            border-radius: var(--radius);
-            margin-bottom: var(--spacing-lg);
-        }
+    /* XPath expression display */
+    .xpath-block {
+      background: var(--black);
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      padding: var(--spacing-lg);
+      margin: var(--spacing-lg) 0;
+      box-shadow: 5px 5px 0 var(--purple);
+      font-family: "Courier New", monospace;
+    }
+    .xpath-expr {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-md);
+      padding: var(--spacing-sm) 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .xpath-expr:last-child { border-bottom: none; }
+    .xpath-code { color: var(--yellow); font-size: 0.9rem; font-weight: 700; min-width: 280px; flex-shrink: 0; }
+    .xpath-desc { color: #aaa; font-size: 0.85rem; font-family: -apple-system, sans-serif; line-height: 1.5; }
 
-        .code-block {
-            background: var(--black);
-            color: var(--yellow);
-            padding: var(--spacing-md);
-            border-radius: var(--radius-sm);
-            font-family: 'Courier New', monospace;
-            overflow-x: auto;
-            margin: var(--spacing-md) 0;
-            border-left: 8px solid var(--purple);
-        }
+    /* Code blocks */
+    .code-block {
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 5px 5px 0 var(--black);
+      margin: var(--spacing-lg) 0;
+    }
+    .code-header {
+      padding: var(--spacing-xs) var(--spacing-md);
+      font-weight: 900;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 3px solid var(--black);
+    }
+    .code-header.java   { background: #e76f00; color: white; }
+    .code-header.python { background: #306998; color: white; }
+    .code-header.dotnet { background: #512BD4; color: white; }
+    .code-header.js     { background: #f7df1e; color: var(--black); }
+    .code-header.xml    { background: var(--blue); color: white; }
+    .code-header.neutral { background: var(--black); color: var(--yellow); }
+    .code-block pre {
+      margin: 0;
+      padding: var(--spacing-md);
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: "Courier New", monospace;
+      font-size: 0.875rem;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
 
-        @media (max-width: 1200px) {
-            .three-column-layout { grid-template-columns: 280px 1fr; }
-            .right-sidebar { display: none; }
-        }
+    /* Callouts */
+    .callout {
+      padding: var(--spacing-lg);
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      margin: var(--spacing-lg) 0;
+    }
+    .callout-tip    { background: rgba(0,204,102,0.1);   border-color: var(--green); }
+    .callout-warn   { background: rgba(255,51,51,0.08);  border-color: var(--red); border-left-width: 8px; }
+    .callout-info   { background: rgba(0,102,255,0.08);  border-color: var(--blue); }
+    .callout-purple { background: rgba(153,51,255,0.08); border-color: var(--purple); }
+    .callout-label {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 3px solid var(--black);
+      border-radius: var(--radius-sm);
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: var(--spacing-sm);
+    }
+    .callout-tip    .callout-label { background: var(--green); color: white; }
+    .callout-warn   .callout-label { background: var(--red); color: white; }
+    .callout-info   .callout-label { background: var(--blue); color: white; }
+    .callout-purple .callout-label { background: var(--purple); color: white; }
 
-        @media (max-width: 900px) {
-            .three-column-layout { display: flex; flex-direction: column; }
-        }
-    </style>
+    /* Axes reference table */
+    .axes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-sm);
+      margin: var(--spacing-lg) 0;
+    }
+    .axis-card {
+      border: 4px solid var(--black);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: 4px 4px 0 var(--black);
+      transition: transform 0.2s;
+    }
+    .axis-card:hover { transform: translateY(-3px); }
+    .axis-card-head {
+      padding: 8px var(--spacing-md);
+      font-weight: 900;
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      background: var(--purple);
+      color: white;
+      border-bottom: 3px solid var(--black);
+    }
+    .axis-card-body {
+      padding: var(--spacing-sm) var(--spacing-md);
+      font-size: 0.875rem;
+      background: white;
+      line-height: 1.5;
+    }
+    .axis-example {
+      margin-top: 4px;
+      font-family: "Courier New", monospace;
+      font-size: 0.8rem;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* Function reference */
+    .func-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--spacing-lg) 0;
+      border: 4px solid var(--black);
+      box-shadow: 5px 5px 0 var(--black);
+    }
+    .func-table th, .func-table td {
+      padding: 8px var(--spacing-md);
+      border: 2px solid var(--black);
+      text-align: left;
+      font-size: 0.875rem;
+    }
+    .func-table th { background: var(--black); color: var(--cream-white); font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+    .func-table tr:nth-child(even) td { background: rgba(153,51,255,0.04); }
+    .func-table td code { background: rgba(153,51,255,0.12); padding: 2px 6px; border-radius: 4px; font-family: "Courier New", monospace; font-weight: 700; font-size: 0.85em; border: 1px solid rgba(153,51,255,0.3); }
+
+    /* FAQ */
+    .faq-item {
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      margin-bottom: var(--spacing-md);
+      overflow: hidden;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+    .faq-q {
+      padding: var(--spacing-md) var(--spacing-lg);
+      background: var(--black);
+      color: var(--cream-white);
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-q .faq-icon { font-size: 1.5rem; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a { padding: var(--spacing-lg); background: var(--cream-white); display: none; font-size: 0.95rem; line-height: 1.8; border-top: 3px solid var(--black); }
+    .faq-item.open .faq-a { display: block; }
+
+    /* Internal links */
+    .internal-links {
+      background: var(--black);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius);
+      margin: var(--spacing-xl) 0;
+      box-shadow: 6px 6px 0 var(--purple);
+    }
+    .internal-links h3 { font-size: 1.125rem; font-weight: 900; color: var(--yellow); margin-bottom: var(--spacing-md); letter-spacing: 1px; }
+    .internal-links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm); }
+    .internal-link-item { display: block; padding: var(--spacing-sm) var(--spacing-md); border: 3px solid var(--yellow); border-radius: var(--radius-sm); color: var(--cream-white); text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: all 0.2s; }
+    .internal-link-item:hover { background: var(--yellow); color: var(--black); transform: translateX(4px); }
+
+    /* Right sidebar */
+    .right-sidebar { position: sticky; top: 120px; height: fit-content; }
+    .rs-card { background: var(--cream-white); border: 5px solid var(--black); border-radius: var(--radius-lg); padding: var(--spacing-lg); box-shadow: var(--shadow-brutal); margin-bottom: var(--spacing-lg); }
+    .rs-title { font-size: 0.875rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-xs); border-bottom: 3px solid var(--yellow); }
+    .rs-link { display: block; padding: var(--spacing-sm) 0; border-bottom: 2px solid var(--gray-light); text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.875rem; line-height: 1.4; transition: color 0.2s; }
+    .rs-link:hover { color: var(--blue); }
+    .rs-link:last-child { border-bottom: none; }
+
+    /* Content styles */
+    .description-content h2 { font-size: 2rem; font-weight: 900; margin: var(--spacing-xl) 0 var(--spacing-md); padding-bottom: var(--spacing-xs); border-bottom: 5px solid var(--black); letter-spacing: -1px; scroll-margin-top: 100px; }
+    .description-content h3 { font-size: 1.4rem; font-weight: 900; margin: var(--spacing-lg) 0 var(--spacing-sm); scroll-margin-top: 100px; }
+    .description-content p { margin-bottom: var(--spacing-md); font-size: 1rem; line-height: 1.8; }
+    .description-content ul, .description-content ol { padding-left: 1.5rem; margin-bottom: var(--spacing-lg); }
+    .description-content li { margin-bottom: 0.5rem; line-height: 1.7; font-size: 0.975rem; }
+    .description-content strong { font-weight: 900; }
+    .description-content code { background: rgba(153,51,255,0.12); padding: 2px 8px; border-radius: 4px; border: 2px solid rgba(153,51,255,0.4); font-family: "Courier New", monospace; font-weight: 700; font-size: 0.9em; }
+
+    @media (max-width: 1200px) { .article-layout { grid-template-columns: 260px 1fr; } .right-sidebar { display: none; } }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } #sidebar-container { display: none; } .featured-image { height: 220px; } .axes-grid { grid-template-columns: 1fr; } .internal-links-grid { grid-template-columns: 1fr; } .article-body { padding: var(--spacing-lg); } .xpath-expr { flex-direction: column; gap: 4px; } .xpath-code { min-width: 0; } }
+    @media (max-width: 600px) { .article-body { padding: var(--spacing-md); border-width: 4px; } .description-content h2 { font-size: 1.5rem; } .code-block pre { font-size: 0.8rem; } .axes-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
-    <div id="header-container"></div>
     
-    <main class="container">
-        <div class="three-column-layout">
-            <aside id="sidebar-container" class="sidebar"></aside>
-            
-            <article class="main-content">
-                <div class="article-body">
-                    <span class="post-meta" style="font-weight:900; color:var(--blue); text-transform:uppercase;">Published: January 10, 2026</span>
-                    <h1 class="page-title">Demystifying XPath: Navigating Complex XML Documents</h1>
-                    
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800" alt="Complex logic and code" class="featured-image">
+  <div id="header-container"></div>
 
-                    <div class="description-content">
-                        <p>When XML documents grow in size and complexity, simple tag searching isn't enough. XPath (XML Path Language) provides a powerful syntax for selecting nodes within an XML document by navigating through its tree structure.</p>
-                        
-                        <h3>Understanding XPath Axes</h3>
-                        <p>Axes allow you to find nodes based on their relationship to the current node. This is essential for deep-nested data structures where position matters.</p>
-                        
-                        
+  <main class="container">
+    <div class="article-layout">
 
-                        <ul>
-                            <li><strong>child::</strong> Selects all children of the current node.</li>
-                            <li><strong>parent::</strong> Selects the parent of the current node.</li>
-                            <li><strong>descendant::</strong> Selects all descendants (children, grandchildren, etc.).</li>
-                            <li><strong>following-sibling::</strong> Selects all nodes after the current node at the same level.</li>
-                        </ul>
-
-                        <h3>Using Predicates for Precision</h3>
-                        <p>Predicates are used to find a specific node or a node that contains a specific value. They are always embedded in square brackets.</p>
-                        
-                        <div class="code-block">
-                            //book[price > 35.00]/title
-                        </div>
-
-                        <p>In the example above, the XPath query selects the titles of all books that have a price greater than 35.00. Mastering these filters is the key to efficient data extraction from massive enterprise XML files.</p>
-                    </div>
-                </div>
-            </article>
-
-            <aside class="right-sidebar">
-                <div id="articles-sidebar-container">
-                    </div>
-            </aside>
+      <!-- Left Sidebar -->
+      <aside id="sidebar-container" class="sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-section">
+            <h2 class="sidebar-title">XML TOOLS</h2>
+            <ul class="sidebar-menu">
+              <li><a href="xpath-tester.html" class="sidebar-link">XPath Tester</a></li>
+              <li><a href="xslt-transformer.html" class="sidebar-link">XSLT Transformer</a></li>
+              <li><a href="xml-formatter.html" class="sidebar-link">XML Formatter</a></li>
+              <li><a href="xml-validator.html" class="sidebar-link">XML Validator</a></li>
+              <li><a href="xml-to-json.html" class="sidebar-link">XML to JSON</a></li>
+              <li><a href="xml-minifier.html" class="sidebar-link">XML Minifier</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <h2 class="sidebar-title">RELATED ARTICLES</h2>
+            <ul class="sidebar-menu">
+              <li><a href="mastering-xml.html" class="sidebar-link">Mastering XML</a></li>
+              <li><a href="optimizing-xml-performance.html" class="sidebar-link">XML Performance</a></li>
+              <li><a href="xml-security-essentials.html" class="sidebar-link">XML Security</a></li>
+              <li><a href="xml-vs-json.html" class="sidebar-link">XML vs JSON</a></li>
+              <li><a href="top-10-xml-tools.html" class="sidebar-link">Top 10 XML Tools</a></li>
+            </ul>
+          </div>
         </div>
-    </main>
-    
+      </aside>
+
+      <!-- Main Article -->
+      <article class="main-content">
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="meta-badge meta-date">April 1, 2026</span>
+            <span class="meta-badge meta-read">14 MIN READ</span>
+            <span class="meta-badge meta-cat">XPATH &amp; QUERYING</span>
+          </div>
+
+          <h1 class="page-title" style="font-size:2.75rem; font-weight:900; letter-spacing:-1.5px; line-height:1.1; margin-bottom:var(--spacing-lg);">
+            Demystifying XPath: The Complete Guide to Navigating Complex XML Documents
+          </h1>
+
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200"
+            alt="Complex code and logic — mastering XPath expressions for XML navigation"
+            class="featured-image"
+            width="1200" height="380"
+            loading="eager"
+          >
+
+          <nav class="toc" aria-label="Table of contents">
+            <div class="toc-title">🔍 TABLE OF CONTENTS</div>
+            <ol>
+              <li><a href="#what-is-xpath">What Is XPath and Why Master It?</a></li>
+              <li><a href="#syntax-basics">XPath Syntax Fundamentals</a></li>
+              <li><a href="#axes">Understanding XPath Axes</a></li>
+              <li><a href="#predicates">Predicates: Filtering with Precision</a></li>
+              <li><a href="#functions">Built-in XPath Functions</a></li>
+              <li><a href="#advanced-expressions">Advanced XPath Expressions</a></li>
+              <li><a href="#namespaces">XPath with Namespaces</a></li>
+              <li><a href="#xpath2">XPath 2.0 &amp; 3.1: What's New</a></li>
+              <li><a href="#language-usage">Using XPath in Code</a></li>
+              <li><a href="#cheat-sheet">Quick Reference Cheat Sheet</a></li>
+              <li><a href="#faq">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+          <div class="description-content">
+
+            <h2 id="what-is-xpath">What Is XPath and Why Master It?</h2>
+            <p>XPath (XML Path Language) is a W3C standard query language for selecting nodes and computing values from XML documents. Think of it as SQL for XML — a declarative syntax that lets you express <em>what data you want</em> rather than <em>how to traverse the tree to find it</em>.</p>
+            <p>XPath is not just an academic concept. It is the query language used inside:</p>
+            <ul>
+              <li><strong>XSLT</strong> — every <code>&lt;xsl:value-of select="..."&gt;</code> attribute is an XPath expression</li>
+              <li><strong>Schematron</strong> — business rule validation using XPath assertions</li>
+              <li><strong>XQuery</strong> — the full XML database query language, built on XPath</li>
+              <li><strong>XPointer</strong> — fragment identifiers for XML resources</li>
+              <li><strong>SOAP WS-Addressing</strong> — message routing uses XPath for endpoint lookup</li>
+              <li><strong>Browser DevTools</strong> — Chrome and Firefox support XPath in the console and DOM inspector</li>
+              <li><strong>Web scraping</strong> — libraries like Scrapy, lxml, and Playwright use XPath for element selection</li>
+            </ul>
+            <p>Mastering XPath turns complex, nested XML documents into queryable data stores that you can navigate with surgical precision. Test any expression from this guide using our free <a href="xpath-tester.html"><strong>XPath Tester</strong></a> — paste your XML, write your expression, see results instantly.</p>
+
+            <h2 id="syntax-basics">XPath Syntax Fundamentals</h2>
+            <p>An XPath expression is a path that describes how to navigate from the current context node to a set of target nodes, returning a <strong>node set</strong>, a <strong>string</strong>, a <strong>number</strong>, or a <strong>boolean</strong>.</p>
+
+            <div class="code-block">
+              <div class="code-header xml">SAMPLE XML — USED THROUGHOUT THIS GUIDE</div>
+              <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;library&gt;
+  &lt;section name="fiction"&gt;
+    &lt;book id="b001" available="true"&gt;
+      &lt;title lang="en"&gt;Dune&lt;/title&gt;
+      &lt;author&gt;Frank Herbert&lt;/author&gt;
+      &lt;price currency="USD"&gt;14.99&lt;/price&gt;
+      &lt;tags&gt;&lt;tag&gt;sci-fi&lt;/tag&gt;&lt;tag&gt;classic&lt;/tag&gt;&lt;/tags&gt;
+    &lt;/book&gt;
+    &lt;book id="b002" available="false"&gt;
+      &lt;title lang="en"&gt;Foundation&lt;/title&gt;
+      &lt;author&gt;Isaac Asimov&lt;/author&gt;
+      &lt;price currency="USD"&gt;12.50&lt;/price&gt;
+      &lt;tags&gt;&lt;tag&gt;sci-fi&lt;/tag&gt;&lt;tag&gt;classic&lt;/tag&gt;&lt;/tags&gt;
+    &lt;/book&gt;
+  &lt;/section&gt;
+  &lt;section name="technical"&gt;
+    &lt;book id="b003" available="true"&gt;
+      &lt;title lang="en"&gt;Clean Code&lt;/title&gt;
+      &lt;author&gt;Robert C. Martin&lt;/author&gt;
+      &lt;price currency="USD"&gt;39.99&lt;/price&gt;
+      &lt;tags&gt;&lt;tag&gt;programming&lt;/tag&gt;&lt;tag&gt;best-practices&lt;/tag&gt;&lt;/tags&gt;
+    &lt;/book&gt;
+  &lt;/section&gt;
+&lt;/library&gt;</code></pre>
+            </div>
+
+            <h3>The Two Fundamental Path Types</h3>
+            <p>XPath has two path types that underlie all expressions:</p>
+            <ul>
+              <li><strong>Absolute path</strong> — starts with <code>/</code>, navigates from the document root: <code>/library/section/book</code></li>
+              <li><strong>Relative path</strong> — navigates from the context node: <code>section/book</code></li>
+            </ul>
+            <p>The <code>//</code> shorthand selects nodes anywhere in the document: <code>//book</code> selects all book elements at any depth, equivalent to <code>/descendant-or-self::node()/book</code>.</p>
+
+            <div class="xpath-block">
+              <div style="color:var(--yellow); font-weight:900; font-size:0.875rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:var(--spacing-md); padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.2);">FUNDAMENTAL PATH EXPRESSIONS</div>
+              <div class="xpath-expr"><span class="xpath-code">/library</span><span class="xpath-desc">Select the root &lt;library&gt; element (absolute path)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">/library/section</span><span class="xpath-desc">All &lt;section&gt; elements directly under &lt;library&gt;</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book</span><span class="xpath-desc">All &lt;book&gt; elements anywhere in the document</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book/title</span><span class="xpath-desc">All &lt;title&gt; elements that are direct children of &lt;book&gt;</span></div>
+              <div class="xpath-expr"><span class="xpath-code">.</span><span class="xpath-desc">The current context node (self)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">..</span><span class="xpath-desc">The parent of the current context node</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book/@id</span><span class="xpath-desc">All id attributes on &lt;book&gt; elements</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book/title/text()</span><span class="xpath-desc">The text node content of all &lt;title&gt; elements</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//*</span><span class="xpath-desc">Every element in the entire document</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//@*</span><span class="xpath-desc">Every attribute in the entire document</span></div>
+            </div>
+
+            <h2 id="axes">Understanding XPath Axes</h2>
+            <p>The most powerful — and least understood — feature of XPath is the <strong>axis system</strong>. Every XPath step has three parts: <code>axis::nodetest[predicate]</code>. An axis defines the <em>direction of travel</em> from the context node. There are 13 axes in XPath 1.0:</p>
+
+            <div class="axes-grid">
+              <div class="axis-card">
+                <div class="axis-card-head">child::</div>
+                <div class="axis-card-body">All direct child nodes of the context node. The default axis — <code>child::book</code> and <code>book</code> are equivalent.<div class="axis-example">child::book → all &lt;book&gt; children</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">parent::</div>
+                <div class="axis-card-body">The single parent node of the context node. Shorthand: <code>..</code><div class="axis-example">parent::section → parent &lt;section&gt;</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">ancestor::</div>
+                <div class="axis-card-body">All ancestors (parent, grandparent, etc.) up to the root. Ordered from the context node toward the root.<div class="axis-example">ancestor::library → all ancestor &lt;library&gt; nodes</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">descendant::</div>
+                <div class="axis-card-body">All descendants (children, grandchildren, etc.) at any depth below the context node.<div class="axis-example">descendant::tag → all &lt;tag&gt; descendants</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">following-sibling::</div>
+                <div class="axis-card-body">All sibling nodes that come after the context node in document order.<div class="axis-example">following-sibling::book → next &lt;book&gt; siblings</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">preceding-sibling::</div>
+                <div class="axis-card-body">All sibling nodes that come before the context node in document order.<div class="axis-example">preceding-sibling::book[1] → immediately preceding &lt;book&gt;</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">following::</div>
+                <div class="axis-card-body">All nodes that come after the context node's closing tag in document order, excluding descendants.<div class="axis-example">following::book → all later &lt;book&gt; nodes</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">preceding::</div>
+                <div class="axis-card-body">All nodes before the context node's opening tag in document order, excluding ancestors.<div class="axis-example">preceding::book → all earlier &lt;book&gt; nodes</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">self::</div>
+                <div class="axis-card-body">The context node itself. Shorthand: <code>.</code>  Useful in predicates and union expressions.<div class="axis-example">self::book → context node if it is &lt;book&gt;</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">attribute::</div>
+                <div class="axis-card-body">Attributes of the context node. Shorthand: <code>@</code><div class="axis-example">attribute::id → the id attribute. @id is shorthand.</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">namespace::</div>
+                <div class="axis-card-body">Namespace nodes of the context element. Rarely used directly outside of namespace-aware processing.<div class="axis-example">namespace::xsi → xsi namespace node</div></div>
+              </div>
+              <div class="axis-card">
+                <div class="axis-card-head">descendant-or-self::</div>
+                <div class="axis-card-body">The context node and all its descendants. This is what <code>//</code> is an abbreviation for.<div class="axis-example">// = /descendant-or-self::node()/</div></div>
+              </div>
+            </div>
+
+            <div class="callout callout-purple">
+              <span class="callout-label">Power Move</span>
+              <p>Combine axes for powerful cross-document navigation. Example: to find all books that come <em>after</em> a book with id "b001" within the same section: <code>//book[@id='b001']/following-sibling::book</code>. This is impossible with simple path expressions but trivial with axes.</p>
+            </div>
+
+            <h2 id="predicates">Predicates: Filtering with Precision</h2>
+            <p>Predicates are conditions enclosed in square brackets <code>[ ]</code> that filter the node set produced by a location step. You can stack multiple predicates and use any XPath expression as a condition.</p>
+
+            <div class="xpath-block">
+              <div style="color:var(--yellow); font-weight:900; font-size:0.875rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:var(--spacing-md); padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.2);">PREDICATE EXPRESSIONS — ALL AGAINST THE SAMPLE XML ABOVE</div>
+              <div class="xpath-expr"><span class="xpath-code">//book[1]</span><span class="xpath-desc">First book child of each parent (position-based, NOT document-order index)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[last()]</span><span class="xpath-desc">Last book child of each parent element</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[position() &lt;= 2]</span><span class="xpath-desc">First two book elements within each parent</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[@available='true']</span><span class="xpath-desc">Books where the available attribute equals "true"</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[not(@available='true')]</span><span class="xpath-desc">Books where available is NOT "true"</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[price &gt; 15]</span><span class="xpath-desc">Books whose &lt;price&gt; text value is greater than 15</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[price &gt; 10 and price &lt; 20]</span><span class="xpath-desc">Books priced between 10 and 20 (AND operator)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[tags/tag='sci-fi']</span><span class="xpath-desc">Books that have a &lt;tag&gt; child with text "sci-fi"</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[@id='b001' or @id='b003']</span><span class="xpath-desc">Books with id b001 OR b003 (OR operator)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//section[@name='fiction']/book</span><span class="xpath-desc">All books inside the fiction section only</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[@available][price &lt; 20]</span><span class="xpath-desc">Multiple predicates: available AND price &lt; 20 (stacked)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">/library/section[2]/book[1]</span><span class="xpath-desc">First book of the second section (positional path)</span></div>
+            </div>
+
+            <div class="callout callout-warn">
+              <span class="callout-label">Common Mistake</span>
+              <p>In XPath 1.0, <code>//book[1]</code> does <strong>not</strong> select the first book in the entire document — it selects the first book within each parent. To select the very first book in the document, use <code>(//book)[1]</code> with parentheses around the node set before the predicate.</p>
+            </div>
+
+            <h2 id="functions">Built-in XPath Functions</h2>
+            <p>XPath 1.0 includes a standard function library covering string manipulation, numeric operations, boolean logic, and node-set operations. XPath 2.0 greatly expands this library.</p>
+
+            <table class="func-table" aria-label="XPath built-in functions reference">
+              <thead><tr><th>Category</th><th>Function</th><th>Description &amp; Example</th></tr></thead>
+              <tbody>
+                <tr><td rowspan="5">Node Set</td><td><code>count(nodes)</code></td><td>Returns the number of nodes: <code>count(//book)</code> → 3</td></tr>
+                <tr><td><code>last()</code></td><td>Number of nodes in the context: <code>//book[last()]</code></td></tr>
+                <tr><td><code>position()</code></td><td>Position of context node: <code>//book[position()=2]</code></td></tr>
+                <tr><td><code>name()</code></td><td>Tag name of context node: <code>name()</code> → "book"</td></tr>
+                <tr><td><code>local-name()</code></td><td>Name without namespace prefix: <code>local-name()</code></td></tr>
+                <tr><td rowspan="6">String</td><td><code>contains(s, sub)</code></td><td>True if s contains sub: <code>//title[contains(.,'Clean')]</code></td></tr>
+                <tr><td><code>starts-with(s, p)</code></td><td>True if s starts with p: <code>//book[starts-with(@id,'b0')]</code></td></tr>
+                <tr><td><code>string-length(s)</code></td><td>Character length: <code>//title[string-length(.)&gt;10]</code></td></tr>
+                <tr><td><code>substring(s,n,l)</code></td><td>Substring from position n, length l</td></tr>
+                <tr><td><code>normalize-space(s)</code></td><td>Strips leading/trailing whitespace, collapses internal</td></tr>
+                <tr><td><code>translate(s,a,b)</code></td><td>Replaces characters in a with characters in b (no regex in XPath 1.0)</td></tr>
+                <tr><td rowspan="3">Numeric</td><td><code>sum(nodes)</code></td><td>Sum of node values: <code>sum(//price)</code> → 67.48</td></tr>
+                <tr><td><code>number(val)</code></td><td>Converts to number: <code>number('42')</code> → 42</td></tr>
+                <tr><td><code>floor() / ceiling() / round()</code></td><td>Numeric rounding functions</td></tr>
+                <tr><td rowspan="3">Boolean</td><td><code>not(expr)</code></td><td>Boolean negation: <code>//book[not(@available='true')]</code></td></tr>
+                <tr><td><code>true() / false()</code></td><td>Boolean literals for use in predicates</td></tr>
+                <tr><td><code>boolean(expr)</code></td><td>Converts to boolean (empty string / 0 / empty nodeset = false)</td></tr>
+              </tbody>
+            </table>
+
+            <h2 id="advanced-expressions">Advanced XPath Expressions</h2>
+            <p>Once you're comfortable with axes and predicates, these advanced patterns unlock truly powerful queries:</p>
+
+            <div class="xpath-block">
+              <div style="color:var(--yellow); font-weight:900; font-size:0.875rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:var(--spacing-md); padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.2);">ADVANCED PATTERNS</div>
+              <div class="xpath-expr"><span class="xpath-code">count(//book)</span><span class="xpath-desc">Count total books in library → 3</span></div>
+              <div class="xpath-expr"><span class="xpath-code">sum(//price)</span><span class="xpath-desc">Sum all price values → 67.48</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[price = min(//price)]</span><span class="xpath-desc">Book(s) with the minimum price (XPath 2.0 min() function)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book | //section</span><span class="xpath-desc">Union: all book AND section elements (| = union operator)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[not(preceding-sibling::book)]</span><span class="xpath-desc">First book in each section (no preceding sibling)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//tag[not(. = preceding::tag)]</span><span class="xpath-desc">Distinct tag values — removes duplicates using preceding axis</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[.//tag = //book[1]//tag]</span><span class="xpath-desc">Books sharing any tag with the first book</span></div>
+              <div class="xpath-expr"><span class="xpath-code">string(//book[@id='b001']/price)</span><span class="xpath-desc">Get the price of book b001 as a string → "14.99"</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//book[generate-id() = generate-id(key('byTag','sci-fi')[1])]</span><span class="xpath-desc">Muenchian grouping — first book per tag (XSLT pattern)</span></div>
+            </div>
+
+            <h2 id="namespaces">XPath with Namespaces</h2>
+            <p>Namespaces are a major source of confusion when using XPath. When an XML document uses namespaces, your XPath expressions must also use namespace-prefixed element names. You cannot match namespaced elements with unqualified names.</p>
+
+            <div class="code-block">
+              <div class="code-header xml">XML WITH NAMESPACES</div>
+              <pre><code>&lt;catalog xmlns:bk="https://example.com/books"
+         xmlns:inv="https://example.com/inventory"&gt;
+  &lt;bk:book id="001"&gt;
+    &lt;bk:title&gt;Dune&lt;/bk:title&gt;
+    &lt;inv:stock&gt;42&lt;/inv:stock&gt;
+  &lt;/bk:book&gt;
+&lt;/catalog&gt;</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header java">JAVA — XPATH WITH NAMESPACE CONTEXT</div>
+              <pre><code">XPathFactory factory = XPathFactory.newInstance();
+XPath xpath = factory.newXPath();
+
+// Register namespace prefixes so XPath can resolve them
+xpath.setNamespaceContext(new NamespaceContext() {
+    @Override
+    public String getNamespaceURI(String prefix) {
+        return switch (prefix) {
+            case "bk"  -> "https://example.com/books";
+            case "inv" -> "https://example.com/inventory";
+            default    -> XMLConstants.NULL_NS_URI;
+        };
+    }
+    @Override public String getPrefix(String ns) { return null; }
+    @Override public Iterator&lt;String&gt; getPrefixes(String ns) { return null; }
+});
+
+// Now use the registered prefixes in expressions
+NodeList books = (NodeList) xpath.evaluate(
+    "//bk:book[@id='001']/bk:title",
+    document,
+    XPathConstants.NODESET
+);
+System.out.println(books.item(0).getTextContent()); // → "Dune"</code></pre>
+            </div>
+
+            <div class="callout callout-tip">
+              <span class="callout-label">Namespace Trick</span>
+              <p>To select elements regardless of their namespace (useful for exploratory queries), use the <code>local-name()</code> function: <code>//*[local-name()='book']</code> matches any <code>&lt;book&gt;</code> element in any namespace. Avoid this in production code — use explicit namespace contexts instead.</p>
+            </div>
+
+            <h2 id="xpath2">XPath 2.0 &amp; 3.1: What's New</h2>
+            <p>XPath 2.0 (2007) was a major revision that added a rich type system, sequences, and an expanded function library. XPath 3.1 (2017) added maps, arrays, and function items. Key additions:</p>
+            <ul>
+              <li><strong>Sequences</strong> — XPath 2.0 works with ordered sequences, not just unordered node sets. <code>(1, 2, 3, //book)</code> is valid.</li>
+              <li><strong>Typed data</strong> — <code>xs:integer</code>, <code>xs:date</code>, <code>xs:decimal</code>, and other XSD types available natively</li>
+              <li><strong>Conditional expressions</strong> — <code>if (condition) then expr1 else expr2</code></li>
+              <li><strong>Quantified expressions</strong> — <code>some $x in //price satisfies $x &gt; 30</code></li>
+              <li><strong>Range expressions</strong> — <code>for $i in (1 to 10) return $i * $i</code></li>
+              <li><strong>New functions</strong> — <code>matches()</code> (regex), <code>tokenize()</code>, <code>format-date()</code>, <code>min()</code>, <code>max()</code>, <code>avg()</code>, <code>distinct-values()</code></li>
+              <li><strong>XPath 3.1 Maps</strong> — <code>map{'key': 'value'}</code> for key-value structures</li>
+            </ul>
+
+            <div class="callout callout-info">
+              <span class="callout-label">Compatibility Note</span>
+              <p>Most browser-based XPath support (<code>document.evaluate()</code>) is limited to XPath 1.0. Java's built-in <code>javax.xml.xpath</code> also only supports 1.0. For XPath 2.0+, use <strong>Saxon</strong> (Java), <strong>lxml</strong> with XPath 1.0 subset, or <strong>BaseX</strong> for full XPath 3.1 support.</p>
+            </div>
+
+            <h2 id="language-usage">Using XPath in Code</h2>
+
+            <div class="code-block">
+              <div class="code-header python">PYTHON — XPATH WITH LXML</div>
+              <pre><code">from lxml import etree
+
+tree = etree.parse('library.xml')
+root = tree.getroot()
+
+# Simple path selection
+books = root.xpath('//book')
+print(f"Found {len(books)} books")
+
+# Predicate filtering
+expensive = root.xpath('//book[number(price) > 20]')
+for book in expensive:
+    title = book.findtext('title')
+    price = book.findtext('price')
+    print(f"{title}: ${price}")
+
+# Attribute selection
+available_ids = root.xpath('//book[@available="true"]/@id')
+print("Available:", available_ids)
+
+# String function
+sci_fi = root.xpath('//book[tags/tag[contains(., "sci-fi")]]/title/text()')
+print("Sci-fi books:", sci_fi)
+
+# Aggregate
+total = root.xpath('sum(//price)')
+print(f"Total inventory value: ${total:.2f}")</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header js">JAVASCRIPT — XPATH IN BROWSER</div>
+              <pre><code">// Browser XPath API: document.evaluate()
+const xml = `&lt;library&gt;&lt;book id="b1"&gt;&lt;title&gt;Dune&lt;/title&gt;&lt;price&gt;14.99&lt;/price&gt;&lt;/book&gt;&lt;/library&gt;`;
+const parser = new DOMParser();
+const doc = parser.parseFromString(xml, 'application/xml');
+
+function xpathAll(expr, contextNode = doc) {
+    const result = doc.evaluate(
+        expr, contextNode,
+        null,                  // namespace resolver (null = no namespaces)
+        XPathResult.ANY_TYPE,
+        null
+    );
+    const nodes = [];
+    let node;
+    while ((node = result.iterateNext())) nodes.push(node);
+    return nodes;
+}
+
+function xpathString(expr, contextNode = doc) {
+    return doc.evaluate(
+        expr, contextNode, null,
+        XPathResult.STRING_TYPE, null
+    ).stringValue;
+}
+
+// Usage
+const titles = xpathAll('//title').map(n => n.textContent);
+console.log(titles); // ["Dune"]
+
+const price = xpathString('string(//book[@id="b1"]/price)');
+console.log(price); // "14.99"</code></pre>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header dotnet">C# — XPATH WITH XMLDOCUMENT</div>
+              <pre><code">var doc = new XmlDocument();
+doc.Load("library.xml");
+
+// Basic node selection
+var books = doc.SelectNodes("//book");
+Console.WriteLine($"Total books: {books.Count}");
+
+// Filtered selection with predicate
+var available = doc.SelectNodes("//book[@available='true']");
+foreach (XmlNode book in available) {
+    Console.WriteLine(book.SelectSingleNode("title")?.InnerText);
+}
+
+// Single node
+var firstBook = doc.SelectSingleNode("//book[1]/title");
+Console.WriteLine(firstBook?.InnerText); // → "Dune"
+
+// With namespace manager for namespaced XML
+var nsMgr = new XmlNamespaceManager(doc.NameTable);
+nsMgr.AddNamespace("bk", "https://example.com/books");
+var titleNode = doc.SelectSingleNode("//bk:title", nsMgr);</code></pre>
+            </div>
+
+            <h2 id="cheat-sheet">Quick Reference Cheat Sheet</h2>
+
+            <div class="xpath-block">
+              <div style="color:var(--yellow); font-weight:900; font-size:0.875rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:var(--spacing-md); padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.2);">XPATH QUICK REFERENCE</div>
+              <div class="xpath-expr"><span class="xpath-code">nodename</span><span class="xpath-desc">Select all child nodes named "nodename"</span></div>
+              <div class="xpath-expr"><span class="xpath-code">/</span><span class="xpath-desc">Root node (or separator in absolute paths)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">//</span><span class="xpath-desc">Anywhere in the document (descendant-or-self shorthand)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">.</span><span class="xpath-desc">Current context node</span></div>
+              <div class="xpath-expr"><span class="xpath-code">..</span><span class="xpath-desc">Parent of current node</span></div>
+              <div class="xpath-expr"><span class="xpath-code">@attr</span><span class="xpath-desc">Select attribute named "attr" (attribute:: shorthand)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">*</span><span class="xpath-desc">Wildcard: any element node</span></div>
+              <div class="xpath-expr"><span class="xpath-code">@*</span><span class="xpath-desc">Wildcard: any attribute</span></div>
+              <div class="xpath-expr"><span class="xpath-code">node()</span><span class="xpath-desc">Any node (elements, text, comments, PIs)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">text()</span><span class="xpath-desc">Text node children only</span></div>
+              <div class="xpath-expr"><span class="xpath-code">[n]</span><span class="xpath-desc">Position predicate — select nth node (1-indexed)</span></div>
+              <div class="xpath-expr"><span class="xpath-code">|</span><span class="xpath-desc">Union operator: combines two node sets</span></div>
+              <div class="xpath-expr"><span class="xpath-code">and / or / not()</span><span class="xpath-desc">Boolean operators in predicates</span></div>
+              <div class="xpath-expr"><span class="xpath-code">= != &lt; &gt; &lt;= &gt;=</span><span class="xpath-desc">Comparison operators (use &amp;lt; &amp;gt; in XML contexts)</span></div>
+            </div>
+
+            <div class="internal-links">
+              <h3>🔧 RELATED TOOLS &amp; ARTICLES</h3>
+              <div class="internal-links-grid">
+                <a href="xpath-tester.html" class="internal-link-item">→ XPath Tester (Live)</a>
+                <a href="xslt-transformer.html" class="internal-link-item">→ XSLT Transformer</a>
+                <a href="xml-formatter.html" class="internal-link-item">→ XML Formatter</a>
+                <a href="xml-validator.html" class="internal-link-item">→ XML Validator</a>
+                <a href="mastering-xml.html" class="internal-link-item">→ Mastering XML Guide</a>
+                <a href="optimizing-xml-performance.html" class="internal-link-item">→ XML Performance Guide</a>
+                <a href="xml-security-essentials.html" class="internal-link-item">→ XML Security</a>
+                <a href="xml-vs-json.html" class="internal-link-item">→ XML vs JSON</a>
+              </div>
+            </div>
+
+            <h2 id="faq">Frequently Asked Questions</h2>
+            <div class="faq-section">
+              <div class="faq-item open">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is XPath used for? <span class="faq-icon">+</span></div>
+                <div class="faq-a">XPath is used to select and query nodes from XML documents. Its core uses include: selecting values from XML API responses, writing XSLT templates for document transformation, defining Schematron business rules for XML validation, querying XML databases with XQuery, selecting elements in browser DevTools, and powering XML-based web scraping. It's the foundational query language for the entire XML ecosystem.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is the difference between XPath 1.0 and XPath 2.0? <span class="faq-icon">+</span></div>
+                <div class="faq-a">XPath 1.0 (1999) is widely supported and sufficient for most use cases. It operates on four data types: node sets, strings, numbers, and booleans. XPath 2.0 (2007) adds a rich type system based on XML Schema, sequences (ordered collections), a large expanded function library (including regex matching, date/time, aggregate functions), conditional expressions (<code>if/then/else</code>), and quantified expressions (<code>some/every</code>). XPath 2.0 requires a dedicated engine like Saxon — browser <code>document.evaluate()</code> and Java's <code>javax.xml.xpath</code> only support 1.0.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">How do I select an element by its text content in XPath? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Use a predicate with a <code>.</code> reference (which refers to the string value of the current element) or the <code>text()</code> node test: <code>//title[. = 'Dune']</code> or <code>//title[text() = 'Dune']</code>. For partial matches, use <code>contains()</code>: <code>//title[contains(., 'Du')]</code>. For case-insensitive matching in XPath 1.0, combine <code>translate()</code> to normalize case first.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">Why does my XPath expression return nothing on a namespaced XML document? <span class="faq-icon">+</span></div>
+                <div class="faq-a">The most common cause of XPath returning empty results on namespaced XML is failing to register namespace prefixes with the XPath engine. In Java, call <code>xpath.setNamespaceContext(...)</code>. In C#, use <code>XmlNamespaceManager</code>. In Python lxml, pass <code>namespaces={'prefix': 'uri'}</code> to <code>xpath()</code>. As a quick debug workaround (not for production), use <code>//*[local-name()='elementName']</code> which ignores namespaces — this confirms whether your structure is correct before resolving the namespace context issue.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is the // shorthand and when should I avoid it? <span class="faq-icon">+</span></div>
+                <div class="faq-a">The <code>//</code> shorthand selects nodes anywhere in the document (descendant-or-self axis). It's very convenient but can be slow on large documents because it scans the entire subtree. Prefer explicit paths (<code>/library/section/book</code>) when you know the document structure — they are faster because the engine navigates directly without scanning. Use <code>//</code> when the document structure is variable or unknown, or when writing XSLT templates that must match in any context.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">Can I test XPath expressions online without installing anything? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Yes — our free <a href="xpath-tester.html">XPath Tester</a> lets you paste any XML document and then test XPath 1.0 expressions against it, with matching nodes highlighted in real time. It shows the matching node count, values, and tree position. No signup, no installation — runs entirely in your browser. Perfect for developing and debugging expressions before embedding them in application code.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is the union operator in XPath? <span class="faq-icon">+</span></div>
+                <div class="faq-a">The <code>|</code> operator combines two node sets into a single merged node set (duplicates are removed, result is in document order). For example, <code>//book | //article</code> returns all book and article elements. This is useful for XSLT templates that must match multiple element types with the same transformation logic, or for extracting multiple disjoint subtrees in a single query.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Right Sidebar -->
+      <aside class="right-sidebar">
+        <div class="rs-card" style="background:rgba(153,51,255,0.06); border-color:var(--purple);">
+          <div class="rs-title" style="border-bottom-color:var(--purple);">🔍 TRY XPATH LIVE</div>
+          <p style="font-size:0.875rem; margin-bottom:var(--spacing-sm);">Test any expression from this guide against your own XML instantly.</p>
+          <a href="xpath-tester.html" style="display:block; padding:12px; background:var(--purple); color:white; font-weight:900; text-align:center; border-radius:var(--radius-sm); border:3px solid var(--black); text-decoration:none;">Open XPath Tester →</a>
+        </div>
+        <div class="rs-card">
+          <div class="rs-title">🛠 RELATED TOOLS</div>
+          <a href="xpath-tester.html" class="rs-link">XPath Tester</a>
+          <a href="xslt-transformer.html" class="rs-link">XSLT Transformer</a>
+          <a href="xml-formatter.html" class="rs-link">XML Formatter</a>
+          <a href="xml-validator.html" class="rs-link">XML Validator</a>
+        </div>
+        <div class="rs-card">
+          <div class="rs-title">📖 MORE ARTICLES</div>
+          <a href="mastering-xml.html" class="rs-link">Mastering XML: Full Guide</a>
+          <a href="optimizing-xml-performance.html" class="rs-link">XML Performance Guide</a>
+          <a href="xml-security-essentials.html" class="rs-link">XML Security Essentials</a>
+          <a href="xml-vs-json.html" class="rs-link">XML vs JSON</a>
+          <a href="top-10-xml-tools.html" class="rs-link">Top 10 XML Tools</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
     <div id="footer-container"></div>
+    
+    <!-- Scripts -->
     <script src="app.js"></script>
+
+  <script>
+    function toggleFAQ(el) { el.parentElement.classList.toggle('open'); }
+  </script>
 </body>
 </html>
