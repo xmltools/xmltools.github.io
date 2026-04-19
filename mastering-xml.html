@@ -1,144 +1,865 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9759808041159779"
-     crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8570XQ6PQ4');
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://xmltools.github.io/mastering-xml"
-  },
-  "headline": "Mastering XML: From Basics to Advanced Structures",
-  "description": "Deep dive into XML architecture, from simple tags to complex schema validation and namespaces.",
-  "image": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800",
-  "author": {
-    "@type": "Organization",
-    "name": "XML Tools"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "XML Tools",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://xmltools.github.io/assets/favicon.jpg"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9759808041159779" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8570XQ6PQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8570XQ6PQ4');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xmltools.github.io/mastering-xml"},
+    "headline": "Mastering XML: A Complete Guide from Basics to Advanced Structures",
+    "description": "The definitive developer guide to XML — covering syntax, namespaces, XSD schemas, XPath, XSLT, and real-world patterns.",
+    "image": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1200",
+    "author": {"@type": "Organization", "name": "XML Tools"},
+    "publisher": {"@type": "Organization", "name": "XML Tools", "logo": {"@type": "ImageObject", "url": "https://xmltools.github.io/assets/favicon.jpg"}},
+    "datePublished": "2026-01-15",
+    "dateModified": "2026-04-19"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is XML used for?", "acceptedAnswer": {"@type": "Answer", "text": "XML is used for data exchange between systems, configuration files, document storage (Microsoft Office, SVG), web feeds (RSS/Atom), SOAP web services, and Android UI layouts, among many other purposes."}},
+      {"@type": "Question", "name": "Is XML still relevant in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. XML remains widely used in enterprise systems, document processing, Microsoft Office formats, SVG graphics, RSS/Atom feeds, Android development, and many industry-specific standards like HL7 FHIR for healthcare data."}},
+      {"@type": "Question", "name": "What is the difference between XML and HTML?", "acceptedAnswer": {"@type": "Answer", "text": "HTML is designed for displaying data in web browsers and has predefined tags. XML is designed for storing and transporting data and allows you to define your own custom tags. XML is strict about proper nesting and closing tags, while HTML (especially HTML5) is more lenient."}}
+    ]
+  }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastering XML: Complete Guide from Basics to Advanced Structures (2026) | XML Tools</title>
+  <meta name="description" content="The complete developer guide to mastering XML. Learn XML syntax, namespaces, XSD schemas, XPath queries, XSLT transformations, and advanced patterns with practical code examples.">
+  <meta name="keywords" content="mastering xml, xml tutorial, xml guide, xml syntax, xml namespace, xsd schema, xpath tutorial, xslt transformation, xml for developers, learn xml 2026">
+  <meta name="author" content="XML Tools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://xmltools.github.io/mastering-xml">
+
+  <meta property="og:title" content="Mastering XML: Complete Guide from Basics to Advanced Structures (2026)">
+  <meta property="og:description" content="The definitive developer guide to XML — syntax, namespaces, XSD schemas, XPath, XSLT, and real-world patterns.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://xmltools.github.io/mastering-xml">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1200">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mastering XML: Complete Guide (2026)">
+  <meta name="twitter:description" content="The definitive developer guide to XML syntax, namespaces, schemas, XPath, and XSLT.">
+
+  <link rel="icon" type="image/png" href="assets/favicon.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr 280px;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      align-items: start;
     }
-  },
-  "datePublished": "2026-01-20",
-  "dateModified": "2026-01-20"
-}
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Mastering XML: From Basics to Advanced Structures | XML Tools</title>
-    <meta name="description" content="A comprehensive guide to mastering XML. Learn about syntax, schemas, namespaces, and advanced data structures for modern development.">
-    <meta name="author" content="XML Tools Team">
-    
-    <meta property="og:title" content="Mastering XML: From Basics to Advanced Structures">
-    <meta property="og:description" content="Deep dive into XML architecture, from simple tags to complex schema validation.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://xmltools.github.io/mastering-xml">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800">
-    
-    <link rel="stylesheet" href="styles.css">    
-    <style>
-        .three-column-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr 300px;
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-xl);
-        }
+    .article-body {
+      background: var(--cream-white);
+      border: 6px solid var(--black);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-brutal);
+    }
+    .featured-image {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      margin-bottom: var(--spacing-lg);
+      display: block;
+    }
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--spacing-md);
+    }
+    .meta-badge {
+      padding: 4px 12px;
+      border: 3px solid var(--black);
+      border-radius: var(--radius);
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .meta-date { background: var(--yellow); color: var(--black); }
+    .meta-read { background: var(--blue); color: white; }
+    .meta-cat { background: var(--black); color: var(--cream-white); }
 
-        .article-body {
-            background: var(--cream-white);
-            border: 6px solid var(--black);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            box-shadow: var(--shadow-brutal);
-        }
+    .toc {
+      background: var(--yellow);
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      padding: var(--spacing-lg);
+      margin: var(--spacing-xl) 0;
+      box-shadow: 6px 6px 0 var(--black);
+    }
+    .toc-title { font-size: 1.25rem; font-weight: 900; margin-bottom: var(--spacing-md); border-bottom: 3px solid var(--black); padding-bottom: var(--spacing-xs); }
+    .toc ol { padding-left: 1.5rem; }
+    .toc li { margin-bottom: 0.5rem; }
+    .toc a { color: var(--black); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--black); }
+    .toc a:hover { background: var(--black); color: var(--yellow); padding: 0 4px; }
 
-        .featured-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border: 4px solid var(--black);
-            border-radius: var(--radius);
-            margin-bottom: var(--spacing-lg);
-        }
+    .code-block {
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 5px 5px 0 var(--black);
+      margin: var(--spacing-lg) 0;
+    }
+    .code-header {
+      padding: var(--spacing-xs) var(--spacing-md);
+      font-weight: 900;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 3px solid var(--black);
+      background: var(--black);
+      color: var(--yellow);
+    }
+    .code-block pre {
+      margin: 0;
+      padding: var(--spacing-md);
+      background: #1a1a2e;
+      color: #e8e8e8;
+      font-family: "Courier New", monospace;
+      font-size: 0.875rem;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+    .code-block pre .tag { color: #79b8ff; }
+    .code-block pre .attr { color: #f9c513; }
+    .code-block pre .val { color: #85e89d; }
+    .code-block pre .cmt { color: #6a737d; font-style: italic; }
+    .code-block pre .str { color: #f1fa8c; }
 
-        .post-meta {
-            font-weight: 900;
-            color: var(--blue);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: var(--spacing-xs);
-            display: block;
-        }
+    .callout {
+      padding: var(--spacing-lg);
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      margin: var(--spacing-lg) 0;
+    }
+    .callout-tip { background: rgba(0,204,102,0.1); border-color: var(--green); }
+    .callout-warn { background: rgba(255,51,51,0.08); border-color: var(--red); }
+    .callout-info { background: rgba(0,102,255,0.08); border-color: var(--blue); }
+    .callout-note { background: rgba(255,204,0,0.15); border-color: var(--yellow); border-left-width: 8px; }
+    .callout-label {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 3px solid var(--black);
+      border-radius: var(--radius-sm);
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: var(--spacing-sm);
+    }
+    .callout-tip .callout-label { background: var(--green); color: white; }
+    .callout-warn .callout-label { background: var(--red); color: white; }
+    .callout-info .callout-label { background: var(--blue); color: white; }
+    .callout-note .callout-label { background: var(--yellow); color: var(--black); }
 
-        @media (max-width: 1200px) {
-            .three-column-layout {
-                grid-template-columns: 280px 1fr;
-            }
-            .right-sidebar { display: none; }
-        }
+    /* Concept cards */
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--spacing-md);
+      margin: var(--spacing-lg) 0;
+    }
+    .concept-card {
+      padding: var(--spacing-lg);
+      border: 5px solid var(--black);
+      border-radius: var(--radius);
+      box-shadow: 5px 5px 0 var(--black);
+      background: white;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .concept-card:hover { transform: translateY(-4px); box-shadow: 8px 8px 0 var(--black); }
+    .concept-icon { font-size: 2rem; margin-bottom: var(--spacing-sm); display: block; }
+    .concept-card h3 { font-size: 1.1rem; font-weight: 900; margin-bottom: var(--spacing-xs); }
+    .concept-card p { font-size: 0.875rem; color: var(--gray-medium); line-height: 1.6; }
 
-        @media (max-width: 900px) {
-            .three-column-layout {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    </style>
+    /* Well-formed rules */
+    .rules-list {
+      counter-reset: rule;
+      list-style: none;
+      padding: 0;
+      margin: var(--spacing-md) 0;
+    }
+    .rules-list li {
+      counter-increment: rule;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 3px solid var(--black);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--spacing-sm);
+      background: white;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-sm);
+    }
+    .rules-list li::before {
+      content: counter(rule, decimal-leading-zero);
+      background: var(--blue);
+      color: white;
+      font-weight: 900;
+      font-size: 0.875rem;
+      min-width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 3px solid var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      margin-bottom: var(--spacing-md);
+      overflow: hidden;
+      box-shadow: 4px 4px 0 var(--black);
+      transition: box-shadow 0.2s;
+    }
+    .faq-item:hover { box-shadow: 6px 6px 0 var(--black); }
+    .faq-q {
+      padding: var(--spacing-md) var(--spacing-lg);
+      background: var(--black);
+      color: var(--cream-white);
+      font-weight: 900;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-q .faq-icon { font-size: 1.5rem; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      padding: var(--spacing-lg);
+      background: var(--cream-white);
+      display: none;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      border-top: 3px solid var(--black);
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    .internal-links {
+      background: var(--black);
+      color: var(--cream-white);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius);
+      margin: var(--spacing-xl) 0;
+      border: 5px solid var(--black);
+      box-shadow: 6px 6px 0 var(--yellow);
+    }
+    .internal-links h3 { font-size: 1.125rem; font-weight: 900; color: var(--yellow); margin-bottom: var(--spacing-md); letter-spacing: 1px; }
+    .internal-links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-sm); }
+    .internal-link-item {
+      display: block;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 3px solid var(--yellow);
+      border-radius: var(--radius-sm);
+      color: var(--cream-white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .internal-link-item:hover { background: var(--yellow); color: var(--black); transform: translateX(4px); }
+
+    .right-sidebar { position: sticky; top: 120px; height: fit-content; }
+    .rs-card {
+      background: var(--cream-white);
+      border: 5px solid var(--black);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-brutal);
+      margin-bottom: var(--spacing-lg);
+    }
+    .rs-title { font-size: 0.875rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-xs); border-bottom: 3px solid var(--yellow); }
+    .rs-article-link {
+      display: block;
+      padding: var(--spacing-sm) 0;
+      border-bottom: 2px solid var(--gray-light);
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+    .rs-article-link:hover { color: var(--blue); }
+    .rs-article-link:last-child { border-bottom: none; }
+
+    .description-content h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin: var(--spacing-xl) 0 var(--spacing-md);
+      padding-bottom: var(--spacing-xs);
+      border-bottom: 5px solid var(--black);
+      letter-spacing: -1px;
+      scroll-margin-top: 100px;
+    }
+    .description-content h3 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin: var(--spacing-lg) 0 var(--spacing-sm);
+      scroll-margin-top: 100px;
+    }
+    .description-content p { margin-bottom: var(--spacing-md); font-size: 1rem; line-height: 1.8; }
+    .description-content ul, .description-content ol { padding-left: 1.5rem; margin-bottom: var(--spacing-lg); }
+    .description-content li { margin-bottom: 0.5rem; line-height: 1.7; font-size: 0.975rem; }
+    .description-content strong { font-weight: 900; }
+    .description-content code {
+      background: var(--yellow);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 2px solid var(--black);
+      font-family: "Courier New", monospace;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+    .description-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--spacing-lg) 0;
+      border: 4px solid var(--black);
+      box-shadow: 5px 5px 0 var(--black);
+    }
+    .description-content th, .description-content td {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 2px solid var(--black);
+      text-align: left;
+      font-size: 0.925rem;
+    }
+    .description-content th { background: var(--black); color: var(--cream-white); font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+    .description-content tr:nth-child(even) td { background: rgba(0,102,255,0.04); }
+
+    @media (max-width: 1200px) {
+      .article-layout { grid-template-columns: 260px 1fr; }
+      .right-sidebar { display: none; }
+    }
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      #sidebar-container { display: none; }
+      .featured-image { height: 220px; }
+      .internal-links-grid { grid-template-columns: 1fr; }
+      .concept-grid { grid-template-columns: 1fr 1fr; }
+      .article-body { padding: var(--spacing-lg); }
+    }
+    @media (max-width: 600px) {
+      .article-body { padding: var(--spacing-md); border-width: 4px; }
+      .description-content h2 { font-size: 1.5rem; }
+      .concept-grid { grid-template-columns: 1fr; }
+      .code-block pre { font-size: 0.8rem; }
+    }
+  </style>
 </head>
 <body>
-    <div id="header-container"></div>
-    
-    <main class="container">
-        <div class="three-column-layout">
-            <aside id="sidebar-container" class="sidebar"></aside>
-            
-            <article class="main-content">
-                <div class="article-body">
-                    <span class="post-meta">Published: January 15, 2026</span>
-                    <h1 class="page-title">Mastering XML: From Basics to Advanced Structures</h1>
-                    
-                    <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800" alt="XML Code on screen" class="featured-image">
-
-                    <div class="description-content">
-                        <p>Extensible Markup Language (XML) remains the backbone of data exchange across many enterprise systems. While JSON has seen a rise in web APIs, XML’s strict structural rules and schema validation make it indispensable for complex data modeling.</p>
-                        
-                        <h3>The Anatomy of an XML Document</h3>
-                        <p>Every valid XML document must start with a declaration and contain exactly one root element. Elements must be properly nested and tags are case-sensitive.</p>
-                        
-                        <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;root&gt;
-    &lt;child id="1"&gt;Content here&lt;/child&gt;
-&lt;/root&gt;</code></pre>
-
-                        <h3>Advanced Data Structures</h3>
-                        <p>Mastering XML involves moving beyond simple tags into <strong>Namespaces (xmlns)</strong> to prevent element name conflicts and <strong>XSD (XML Schema Definition)</strong> to enforce data types and structures.</p>
-                    </div>
-                </div>
-            </article>
-
-            <aside class="right-sidebar">
-                <div id="articles-sidebar-container" class="sidebar-content">
-                    </div>
-            </aside>
+  <div id="header-container">
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-section">
+          <a href="/" class="logo-link">
+            <img src="assets/favicon.jpg" alt="XML Tools Logo" class="logo">
+            <span class="logo-text">XML<strong>TOOLS</strong></span>
+          </a>
         </div>
-    </main>
-    
-    <div id="footer-container"></div>
-    <script src="app.js"></script>
+        <nav class="nav">
+          <a href="/" class="nav-link">HOME</a>
+          <a href="/#tools" class="nav-link">TOOLS</a>
+          <a href="mastering-xml" class="nav-link" aria-current="page">BLOG</a>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main class="container">
+    <div class="article-layout">
+      <aside id="sidebar-container" class="sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-section">
+            <h2 class="sidebar-title">XML TOOLS</h2>
+            <ul class="sidebar-menu">
+              <li><a href="xml-formatter" class="sidebar-link">XML Formatter</a></li>
+              <li><a href="xml-validator" class="sidebar-link">XML Validator</a></li>
+              <li><a href="xml-to-json" class="sidebar-link">XML to JSON</a></li>
+              <li><a href="xpath-tester" class="sidebar-link">XPath Tester</a></li>
+              <li><a href="xslt-transformer" class="sidebar-link">XSLT Transformer</a></li>
+              <li><a href="xml-minifier" class="sidebar-link">XML Minifier</a></li>
+              <li><a href="xsd-generator" class="sidebar-link">XSD Generator</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <h2 class="sidebar-title">RELATED ARTICLES</h2>
+            <ul class="sidebar-menu">
+              <li><a href="xml-vs-json" class="sidebar-link">XML vs JSON</a></li>
+              <li><a href="xml-security-essentials" class="sidebar-link">XML Security</a></li>
+              <li><a href="top-10-xml-tools" class="sidebar-link">Top 10 XML Tools</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <article class="main-content">
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="meta-badge meta-date">April 1, 2026</span>
+            <span class="meta-badge meta-read">15 MIN READ</span>
+            <span class="meta-badge meta-cat">XML TUTORIAL</span>
+          </div>
+
+          <h1 class="page-title" style="font-size:2.75rem; font-weight:900; letter-spacing:-1.5px; line-height:1.1; margin-bottom:var(--spacing-lg);">
+            Mastering XML: A Complete Guide from Basics to Advanced Structures
+          </h1>
+
+          <img
+            src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1200"
+            alt="XML code on a developer screen — mastering XML structures"
+            class="featured-image"
+            width="1200" height="380"
+            loading="eager"
+          >
+
+          <nav class="toc" aria-label="Table of contents">
+            <div class="toc-title">📋 TABLE OF CONTENTS</div>
+            <ol>
+              <li><a href="#what-is-xml">What Is XML and Why Does It Matter?</a></li>
+              <li><a href="#anatomy">The Anatomy of an XML Document</a></li>
+              <li><a href="#well-formed">Well-Formed vs Valid XML</a></li>
+              <li><a href="#attributes">Elements, Attributes &amp; Text Nodes</a></li>
+              <li><a href="#namespaces">XML Namespaces (xmlns)</a></li>
+              <li><a href="#xsd">Schema Validation with XSD</a></li>
+              <li><a href="#xpath">Querying Data with XPath</a></li>
+              <li><a href="#xslt">Transforming XML with XSLT</a></li>
+              <li><a href="#advanced">Advanced XML Patterns</a></li>
+              <li><a href="#tools">Essential XML Development Tools</a></li>
+              <li><a href="#faq">Frequently Asked Questions</a></li>
+            </ol>
+          </nav>
+
+          <div class="description-content">
+
+            <h2 id="what-is-xml">What Is XML and Why Does It Matter?</h2>
+            <p><strong>XML (Extensible Markup Language)</strong> is a markup language defined by the W3C that provides a set of rules for encoding documents in a format that is both human-readable and machine-readable. Unlike HTML — which has a fixed set of tags for browser rendering — XML lets you define your own tags, making it infinitely flexible for representing any kind of structured data.</p>
+            <p>First published in 1998, XML was designed to be a simplified, portable subset of SGML (Standard Generalized Markup Language). It quickly became the backbone of enterprise data exchange, document storage, and configuration management. Despite the rise of JSON for web APIs, XML remains essential in 2026 for:</p>
+            <ul>
+              <li>Microsoft Office document formats (DOCX, XLSX, PPTX are all ZIP files containing XML)</li>
+              <li>Android UI layout files</li>
+              <li>SVG (Scalable Vector Graphics)</li>
+              <li>RSS and Atom web feeds</li>
+              <li>SOAP web services and WS-* standards</li>
+              <li>Healthcare interoperability standards (HL7, FHIR)</li>
+              <li>Financial data exchange (XBRL, FpML, ISO 20022)</li>
+              <li>Build systems (Maven's <code>pom.xml</code>, Ant, MSBuild)</li>
+            </ul>
+
+            <div class="callout callout-info">
+              <span class="callout-label">Did You Know?</span>
+              <p>Every time you open a .docx or .xlsx file, you're interacting with XML. Microsoft's Office Open XML (OOXML) format stores all content as a collection of XML documents inside a ZIP archive.</p>
+            </div>
+
+            <h2 id="anatomy">The Anatomy of an XML Document</h2>
+            <p>A well-formed XML document has a predictable structure. Let's break down each part:</p>
+
+            <div class="code-block">
+              <div class="code-header">COMPLETE XML DOCUMENT ANATOMY</div>
+              <pre><code>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;!-- This is an XML comment --&gt;
+
+&lt;bookstore xmlns="https://example.com/books"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://example.com/books books.xsd"&gt;
+
+  &lt;book id="bk001" category="fiction"&gt;
+    &lt;title lang="en"&gt;The Pragmatic Programmer&lt;/title&gt;
+    &lt;author&gt;
+      &lt;firstName&gt;David&lt;/firstName&gt;
+      &lt;lastName&gt;Thomas&lt;/lastName&gt;
+    &lt;/author&gt;
+    &lt;price currency="USD"&gt;49.99&lt;/price&gt;
+    &lt;available&gt;true&lt;/available&gt;
+    &lt;tags&gt;
+      &lt;tag&gt;programming&lt;/tag&gt;
+      &lt;tag&gt;best-practices&lt;/tag&gt;
+    &lt;/tags&gt;
+  &lt;/book&gt;
+
+&lt;/bookstore&gt;</code></pre>
+            </div>
+
+            <h3>Key Components Explained</h3>
+
+            <div class="concept-grid">
+              <div class="concept-card">
+                <span class="concept-icon">📄</span>
+                <h3>XML Declaration</h3>
+                <p>The <code>&lt;?xml ...?&gt;</code> processing instruction specifies the XML version and character encoding. Technically optional, but best practice to always include it.</p>
+              </div>
+              <div class="concept-card">
+                <span class="concept-icon">🌳</span>
+                <h3>Root Element</h3>
+                <p>Every XML document must have exactly one root element that contains all other elements. In the example, <code>&lt;bookstore&gt;</code> is the root.</p>
+              </div>
+              <div class="concept-card">
+                <span class="concept-icon">🏷️</span>
+                <h3>Elements</h3>
+                <p>Elements are defined by start tags (<code>&lt;title&gt;</code>) and end tags (<code>&lt;/title&gt;</code>). Empty elements can use self-closing syntax: <code>&lt;br/&gt;</code>.</p>
+              </div>
+              <div class="concept-card">
+                <span class="concept-icon">⚙️</span>
+                <h3>Attributes</h3>
+                <p>Name-value pairs inside an opening tag: <code>id="bk001"</code>. Values must always be quoted (single or double quotes).</p>
+              </div>
+              <div class="concept-card">
+                <span class="concept-icon">💬</span>
+                <h3>Comments</h3>
+                <p>Use <code>&lt;!-- comment --&gt;</code> for inline documentation. Comments are ignored by parsers but preserved in the DOM.</p>
+              </div>
+              <div class="concept-card">
+                <span class="concept-icon">📦</span>
+                <h3>Text Content</h3>
+                <p>The textual data between an element's start and end tags. Can coexist with child elements (mixed content).</p>
+              </div>
+            </div>
+
+            <h2 id="well-formed">Well-Formed vs Valid XML</h2>
+            <p>These two terms are often confused but mean different things in XML terminology:</p>
+            <p>A <strong>well-formed</strong> XML document follows the basic syntactic rules of XML. A <strong>valid</strong> XML document is well-formed AND conforms to a schema (XSD or DTD).</p>
+
+            <h3>Rules for Well-Formed XML</h3>
+            <ul class="rules-list">
+              <li>There must be exactly one root element containing all other elements.</li>
+              <li>All elements must have a closing tag (or use self-closing syntax <code>&lt;element/&gt;</code>).</li>
+              <li>Tags are case-sensitive: <code>&lt;Name&gt;</code> and <code>&lt;name&gt;</code> are different elements.</li>
+              <li>Elements must be properly nested — they cannot overlap. <code>&lt;a&gt;&lt;b&gt;&lt;/a&gt;&lt;/b&gt;</code> is invalid.</li>
+              <li>Attribute values must be quoted (single or double quotes).</li>
+              <li>Special characters must be escaped: <code>&amp;amp;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;apos;</code>, <code>&amp;quot;</code>.</li>
+              <li>XML names (element and attribute names) cannot start with a number or hyphen.</li>
+            </ul>
+
+            <div class="callout callout-warn">
+              <span class="callout-label">Common Error</span>
+              <p>The most frequent XML parsing error is unescaped special characters. If your text content contains <code>&amp;</code>, <code>&lt;</code>, or <code>&gt;</code>, you must escape them as <code>&amp;amp;</code>, <code>&amp;lt;</code>, and <code>&amp;gt;</code> respectively. Use our <a href="xml-validator"><strong>XML Validator</strong></a> to catch these errors instantly.</p>
+            </div>
+
+            <h2 id="attributes">Elements, Attributes &amp; Text Nodes</h2>
+            <p>One of the most debated decisions in XML design is whether to represent data as elements or attributes. Both work, but they carry different semantics and have different use cases.</p>
+
+            <div class="code-block">
+              <div class="code-header">ELEMENT-CENTRIC vs ATTRIBUTE-CENTRIC</div>
+              <pre><code>&lt;!-- Option 1: Data as child elements (element-centric) --&gt;
+&lt;person&gt;
+  &lt;firstName&gt;Alice&lt;/firstName&gt;
+  &lt;age&gt;34&lt;/age&gt;
+  &lt;email&gt;alice@example.com&lt;/email&gt;
+&lt;/person&gt;
+
+&lt;!-- Option 2: Data as attributes (attribute-centric) --&gt;
+&lt;person firstName="Alice" age="34" email="alice@example.com"/&gt;</code></pre>
+            </div>
+
+            <p>The generally accepted guideline is: use <strong>attributes for metadata</strong> (identifiers, units, types) and <strong>child elements for data</strong> (especially if the value is long, structured, or may change over time). Attributes have limitations: they cannot contain structured data or multiple values, they can't be searched by XPath in the same way as child text, and their order is not guaranteed.</p>
+
+            <table>
+              <thead><tr><th>Criteria</th><th>Use Element</th><th>Use Attribute</th></tr></thead>
+              <tbody>
+                <tr><td>Multiple values possible</td><td>✅ Yes</td><td>❌ No</td></tr>
+                <tr><td>Nested structure needed</td><td>✅ Yes</td><td>❌ No</td></tr>
+                <tr><td>Metadata/identifier</td><td>Optional</td><td>✅ Preferred</td></tr>
+                <tr><td>Unit or type qualifier</td><td>Optional</td><td>✅ Preferred</td></tr>
+                <tr><td>Large text content</td><td>✅ Yes</td><td>❌ Avoid</td></tr>
+                <tr><td>Binary/encoded content</td><td>✅ (CDATA)</td><td>❌ No</td></tr>
+              </tbody>
+            </table>
+
+            <h2 id="namespaces">XML Namespaces (xmlns)</h2>
+            <p>Namespaces solve a critical problem in XML: what happens when you combine documents from different vocabularies that use the same element names? For example, an HTML <code>&lt;table&gt;</code> and a furniture store's <code>&lt;table&gt;</code> would conflict without namespaces.</p>
+            <p>Namespaces are declared using the <code>xmlns</code> attribute and identified by a URI (not necessarily a real URL — just a unique string):</p>
+
+            <div class="code-block">
+              <div class="code-header">XML NAMESPACES IN ACTION</div>
+              <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;report xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns:data="https://mycompany.com/data/v2"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+
+  &lt;!-- HTML namespace element --&gt;
+  &lt;html:h1&gt;Monthly Sales Report&lt;/html:h1&gt;
+  &lt;html:p&gt;Generated on 2026-04-01&lt;/html:p&gt;
+
+  &lt;!-- Custom data namespace --&gt;
+  &lt;data:summary period="Q1-2026"&gt;
+    &lt;data:revenue currency="USD"&gt;1250000&lt;/data:revenue&gt;
+    &lt;data:growth pct="12.5"/&gt;
+  &lt;/data:summary&gt;
+
+&lt;/report&gt;</code></pre>
+            </div>
+
+            <div class="callout callout-tip">
+              <span class="callout-label">Pro Tip</span>
+              <p>The default namespace (<code>xmlns="..."</code>) applies to the element it's declared on and all its descendants unless overridden. Prefix namespaces (<code>xmlns:prefix="..."</code>) only apply to elements that explicitly use the prefix.</p>
+            </div>
+
+            <h2 id="xsd">Schema Validation with XSD</h2>
+            <p>XSD (XML Schema Definition) is the most powerful way to define the structure and data types of an XML document. An XSD acts as a contract: any XML claiming to conform to it must match every rule defined in the schema.</p>
+
+            <div class="code-block">
+              <div class="code-header">EXAMPLE XSD SCHEMA</div>
+              <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://example.com/books"
+           xmlns="https://example.com/books"
+           elementFormDefault="qualified"&gt;
+
+  &lt;xs:element name="bookstore"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="book" type="BookType"
+                    minOccurs="0" maxOccurs="unbounded"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+
+  &lt;xs:complexType name="BookType"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="title"  type="xs:string"/&gt;
+      &lt;xs:element name="price"  type="xs:decimal"/&gt;
+      &lt;xs:element name="inStock" type="xs:boolean"/&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name="id" type="xs:ID" use="required"/&gt;
+  &lt;/xs:complexType&gt;
+
+&lt;/xs:schema&gt;</code></pre>
+            </div>
+
+            <p>Key XSD features that make it superior to JSON Schema for complex validations:</p>
+            <ul>
+              <li><strong>Strong typing</strong> — <code>xs:decimal</code>, <code>xs:date</code>, <code>xs:integer</code>, <code>xs:boolean</code>, and 40+ other built-in types</li>
+              <li><strong>Type inheritance</strong> — extend or restrict base types using <code>xs:extension</code> and <code>xs:restriction</code></li>
+              <li><strong>Regular expression patterns</strong> — enforce exact string formats (<code>xs:pattern value="[A-Z]{2}-\d{4}"</code>)</li>
+              <li><strong>Min/max constraints</strong> — <code>xs:minOccurs</code>, <code>xs:maxOccurs</code>, <code>xs:minInclusive</code></li>
+              <li><strong>Choice and sequence groups</strong> — model complex cardinality rules</li>
+              <li><strong>Key and keyref</strong> — enforce cross-element referential integrity (similar to foreign keys)</li>
+            </ul>
+            <p>Validate your XML against an XSD using our free <a href="xml-validator"><strong>XML Validator</strong></a>.</p>
+
+            <h2 id="xpath">Querying Data with XPath</h2>
+            <p>XPath (XML Path Language) is a query language for navigating and selecting nodes in an XML document. It uses a path syntax similar to file system paths, and it is the foundation of both XSLT and XQuery.</p>
+
+            <div class="code-block">
+              <div class="code-header">XPATH EXPRESSIONS — REFERENCE GUIDE</div>
+              <pre><code>/bookstore/book              — Select all book elements directly under bookstore (root path)
+//book                       — Select all book elements anywhere in the document
+//book[@category='fiction']  — Select books with attribute category="fiction"
+//book[price &lt; 30]           — Select books where price element value is less than 30
+//title[@lang='en']          — Select titles with lang attribute equal to 'en'
+/bookstore/book[1]           — Select the first book (XPath indexes from 1, not 0)
+/bookstore/book[last()]      — Select the last book
+//book/title/text()          — Select the text node content of all titles
+count(//book)                — Count total number of book elements
+//book[contains(title,'XML')] — Select books whose title contains 'XML'
+//book[position() &lt;= 3]     — Select the first 3 books</code></pre>
+            </div>
+
+            <p>Test your XPath expressions live against your own XML documents using our <a href="xpath-tester"><strong>XPath Tester</strong></a>. It highlights matching nodes in real time and supports XPath 1.0 and 2.0 expressions.</p>
+
+            <h2 id="xslt">Transforming XML with XSLT</h2>
+            <p><strong>XSLT (Extensible Stylesheet Language Transformations)</strong> is a declarative language for transforming XML documents into other formats — HTML, plain text, another XML structure, JSON, and more. XSLT stylesheets are themselves XML documents.</p>
+
+            <div class="code-block">
+              <div class="code-header">XSLT STYLESHEET: XML → HTML TABLE</div>
+              <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;xsl:output method="html" indent="yes"/&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Book Catalog&lt;/h1&gt;
+        &lt;table border="1"&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Title&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;xsl:for-each select="bookstore/book"&gt;
+            &lt;xsl:sort select="price" order="ascending"/&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;xsl:value-of select="title"/&gt;&lt;/td&gt;
+              &lt;td&gt;$&lt;xsl:value-of select="price"/&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/xsl:for-each&gt;
+        &lt;/table&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code></pre>
+            </div>
+            <p>Try your own XSLT stylesheets with our free <a href="xslt-transformer"><strong>XSLT Transformer</strong></a> — paste your XML and stylesheet, and see the output instantly.</p>
+
+            <h2 id="advanced">Advanced XML Patterns</h2>
+
+            <h3>CDATA Sections</h3>
+            <p>When your element content contains lots of special characters (like embedded HTML or code snippets), escaping every <code>&lt;</code> and <code>&amp;</code> becomes tedious. <strong>CDATA sections</strong> tell the parser to treat their content as literal character data:</p>
+
+            <div class="code-block">
+              <div class="code-header">CDATA SECTION</div>
+              <pre><code>&lt;script&gt;
+  &lt;![CDATA[
+    if (price < 100 && available === true) {
+      alert("Great deal!");
+    }
+  ]]&gt;
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <h3>XML Processing Instructions</h3>
+            <p>Processing instructions (<code>&lt;?target data?&gt;</code>) pass application-specific instructions to the XML processor without affecting the document data:</p>
+
+            <div class="code-block">
+              <div class="code-header">PROCESSING INSTRUCTIONS</div>
+              <pre><code>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="transform.xsl"?&gt;
+&lt;?xml-model href="schema.rng" type="application/xml"?&gt;
+&lt;root&gt;...&lt;/root&gt;</code></pre>
+            </div>
+
+            <h3>XML Entities</h3>
+            <p>Beyond the five predefined entities, you can define custom entities in a DTD to create reusable text fragments or references to external content. This is particularly useful for boilerplate text in document-centric XML.</p>
+
+            <div class="callout callout-warn">
+              <span class="callout-label">Security Warning</span>
+              <p>Custom XML entities, particularly external entities, are the root cause of XXE (XML External Entity) injection attacks. Always disable DTD processing in your XML parsers when handling untrusted input. See our <a href="xml-security-essentials"><strong>XML Security Essentials</strong></a> guide for complete mitigation strategies.</p>
+            </div>
+
+            <h2 id="tools">Essential XML Development Tools</h2>
+            <p>The right tools can dramatically speed up your XML development workflow. Here are the most important categories and our recommendations. For a full ranked list, see our <a href="top-10-xml-tools"><strong>Top 10 XML Tools</strong></a> article.</p>
+            <ul>
+              <li><strong>XML Formatter</strong> — Beautify minified or poorly indented XML for readability. Try our <a href="xml-formatter">XML Formatter</a>.</li>
+              <li><strong>XML Validator</strong> — Check well-formedness and schema conformance. Try our <a href="xml-validator">XML Validator</a>.</li>
+              <li><strong>XPath Tester</strong> — Test path expressions against live XML. Try our <a href="xpath-tester">XPath Tester</a>.</li>
+              <li><strong>XSLT Transformer</strong> — Apply stylesheets to transform XML. Try our <a href="xslt-transformer">XSLT Transformer</a>.</li>
+              <li><strong>XML to JSON Converter</strong> — Bridge between XML and modern APIs. Try our <a href="xml-to-json">XML to JSON Converter</a>.</li>
+              <li><strong>XML Minifier</strong> — Remove whitespace for production payloads. Try our <a href="xml-minifier">XML Minifier</a>.</li>
+            </ul>
+
+            <div class="internal-links">
+              <h3>🔧 RELATED TOOLS &amp; ARTICLES</h3>
+              <div class="internal-links-grid">
+                <a href="xml-formatter" class="internal-link-item">→ XML Formatter</a>
+                <a href="xml-validator" class="internal-link-item">→ XML Validator</a>
+                <a href="xpath-tester" class="internal-link-item">→ XPath Tester</a>
+                <a href="xslt-transformer" class="internal-link-item">→ XSLT Transformer</a>
+                <a href="xml-to-json" class="internal-link-item">→ XML to JSON Converter</a>
+                <a href="xml-vs-json" class="internal-link-item">→ XML vs JSON Guide</a>
+                <a href="xml-security-essentials" class="internal-link-item">→ XML Security Essentials</a>
+                <a href="top-10-xml-tools" class="internal-link-item">→ Top 10 XML Tools</a>
+              </div>
+            </div>
+
+            <h2 id="faq">Frequently Asked Questions</h2>
+
+            <div class="faq-section">
+              <div class="faq-item open">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is XML used for? <span class="faq-icon">+</span></div>
+                <div class="faq-a">XML is used for an enormous variety of purposes: data exchange between enterprise systems, Microsoft Office document formats (DOCX/XLSX/PPTX), SVG graphics, Android UI layouts, RSS/Atom feeds, SOAP web services, configuration files (Maven pom.xml, Spring), healthcare data standards (HL7, FHIR), financial messaging (XBRL, ISO 20022), and many industry-specific data exchange protocols.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">Is XML still relevant in 2026? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Absolutely. While JSON has taken over for REST APIs and web development, XML remains dominant in enterprise integration, document processing, and industry standards. Every Word and Excel file you open is XML. Every Android app has XML layout files. The healthcare, finance, and legal industries still rely heavily on XML for data standards. It's not going anywhere — it's just less visible to the average web developer.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is the difference between XML and HTML? <span class="faq-icon">+</span></div>
+                <div class="faq-a">HTML and XML are both derived from SGML, but they serve different purposes. HTML is designed specifically for displaying content in web browsers and has a fixed vocabulary of predefined tags. XML lets you define your own tags for any purpose and is strictly about data structure, not presentation. HTML5 is also more lenient about syntax errors (browsers try to recover from malformed HTML), while XML parsers will reject any document that isn't well-formed.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is the difference between DTD and XSD? <span class="faq-icon">+</span></div>
+                <div class="faq-a">DTD (Document Type Definition) is the original XML schema language. It's simple but limited — it doesn't support data types (everything is text), and it has its own non-XML syntax. XSD (XML Schema Definition) is much more powerful: it supports 40+ built-in data types, type inheritance, regular expressions, cardinality constraints, and key/keyref relationships. XSD is itself written in XML, making it easier to process programmatically. For new projects, always prefer XSD over DTD.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">How do I format and beautify XML? <span class="faq-icon">+</span></div>
+                <div class="faq-a">You can format and indent XML using our free <a href="xml-formatter">XML Formatter &amp; Beautifier</a>. Paste your minified or messy XML, choose your indent size, and get cleanly formatted output instantly. No signup required. You can also minify XML for production use with our <a href="xml-minifier">XML Minifier</a>.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">Can XML elements have the same name as attributes? <span class="faq-icon">+</span></div>
+                <div class="faq-a">Yes, an element and an attribute in the same document can share the same name — they exist in different node types so there's no ambiguity. For example, a <code>&lt;title&gt;</code> element can have a <code>title</code> attribute on a different element. However, an element cannot have two attributes with the same name (that's a well-formedness error).</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFAQ(this)">What is a CDATA section and when should I use it? <span class="faq-icon">+</span></div>
+                <div class="faq-a">A CDATA section (<code>&lt;![CDATA[...]]&gt;</code>) marks a region where the parser treats all content as literal text, ignoring any XML markup. Use it when your element content contains many special characters like <code>&lt;</code>, <code>&gt;</code>, and <code>&amp;</code> — for example, embedded HTML, SQL code, or JavaScript. Instead of escaping every special character, you wrap the entire content in a CDATA section. Note that CDATA sections cannot be nested.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <aside class="right-sidebar">
+        <div class="rs-card">
+          <div class="rs-title">🛠 FREE XML TOOLS</div>
+          <a href="xml-formatter" class="rs-article-link">XML Formatter &amp; Beautifier</a>
+          <a href="xml-validator" class="rs-article-link">XML Validator (XSD/DTD)</a>
+          <a href="xpath-tester" class="rs-article-link">XPath Tester</a>
+          <a href="xslt-transformer" class="rs-article-link">XSLT Transformer</a>
+          <a href="xml-to-json" class="rs-article-link">XML to JSON Converter</a>
+          <a href="xml-minifier" class="rs-article-link">XML Minifier</a>
+        </div>
+        <div class="rs-card">
+          <div class="rs-title">📖 MORE ARTICLES</div>
+          <a href="xml-vs-json" class="rs-article-link">XML vs JSON: Which to Choose?</a>
+          <a href="xml-security-essentials" class="rs-article-link">XML Security Essentials</a>
+          <a href="top-10-xml-tools" class="rs-article-link">Top 10 XML Tools for Developers</a>
+        </div>
+        <div class="rs-card" style="background:var(--green); border-color:var(--black);">
+          <div class="rs-title" style="color:white; border-bottom-color:rgba(255,255,255,0.4);">VALIDATE NOW</div>
+          <p style="color:white; font-size:0.875rem; margin-bottom:var(--spacing-sm);">Check your XML is well-formed and schema-valid.</p>
+          <a href="xml-validator" style="display:block; padding:10px; background:var(--black); color:var(--yellow); font-weight:900; text-align:center; border-radius:var(--radius-sm); border:3px solid var(--black); text-decoration:none;">Open XML Validator →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer style="background:var(--black); border-top:6px solid var(--yellow); padding:var(--spacing-xl) 0; margin-top:var(--spacing-xl);">
+    <div class="container" style="text-align:center;">
+      <p style="color:var(--cream-white); font-weight:900; font-size:1.25rem; margin-bottom:var(--spacing-sm);">XML<strong style="color:var(--yellow);">TOOLS</strong></p>
+      <p style="color:#888; font-size:0.875rem;">Free online XML utilities for developers. No signup required.</p>
+      <div style="margin-top:var(--spacing-md); display:flex; gap:var(--spacing-md); justify-content:center; flex-wrap:wrap;">
+        <a href="/" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">Home</a>
+        <a href="xml-formatter" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">Formatter</a>
+        <a href="xml-validator" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">Validator</a>
+        <a href="xml-to-json" style="color:var(--cream-white); font-weight:700; font-size:0.875rem; text-decoration:none;">XML to JSON</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFAQ(el) {
+      el.parentElement.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
