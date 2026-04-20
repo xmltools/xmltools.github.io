@@ -40,6 +40,23 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+        
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "XML Tools",
+  "url": "https://xmltools.github.io",
+  "description": "Free online XML tools for developers. Format, validate, convert XML to JSON, minify, beautify and more.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://xmltools.github.io/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+    </script>     
     
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
@@ -64,7 +81,57 @@
         "XML Beautifier"
       ]
     }
-    </script>   
+    </script>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is XML Tools really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — completely. Every tool on this site is free with no hidden tiers, no watermarks, and no usage limits. There's no account to create and no credit card required, now or ever."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my XML data sent to any server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All processing runs entirely inside your browser using JavaScript. Your XML is never uploaded, logged, or transmitted anywhere. You can verify this by opening your browser's network tab — you'll see zero outbound requests when using a tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum XML file size I can process?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Since processing is browser-based, the practical limit depends on your device's available memory. In practice, files up to ~50MB work smoothly on most modern devices. For very large XML files (100MB+) we recommend using the XML Splitter first to break them into smaller chunks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does XML Tools work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once the page is loaded in your browser, most tools will continue to function without an internet connection since all processing is local. However, you'll need an initial connection to load the page itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between XML Formatter and XML Beautifier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They produce the same result — properly indented, human-readable XML. XML Formatter lets you customise the indentation style (spaces vs tabs, indent size), while XML Beautifier applies sensible defaults in one click."
+      }
+    }
+  ]
+}
+    </script> 
     
 </head>
 <body>
