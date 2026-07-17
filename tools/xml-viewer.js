@@ -61,11 +61,12 @@
       container.appendChild(closeTag)
 
       // Toggle Logic
-      if (toggle.textContent === "▼") {
-        tagHeader.onclick = (e) => {
+      let tagToggle = tagHeader.querySelector(".toggle-btn");
+      if (tagToggle) {
+        tagToggle.onclick = (e) => {
           e.stopPropagation()
           container.classList.toggle("collapsed")
-          toggle.textContent = container.classList.contains("collapsed") ? "▶" : "▼"
+          tagToggle.textContent = container.classList.contains("collapsed") ? "▶" : "▼"
         }
       }
 
