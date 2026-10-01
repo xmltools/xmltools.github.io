@@ -184,6 +184,29 @@
       background: #334155;
     }
 
+    /* Advertisement Slot (300x250) */
+    .tools-sb-ad {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      min-height: 274px;
+      overflow: hidden;
+      position: relative;
+    }
+    body.dark .tools-sb-ad {
+      background: #1e293b;
+      border-bottom-color: #334155;
+    }
+    .tools-sb-ad iframe {
+      max-width: 100%;
+      border: 0;
+      display: block;
+    }
+
     /* Scrollable items menu wrapper */
     .tools-sb-body {
       flex: 1;
@@ -333,6 +356,7 @@
         <h2>XML <em>Tools</em></h2>
         <button class="tools-sb-close" id="toolsSidebarClose" aria-label="Close toolkit">✕</button>
       </div>
+      <div class="tools-sb-ad" id="toolsSidebarAd"></div>
       <div class="tools-sb-body" id="toolsSidebarBody"></div>
     </aside>
   `;
@@ -342,6 +366,28 @@
   const trigger = document.getElementById("toolsSidebarTrigger");
   const overlay = document.getElementById("toolsSidebarOverlay");
   const closeBtn = document.getElementById("toolsSidebarClose");
+
+  // 4b. Load the 300x250 advertisement into the sidebar
+  (function loadSidebarAd() {
+    const adContainer = document.getElementById("toolsSidebarAd");
+    if (!adContainer) return;
+
+    // Set ad options on the global scope (required by the ad network)
+    window.atOptions = {
+      'key' : 'b66742f06438eec1eb9e59058d65f2fb',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+
+    // Inject the external ad script (innerHTML scripts don't execute)
+    const adScript = document.createElement("script");
+    adScript.type = "text/javascript";
+    adScript.src = "https://www.highrevenueformat.com/b66742f06438eec1eb9e59058d65f2fb/invoke.js";
+    adScript.async = true;
+    adContainer.appendChild(adScript);
+  })();
 
   // Helper to add category headers
   function addCategory(title) {
