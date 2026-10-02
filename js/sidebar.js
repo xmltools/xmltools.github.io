@@ -367,28 +367,7 @@
   const overlay = document.getElementById("toolsSidebarOverlay");
   const closeBtn = document.getElementById("toolsSidebarClose");
 
-  // 4b. Load the 300x250 advertisement into the sidebar
-  (function loadSidebarAd() {
-    const adContainer = document.getElementById("toolsSidebarAd");
-    if (!adContainer) return;
-
-    // Set ad options on the global scope (required by the ad network)
-    window.atOptions = {
-      'key' : 'b66742f06438eec1eb9e59058d65f2fb',
-      'format' : 'iframe',
-      'height' : 250,
-      'width' : 300,
-      'params' : {}
-    };
-
-    // Inject the external ad script (innerHTML scripts don't execute)
-    const adScript = document.createElement("script");
-    adScript.type = "text/javascript";
-    adScript.src = "https://www.highrevenueformat.com/b66742f06438eec1eb9e59058d65f2fb/invoke.js";
-    adScript.async = true;
-    adContainer.appendChild(adScript);
-  })();
-
+  
   // Helper to add category headers
   function addCategory(title) {
     const catDiv = document.createElement("div");
