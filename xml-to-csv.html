@@ -14,15 +14,15 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML to CSV Converter Online Free</title>
-    <meta name="description" content="Convert XML to CSV online instantly. Free XML to CSV converter with proper formatting. Export XML data to CSV spreadsheet format.">
-    <meta name="keywords" content="xml to csv, convert xml to csv, xml csv converter, xml to spreadsheet, xml export">
+    <title>XML to CSV Converter Online Free - Export XML to Spreadsheet Instantly</title>
+    <meta name="description" content="Free online XML to CSV converter. Export XML data to CSV spreadsheet format instantly for Excel and Google Sheets. Supports custom delimiters, headers, nested XML. No signup, 100% private, works offline.">
+    <meta name="keywords" content="xml to csv, convert xml to csv, xml csv converter, xml to spreadsheet, xml export, xml to csv online free, xml2csv, xml to excel, convert xml file to csv, xml csv conversion, xml to csv tool">
     
     <!-- Open Graph -->
     <meta property="og:title" content="XML to CSV Converter Online Free">
     <meta property="og:description" content="Convert XML to CSV online instantly. Export XML data to CSV spreadsheet format.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xmltools.github.io/xml-to-csv.html">
+    <meta property="og:url" content="https://xmltools.github.io/xml-to-csv">
     <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
     
     <!-- Twitter Card -->
@@ -45,7 +45,7 @@
         {
           "@type": "WebApplication",
           "name": "XML to CSV Converter",
-          "url": "https://xmltools.github.io/xml-to-csv.html",
+          "url": "https://xmltools.github.io/xml-to-csv",
           "description": "Free online XML to CSV converter tool. Convert XML data to CSV spreadsheet format instantly for Excel and other applications.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "Any",
@@ -73,6 +73,92 @@
             "price": "0"
           },
           "description": "Professional XML to CSV conversion tool for data analysis"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I convert XML to CSV?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Paste your XML into the input panel, choose your delimiter and header options, then click 'Convert to CSV'. The tool parses the XML, identifies repeating elements as rows, and generates a CSV file you can copy or download."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this XML to CSV converter free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, completely free with no usage limits, no registration, and no hidden fees. All conversion happens in your browser so your XML data never leaves your device."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What kind of XML converts best to CSV?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "XML with a consistent repeating element structure converts best — for example, a catalog with many product elements, or a log with many event elements. Each repeating element becomes a CSV row, and its child elements or attributes become columns. Deeply nested or irregular XML may require flattening first."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How are nested XML elements handled?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nested elements are flattened into columns using dot notation (e.g., address.city becomes a column 'address.city') or serialized as text within a single column. This preserves the data while making it accessible in a flat CSV structure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I open the CSV output in Excel?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The CSV output opens directly in Microsoft Excel, Google Sheets, Apple Numbers, LibreOffice Calc, and any other spreadsheet application. Download the .csv file and open it in your spreadsheet app — the data will populate in rows and columns automatically."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What delimiter should I choose?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use comma (,) for US and most English-speaking locales. Use semicolon (;) for European locales where commas serve as decimal separators. Use tab for TSV files when pasting into spreadsheets. Use pipe (|) when your data contains both commas and quotes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How are commas and quotes in the data handled?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fields containing delimiters are automatically quoted. Quotes within fields are escaped by doubling them (a double quote becomes two double quotes). Line breaks within data are preserved inside quoted fields. This ensures the CSV output is valid and opens correctly without data corruption."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my XML data sent to any server?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All XML to CSV conversion happens entirely inside your browser using JavaScript. Your data is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "XML Tools",
+              "item": "https://xmltools.github.io"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "XML to CSV Converter",
+              "item": "https://xmltools.github.io/xml-to-csv"
+            }
+          ]
         }
       ]
     }
@@ -87,7 +173,7 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">📊 XML to CSV Converter</h1>
-                <p class="page-subtitle">Convert XML data to CSV spreadsheet format</p>
+                <p class="page-subtitle">Convert XML data to CSV spreadsheet format — free, private, and browser-based</p>
             </div>
 
             <!-- Tool Interface -->
@@ -136,29 +222,78 @@
                 <div id="error-message" class="error-message" style="display: none;"></div>
             </div>
 
+            <!-- Why Section -->
+            <section class="why-section">
+                <h2 class="section-title"><span class="title-accent">WHY</span> USE THIS XML TO CSV CONVERTER</h2>
+                <div class="why-grid">
+                    <div class="why-card why-card--blue">
+                        <div class="why-icon">⚡</div>
+                        <h3>Fast Conversion</h3>
+                        <p>Convert XML to CSV in milliseconds, even with large datasets. No server round-trips — parsing and conversion run natively in your browser.</p>
+                    </div>
+                    <div class="why-card why-card--green">
+                        <div class="why-icon">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>Your XML data never leaves your machine. All conversion runs locally in JavaScript — zero uploads, zero logging, zero data collection.</p>
+                    </div>
+                    <div class="why-card why-card--yellow">
+                        <div class="why-icon">📊</div>
+                        <h3>Excel Compatible</h3>
+                        <p>Output opens perfectly in Excel, Google Sheets, Numbers, LibreOffice, and any other spreadsheet app. Ready for pivot tables and charts.</p>
+                    </div>
+                    <div class="why-card why-card--red">
+                        <div class="why-icon">🔧</div>
+                        <h3>Custom Delimiters</h3>
+                        <p>Choose between comma, semicolon, tab, or pipe delimiters to match your target application and regional locale conventions.</p>
+                    </div>
+                    <div class="why-card why-card--purple">
+                        <div class="why-icon">📋</div>
+                        <h3>Header Options</h3>
+                        <p>Include or exclude column headers based on your needs. Headers make the CSV self-documenting for analysis and reporting.</p>
+                    </div>
+                    <div class="why-card why-card--pink">
+                        <div class="why-icon">💾</div>
+                        <h3>Easy Export</h3>
+                        <p>Download the CSV as a file or copy to clipboard for immediate pasting into spreadsheets, databases, or analysis tools.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- How To Section -->
-            <section class="content-section">
-                <h2 class="section-title">How to Convert XML to CSV</h2>
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Input XML</h3>
-                        <p>Paste your XML data into the input textarea. Works best with tabular XML structures.</p>
+            <section class="howto-section">
+                <h2 class="section-title"><span class="title-accent">HOW</span> TO CONVERT XML TO CSV</h2>
+                <div class="howto-steps">
+                    <div class="howto-step">
+                        <div class="howto-number">01</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Paste Your XML</h3>
+                            <p>Paste your XML data into the input textarea. The tool works best with tabular XML structures — a repeating element (like product, user, or transaction) with consistent child elements or attributes.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Choose Options</h3>
-                        <p>Select your preferred delimiter and decide whether to include column headers.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">02</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Choose Your Options</h3>
+                            <p>Select your preferred delimiter (comma, semicolon, tab, or pipe) and decide whether to include column headers. Choose based on your spreadsheet app and regional locale.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Convert</h3>
-                        <p>Click "Convert to CSV" to transform your XML data into CSV format.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">03</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Convert</h3>
+                            <p>Click "Convert to CSV". The tool parses your XML, identifies repeating elements as rows, and flattens the structure into CSV columns with proper escaping.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h3>Export</h3>
-                        <p>Copy the CSV output or download it as a .csv file for use in Excel or other tools.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">04</div>
+                        <div class="howto-connector howto-connector--last" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Copy or Download</h3>
+                            <p>Use the Copy button to grab the CSV to your clipboard, or Download to save it as a .csv file. Open directly in Excel or Google Sheets. No account, no confirmation dialogs.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -200,6 +335,68 @@
                 </div>
             </section>
 
+            <!-- Use Cases Section -->
+            <section class="usecases-section">
+                <h2 class="section-title"><span class="title-accent">USE</span> CASES FOR XML TO CSV CONVERSION</h2>
+                <p class="usecases-intro">XML to CSV conversion is essential in data-driven workflows — here's where this tool fits in yours.</p>
+                <div class="usecases-grid">
+                    <div class="usecase-card" data-accent="blue">
+                        <span class="usecase-tag">DATA ANALYSIS</span>
+                        <h3>XML to Excel Analytics</h3>
+                        <p>Import XML datasets into Excel or statistical tools for analysis and visualization. Build pivot tables, charts, and dashboards from XML-sourced data.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-formatter" class="usecase-tool-link">Formatter</a>
+                            <a href="/xml-to-json" class="usecase-tool-link">XML → JSON</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="green">
+                        <span class="usecase-tag">REPORTING</span>
+                        <h3>Business Reports</h3>
+                        <p>Transform XML data exports into spreadsheet format for business reports. Share CSV files with stakeholders who prefer Excel over raw XML.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-viewer" class="usecase-tool-link">Tree Viewer</a>
+                            <a href="/xml-diff" class="usecase-tool-link">Diff Tool</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="purple">
+                        <span class="usecase-tag">DATABASE MIGRATION</span>
+                        <h3>Import to SQL Databases</h3>
+                        <p>Convert XML exports to CSV for bulk import into MySQL, PostgreSQL, SQL Server, or any database with CSV import support.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-splitter" class="usecase-tool-link">Splitter</a>
+                            <a href="/xml-validator" class="usecase-tool-link">Validator</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="red">
+                        <span class="usecase-tag">FINANCE</span>
+                        <h3>Transaction Processing</h3>
+                        <p>Convert XML transaction logs, bank statements, or accounting exports to CSV for reconciliation, tax preparation, or accounting software import.</p>
+                        <div class="usecase-tools">
+                            <a href="/xpath-tester" class="usecase-tool-link">XPath Tester</a>
+                            <a href="/xml-schema-validator" class="usecase-tool-link">Schema Validator</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="yellow">
+                        <span class="usecase-tag">E-COMMERCE</span>
+                        <h3>Product Catalogs</h3>
+                        <p>Export product catalogs from XML feeds to CSV for inventory management, bulk editing, or import into e-commerce platforms and marketplaces.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-sorter" class="usecase-tool-link">Sorter</a>
+                            <a href="/xml-merger" class="usecase-tool-link">Merger</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="pink">
+                        <span class="usecase-tag">API DATA</span>
+                        <h3>Response Analysis</h3>
+                        <p>Convert XML API responses (SOAP, legacy REST) to CSV for tracking, monitoring, and analyzing request/response patterns over time.</p>
+                        <div class="usecase-tools">
+                            <a href="/xslt-transformer" class="usecase-tool-link">XSLT Transformer</a>
+                            <a href="/xml-editor" class="usecase-tool-link">Editor</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Long Description -->
             <section class="content-section">
                 <h2 class="section-title">About XML to CSV Converter</h2>
@@ -208,6 +405,9 @@
                     
                     <h3>Why Convert XML to CSV?</h3>
                     <p>Converting XML to CSV offers several practical advantages. Spreadsheet applications like Excel work natively with CSV, making data easier to view and edit. CSV files are simpler and more compact than XML for tabular data. Data analysis tools and statistical software often prefer CSV input. CSV files open instantly in any text editor for quick viewing. Business users find CSV more familiar and easier to work with than XML. The flat structure of CSV is perfect for simple, tabular data that doesn't require XML's hierarchical complexity.</p>
+                    
+                    <h3>XML vs CSV: Structural Differences</h3>
+                    <p>XML and CSV represent data in fundamentally different ways. XML is hierarchical — elements nest inside other elements, attributes attach to elements, and the same element name can appear at different depths with different meanings. CSV is flat — every row has the same columns, and there is no nesting or hierarchy. Converting from XML to CSV is therefore a flattening operation: hierarchical relationships must be collapsed into columns, either through dot notation (<code>address.city</code>, <code>address.zip</code>), element repetition in single cells, or serialization. This structural gap is why CSV conversion works best with XML that is already essentially tabular.</p>
                     
                     <h3>Common Use Cases</h3>
                     <p>Our XML to CSV converter serves various practical scenarios. Data analysis projects use it to import XML datasets into Excel or statistical tools for analysis and visualization. Report generation transforms XML data exports into spreadsheet format for business reports. Database migrations convert XML exports to CSV for import into databases. Financial data processing converts XML transaction logs or statements to CSV for accounting software. E-commerce systems export product catalogs from XML to CSV for inventory management. API data analysis converts XML API responses to CSV for tracking and analysis.</p>
@@ -221,11 +421,145 @@
                     <h3>Data Integrity</h3>
                     <p>The converter ensures data integrity by properly escaping special characters that could break CSV format. Fields containing delimiters are automatically quoted. Quotes within fields are escaped by doubling them. Line breaks within data are preserved within quoted fields. This ensures your CSV output is valid and opens correctly in all spreadsheet applications without data corruption or formatting issues.</p>
                     
+                    <h3>Character Encoding and Unicode</h3>
+                    <p>CSV files are plain text, so character encoding matters. The converter outputs UTF-8 by default — the universal standard supported by all modern spreadsheet applications. If your data contains non-ASCII characters (accented letters, CJK characters, emoji), Excel may not auto-detect UTF-8 when opening a .csv file directly. If you see garbled characters, import the file through Excel's "Get Data > From Text/CSV" wizard and select UTF-8 encoding explicitly. Google Sheets and LibreOffice handle UTF-8 CSV automatically.</p>
+                    
                     <h3>Best Practices</h3>
                     <p>For optimal results when converting XML to CSV, ensure your XML has a consistent, repeating structure for tabular conversion. Use the appropriate delimiter for your region and target application. Include headers to make the CSV self-documenting. Test with a small sample first if working with large files. Remember that CSV is flat, so deeply nested XML may not convert perfectly. For complex hierarchical data, consider using XML to JSON conversion instead.</p>
                     
                     <h3>Security and Privacy</h3>
                     <p>All XML to CSV conversion is performed entirely within your web browser using JavaScript. No data is uploaded to servers, transmitted over networks, or stored anywhere. This client-side approach ensures complete privacy and security for sensitive business data, financial records, personal information, and proprietary datasets.</p>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-marquee-wrap" aria-hidden="true">
+                    <div class="stats-marquee-track">
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">EXCEL READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">CUSTOM DELIMITERS &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COPY & DOWNLOAD &nbsp;★&nbsp;</span>
+                        <!-- duplicate for seamless loop -->
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">EXCEL READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">CUSTOM DELIMITERS &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COPY & DOWNLOAD &nbsp;★&nbsp;</span>
+                    </div>
+                </div>
+                <div class="stats-numbers">
+                    <div class="stat-block stat-block--blue">
+                        <span class="stat-block-value">4<span class="stat-block-plus">+</span></span>
+                        <span class="stat-block-label">DELIMITERS</span>
+                    </div>
+                    <div class="stat-block stat-block--green">
+                        <span class="stat-block-value">0<span class="stat-block-unit">ms</span></span>
+                        <span class="stat-block-label">SERVER LATENCY</span>
+                    </div>
+                    <div class="stat-block stat-block--red">
+                        <span class="stat-block-value">$0</span>
+                        <span class="stat-block-label">COST FOREVER</span>
+                    </div>
+                    <div class="stat-block stat-block--yellow">
+                        <span class="stat-block-value">100<span class="stat-block-unit">%</span></span>
+                        <span class="stat-block-label">IN-BROWSER</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title"><span class="title-accent">FAQ</span> — XML TO CSV QUESTIONS</h2>
+                <p class="faq-intro">Common questions about XML to CSV conversion — answered straight.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How do I convert XML to CSV?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Paste your XML into the input panel, choose your delimiter and header options, then click "Convert to CSV". The tool parses the XML, identifies repeating elements as rows, and generates a CSV file you can copy or download.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is this XML to CSV converter free?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, completely free with no usage limits, no registration, and no hidden fees. All conversion happens in your browser so your XML data never leaves your device.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What kind of XML converts best to CSV?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>XML with a consistent repeating element structure converts best — for example, a catalog with many <code>product</code> elements, or a log with many <code>event</code> elements. Each repeating element becomes a CSV row, and its child elements or attributes become columns. Deeply nested or irregular XML may require flattening first.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How are nested XML elements handled?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Nested elements are flattened into columns using dot notation (e.g., <code>address.city</code> becomes a column "address.city") or serialized as text within a single column. This preserves the data while making it accessible in a flat CSV structure.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Can I open the CSV output in Excel?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. The CSV output opens directly in Microsoft Excel, Google Sheets, Apple Numbers, LibreOffice Calc, and any other spreadsheet application. Download the <code>.csv</code> file and open it in your spreadsheet app — the data will populate in rows and columns automatically.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What delimiter should I choose?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Use <strong>comma (,)</strong> for US and most English-speaking locales. Use <strong>semicolon (;)</strong> for European locales where commas serve as decimal separators. Use <strong>tab</strong> for TSV files when pasting into spreadsheets. Use <strong>pipe (|)</strong> when your data contains both commas and quotes.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How are commas and quotes in the data handled?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Fields containing delimiters are automatically quoted. Quotes within fields are escaped by doubling them (a double quote becomes two double quotes). Line breaks within data are preserved inside quoted fields. This ensures the CSV output is valid and opens correctly without data corruption.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is my XML data sent to any server?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. All XML to CSV conversion happens entirely inside your browser using JavaScript. Your data is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab.</p>
+                        </div>
+                    </details>
                 </div>
             </section>
 
