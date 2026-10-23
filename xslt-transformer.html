@@ -14,15 +14,21 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XSLT Transformer Online - Transform XML with XSLT</title>
-    <meta name="description" content="Free online XSLT transformer. Apply XSLT stylesheets to XML documents to transform them into HTML, XML, or text instantly in your browser.">
-    <meta name="keywords" content="xslt transformer, xslt processor, transform xml, xslt online, xml to html, xslt tester">
+    <title>XSLT Transformer Online Free - Transform XML with XSLT Instantly</title>
+    <meta name="description" content="Free online XSLT transformer. Apply XSLT stylesheets to XML documents to transform them into HTML, XML, or text instantly in your browser. No signup, 100% private, works offline.">
+    <meta name="keywords" content="xslt transformer, xslt processor, transform xml, xslt online, xml to html, xslt tester, xslt converter, xsl transform, online xslt editor, xslt playground, xml transformation tool, xslt debugger">
     
     <meta property="og:title" content="XSLT Transformer Online - Transform XML with XSLT">
     <meta property="og:description" content="Apply XSLT stylesheets to XML documents instantly with our free online transformer.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xmltools.github.io/xslt-transformer.html">
+    <meta property="og:url" content="https://xmltools.github.io/xslt-transformer">
     <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XSLT Transformer Online Free">
+    <meta name="twitter:description" content="Transform XML with XSLT stylesheets instantly in your browser.">
+    <meta name="twitter:image" content="https://xmltools.github.io/assets/logo.jpg">
     
     <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
@@ -36,7 +42,7 @@
         {
           "@type": "WebApplication",
           "name": "XSLT Transformer",
-          "url": "https://xmltools.github.io/xslt-transformer.html",
+          "url": "https://xmltools.github.io/xslt-transformer",
           "description": "An online tool to transform XML documents using XSLT stylesheets directly in the browser.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "Any",
@@ -52,6 +58,103 @@
             "Error reporting",
             "Copy and Download results"
           ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "XSLT Online Processor",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Professional XSLT transformation tool for transforming XML documents online"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an XSLT transformer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An XSLT transformer is a tool that applies XSLT (Extensible Stylesheet Language Transformations) stylesheets to XML documents. It processes the source XML according to the rules defined in the XSLT stylesheet and produces a transformed output — commonly HTML for web display, a different XML structure, or plain text."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I transform XML with XSLT online?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Paste your source XML into the first input panel and your XSLT stylesheet into the second panel. Click the 'Transform XML' button and the tool will process both documents using your browser's native XSLT engine, displaying the transformed output in the third panel."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this XSLT processor free to use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, completely free with no usage limits, no registration, and no hidden fees. All transformation happens in your browser so your XML and XSLT never leave your device."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What XSLT version is supported?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "This tool uses your browser's built-in XSLT processor, which supports XSLT 1.0. For XSLT 2.0 or 3.0 features like XPath 2.0 functions or advanced for-each-group constructs, a server-side processor such as Saxon is required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I transform XML to HTML with this tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. XSLT is commonly used to transform XML data into HTML for web display. Write an XSLT stylesheet with xsl:output method set to 'html' and the tool will produce HTML output from your XML source."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my XML data sent to any server?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All XSLT transformation happens entirely inside your browser using the native XSLTProcessor API. Your XML and XSLT data are never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why do I get a parsing error when transforming?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Parsing errors usually mean either the source XML or the XSLT stylesheet is not well-formed. Common causes include unescaped special characters, mismatched tags, missing namespace declarations, or an XSLT stylesheet that does not declare the XSL namespace (xmlns:xsl='http://www.w3.org/1999/XSL/Transform')."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I debug my XSLT stylesheet with this tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — the tool reports transformation errors with descriptive messages, helping you identify issues. For deeper debugging, you can use xsl:message elements in your stylesheet and test individual templates by simplifying your source XML to isolate the problematic section."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "XML Tools",
+              "item": "https://xmltools.github.io"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "XSLT Transformer",
+              "item": "https://xmltools.github.io/xslt-transformer"
+            }
+          ]
         }
       ]
     }
@@ -66,7 +169,7 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">⚙️ XSLT Transformer</h1>
-                <p class="page-subtitle">Transform XML documents using XSLT stylesheets</p>
+                <p class="page-subtitle">Transform XML documents using XSLT stylesheets — free, private, and browser-based</p>
             </div>
 
             <div class="tool-interface">
@@ -107,34 +210,344 @@
                 <div id="error-message" class="error-message" style="display: none;"></div>
             </div>
 
-            <section class="content-section">
-                <h2 class="section-title">How to Use XSLT Transformer</h2>
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Load XML</h3>
-                        <p>Paste the XML data you want to transform into the first input area.</p>
+            <!-- Why Section -->
+            <section class="why-section">
+                <h2 class="section-title"><span class="title-accent">WHY</span> USE THIS XSLT TRANSFORMER</h2>
+                <div class="why-grid">
+                    <div class="why-card why-card--blue">
+                        <div class="why-icon">⚡</div>
+                        <h3>Instant Transformation</h3>
+                        <p>Apply XSLT stylesheets to XML documents in milliseconds. No server round-trips — transformation runs natively in your browser using the XSLTProcessor API.</p>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Load XSLT</h3>
-                        <p>Paste your XSLT (Extensible Stylesheet Language Transformations) code into the second input area.</p>
+                    <div class="why-card why-card--green">
+                        <div class="why-icon">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>Your XML data and XSLT stylesheets never leave your machine. All processing is local — zero uploads, zero logging, zero data collection.</p>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Transform</h3>
-                        <p>Click "Transform XML" to process the data and view the result in the output panel.</p>
+                    <div class="why-card why-card--yellow">
+                        <div class="why-icon">🆓</div>
+                        <h3>Always Free</h3>
+                        <p>No premium tier, no credit card, no trial period. The XSLT transformer is free forever with no usage limits or watermarks.</p>
+                    </div>
+                    <div class="why-card why-card--red">
+                        <div class="why-icon">🎯</div>
+                        <h3>XSLT 1.0 Support</h3>
+                        <p>Full support for XSLT 1.0 including templates, XPath expressions, sorting, conditional processing, and all built-in functions.</p>
+                    </div>
+                    <div class="why-card why-card--purple">
+                        <div class="why-icon">🌐</div>
+                        <h3>HTML, XML & Text Output</h3>
+                        <p>Produce HTML for web pages, a different XML structure for data pipelines, or plain text using the xsl:output method directive.</p>
+                    </div>
+                    <div class="why-card why-card--pink">
+                        <div class="why-icon">📱</div>
+                        <h3>Works Everywhere</h3>
+                        <p>Fully responsive and touch-friendly. Run XSLT transformations on desktop, tablet, or phone in any modern browser — no installs required.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- How To Section -->
+            <section class="howto-section">
+                <h2 class="section-title"><span class="title-accent">HOW</span> TO USE THE XSLT TRANSFORMER</h2>
+                <div class="howto-steps">
+                    <div class="howto-step">
+                        <div class="howto-number">01</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Load Your Source XML</h3>
+                            <p>Paste the XML data you want to transform into the first input panel. This is the document your XSLT stylesheet will process and transform.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">02</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Load Your XSLT Stylesheet</h3>
+                            <p>Paste your XSLT (Extensible Stylesheet Language Transformations) code into the second panel. The stylesheet must declare the XSL namespace and include a match template for the root.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">03</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Transform</h3>
+                            <p>Click "Transform XML" to process the data. The tool applies the stylesheet to the source XML and displays the transformed result in the output panel.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">04</div>
+                        <div class="howto-connector howto-connector--last" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Copy or Download</h3>
+                            <p>Use the Copy button to grab the result to your clipboard, or Download to save it as a file. No account, no confirmation dialogs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
             <section class="content-section">
-                <h2 class="section-title">Why use XSLT?</h2>
+                <h2 class="section-title">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Real-Time XSLT Processing</h3>
+                        <p>Apply XSLT stylesheets to XML documents instantly using the browser's native XSLTProcessor API.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Triple Panel Interface</h3>
+                        <p>Separate input panels for source XML, XSLT stylesheet, and output result keep your workflow organized.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>HTML, XML & Text Output</h3>
+                        <p>Produce HTML for web display, XML for data pipelines, or plain text using xsl:output method.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure & Private</h3>
+                        <p>All transformation happens in your browser. No data is uploaded, logged, or transmitted to any server.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚠️</div>
+                        <h3>Error Reporting</h3>
+                        <p>Clear error messages help you debug parsing issues in your XML source or XSLT stylesheet.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Easy Export</h3>
+                        <p>Copy the transformed result to clipboard or download it as a file with one click.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases Section -->
+            <section class="usecases-section">
+                <h2 class="section-title"><span class="title-accent">USE</span> CASES FOR XSLT TRANSFORMATION</h2>
+                <p class="usecases-intro">XSLT transformation is a staple of enterprise data workflows — here's where this tool fits in yours.</p>
+                <div class="usecases-grid">
+                    <div class="usecase-card" data-accent="blue">
+                        <span class="usecase-tag">WEB PUBLISHING</span>
+                        <h3>XML to HTML Rendering</h3>
+                        <p>Transform structured XML data into HTML pages for web publishing. XSLT is the classic way to render XML content as web pages with full control over markup.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-formatter" class="usecase-tool-link">Formatter</a>
+                            <a href="/xml-beautifier" class="usecase-tool-link">Beautifier</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="green">
+                        <span class="usecase-tag">DATA INTEGRATION</span>
+                        <h3>XML Format Conversion</h3>
+                        <p>Convert one XML schema to another using XSLT mappings. Ideal for ETL pipelines, legacy system integrations, and API data reshaping between incompatible formats.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-to-json" class="usecase-tool-link">XML → JSON</a>
+                            <a href="/xml-to-csv" class="usecase-tool-link">XML → CSV</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="purple">
+                        <span class="usecase-tag">CONTENT SYNDICATION</span>
+                        <h3>RSS & Atom Feed Styling</h3>
+                        <p>Transform RSS or Atom feeds into formatted HTML for display. XSLT makes it easy to style syndicated content consistently across different platforms.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-viewer" class="usecase-tool-link">Tree Viewer</a>
+                            <a href="/xml-sorter" class="usecase-tool-link">Sorter</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="red">
+                        <span class="usecase-tag">ENTERPRISE</span>
+                        <h3>SOAP & ESB Message Mapping</h3>
+                        <p>Map SOAP request/response payloads or enterprise service bus messages between schemas. XSLT is the standard for message transformation in many integration platforms.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-schema-validator" class="usecase-tool-link">Schema Validator</a>
+                            <a href="/xml-diff" class="usecase-tool-link">Diff Tool</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="yellow">
+                        <span class="usecase-tag">TESTING</span>
+                        <h3>XSLT Prototyping & Testing</h3>
+                        <p>Prototype and test XSLT transformations without spinning up a server or IDE. Paste, transform, and iterate quickly while debugging your stylesheet logic.</p>
+                        <div class="usecase-tools">
+                            <a href="/xpath-tester" class="usecase-tool-link">XPath Tester</a>
+                            <a href="/xml-validator" class="usecase-tool-link">Validator</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="pink">
+                        <span class="usecase-tag">DOCUMENT PROCESSING</span>
+                        <h3>Document Format Conversion</h3>
+                        <p>Convert structured document formats like DocBook or DITA XML to HTML, PDF-ready markup, or other formats using XSLT stylesheets.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-editor" class="usecase-tool-link">Editor</a>
+                            <a href="/xml-splitter" class="usecase-tool-link">Splitter</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long Description -->
+            <section class="content-section">
+                <h2 class="section-title">About XSLT Transformer</h2>
                 <div class="description-content">
-                    <p>XSLT is a powerful language used for transforming XML documents into other formats like HTML for web display, plain text, or even different XML structures. It is widely used in data integration and web publishing workflows.</p>
+                    <p>The XSLT Transformer is a free online tool that applies XSLT (Extensible Stylesheet Language Transformations) stylesheets to XML documents, producing transformed output in HTML, XML, or plain text. XSLT is a powerful declarative language for transforming XML data — widely used in enterprise integration, web publishing, and data conversion workflows where XML remains the lingua franca of structured data exchange.</p>
                     
-                    <h3>Secure & Private</h3>
-                    <p>Transformation happens entirely within your browser's XSLT engine. Your sensitive data and logic never leave your computer.</p>
+                    <h3>What is XSLT?</h3>
+                    <p>XSLT is a declarative language for transforming XML documents into other formats. Instead of writing procedural code that walks through an XML tree, you write templates that match patterns in the source document. When the XSLT processor finds a matching element, it executes the template's instructions to produce output. This pattern-matching approach makes XSLT particularly well-suited for transforming structured data between different schemas, generating HTML from XML data sources, and reshaping XML for downstream consumers.</p>
+                    
+                    <h3>How XSLT Transformation Works</h3>
+                    <p>The transformation process begins with parsing both the source XML and the XSLT stylesheet. The XSLT processor then evaluates the stylesheet's templates against the source document, starting with the template that matches the root node. Each template can select other nodes, apply further templates, and generate output markup. The result tree is serialized according to the <code>xsl:output</code> method directive — producing HTML, XML, or plain text depending on the configuration. Our tool leverages your browser's native <code>XSLTProcessor</code> API to perform this entire process locally.</p>
+                    
+                    <h3>XSLT 1.0 Support</h3>
+                    <p>This tool supports XSLT 1.0, the version implemented natively by all modern browsers. XSLT 1.0 includes the core template mechanism, XPath 1.0 expressions, built-in functions like <code>xsl:for-each</code>, <code>xsl:if</code>, <code>xsl:choose</code>, <code>xsl:sort</code>, and <code>xsl:apply-templates</code>. For XSLT 2.0 or 3.0 features such as <code>for-each-group</code>, regular expression functions, or XPath 2.0/3.0 expressions, you'll need a server-side processor like Saxon.</p>
+                    
+                    <h3>Common XSLT Patterns</h3>
+                    <p>Most XSLT stylesheets follow a few core patterns. The identity transform copies the source document unchanged and is used as a base for selective modifications. Template matching uses <code>xsl:apply-templates</code> to recursively process child nodes. Conditional processing uses <code>xsl:if</code> and <code>xsl:choose</code> to produce different output based on node values. Looping uses <code>xsl:for-each</code> to iterate over node sets and produce repeated output. Understanding these patterns covers the vast majority of real-world XSLT use cases.</p>
+                    
+                    <h3>XML to HTML Transformation</h3>
+                    <p>The most common XSLT use case is transforming XML data into HTML for web display. By setting <code>xsl:output method="html"</code>, the stylesheet produces HTML markup that browsers can render directly. This pattern is used for rendering RSS feeds, sitemaps, and content management system output. Our tool shows the raw HTML output, which you can then save and serve from a web server, or paste into a larger HTML document.</p>
+                    
+                    <h3>Namespace Handling</h3>
+                    <p>XSLT stylesheets interact with XML namespaces in two important ways. The XSL namespace itself must be declared on the <code>xsl:stylesheet</code> or <code>xsl:transform</code> element with <code>xmlns:xsl="http://www.w3.org/1999/XSL/Transform"</code>. When matching elements from the source document, you must use namespace prefixes in your XPath expressions if the source uses namespaces. A common error is forgetting to declare the source namespace on the stylesheet — leading to templates that silently fail to match.</p>
+                    
+                    <h3>XSLT vs XPath</h3>
+                    <p>XSLT and XPath are closely related but distinct. XPath is the query language for selecting nodes from an XML tree — it's used inside XSLT's <code>select</code> attributes, <code>match</code> patterns, and <code>test</code> expressions. XSLT is the transformation language that uses XPath to navigate the source tree and produce output. If you're testing XPath expressions in isolation, use our <a href="/xpath-tester" class="faq-link">XPath Tester</a> tool. If you want to see how XPath drives a full transformation, use this XSLT Transformer.</p>
+                    
+                    <h3>Debugging XSLT Issues</h3>
+                    <p>XSLT errors fall into three categories. Parse errors mean the source XML or stylesheet is malformed — usually mismatched tags, unescaped special characters, or missing namespace declarations. Compile errors mean the stylesheet references undefined variables, functions, or templates. Runtime errors occur during transformation — for example, calling a function with the wrong argument type. Our tool surfaces parse and transformation errors with descriptive messages, helping you identify which category your issue falls into.</p>
+                    
+                    <h3>Security Considerations</h3>
+                    <p>XSLT is powerful — and like all powerful features, it has security implications in production systems. Some XSLT processors allow <code>document()</code> calls to load external files, which can be exploited for XML External Entity (XXE) attacks. Some processors allow extension functions that execute arbitrary code. In browser-based XSLT, these risks are limited because the browser sandbox restricts file system access. Nonetheless, always validate and sanitize XML and XSLT from untrusted sources, and disable external entity processing in server-side processors where possible.</p>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-marquee-wrap" aria-hidden="true">
+                    <div class="stats-marquee-track">
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">XSLT 1.0 &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">HTML / XML / TEXT &nbsp;★&nbsp;</span>
+                        <!-- duplicate for seamless loop -->
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">XSLT 1.0 &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">HTML / XML / TEXT &nbsp;★&nbsp;</span>
+                    </div>
+                </div>
+                <div class="stats-numbers">
+                    <div class="stat-block stat-block--blue">
+                        <span class="stat-block-value">1.0<span class="stat-block-plus">+</span></span>
+                        <span class="stat-block-label">XSLT VERSION</span>
+                    </div>
+                    <div class="stat-block stat-block--green">
+                        <span class="stat-block-value">0<span class="stat-block-unit">ms</span></span>
+                        <span class="stat-block-label">SERVER LATENCY</span>
+                    </div>
+                    <div class="stat-block stat-block--red">
+                        <span class="stat-block-value">$0</span>
+                        <span class="stat-block-label">COST FOREVER</span>
+                    </div>
+                    <div class="stat-block stat-block--yellow">
+                        <span class="stat-block-value">100<span class="stat-block-unit">%</span></span>
+                        <span class="stat-block-label">IN-BROWSER</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title"><span class="title-accent">FAQ</span> — XSLT TRANSFORMATION QUESTIONS</h2>
+                <p class="faq-intro">Common questions about XSLT transformation — answered straight.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What is an XSLT transformer?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>An XSLT transformer is a tool that applies XSLT (Extensible Stylesheet Language Transformations) stylesheets to XML documents. It processes the source XML according to the rules defined in the XSLT stylesheet and produces a transformed output — commonly HTML for web display, a different XML structure, or plain text.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How do I transform XML with XSLT online?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Paste your source XML into the first input panel and your XSLT stylesheet into the second panel. Click the "Transform XML" button and the tool will process both documents using your browser's native XSLT engine, displaying the transformed output in the third panel.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is this XSLT processor free to use?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, completely free with no usage limits, no registration, and no hidden fees. All transformation happens in your browser so your XML and XSLT never leave your device.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What XSLT version is supported?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>This tool uses your browser's built-in XSLT processor, which supports <strong>XSLT 1.0</strong>. For XSLT 2.0 or 3.0 features like XPath 2.0 functions or advanced <code>for-each-group</code> constructs, a server-side processor such as Saxon is required.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Can I transform XML to HTML with this tool?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. XSLT is commonly used to transform XML data into HTML for web display. Write an XSLT stylesheet with <code>&lt;xsl:output method="html"/&gt;</code> and the tool will produce HTML output from your XML source.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is my XML data sent to any server?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. All XSLT transformation happens entirely inside your browser using the native <code>XSLTProcessor</code> API. Your XML and XSLT data are never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Why do I get a parsing error when transforming?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Parsing errors usually mean either the source XML or the XSLT stylesheet is not well-formed. Common causes include unescaped special characters, mismatched tags, missing namespace declarations, or an XSLT stylesheet that does not declare the XSL namespace (<code>xmlns:xsl="http://www.w3.org/1999/XSL/Transform"</code>).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Can I debug my XSLT stylesheet with this tool?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes — the tool reports transformation errors with descriptive messages, helping you identify issues. For deeper debugging, you can use <code>xsl:message</code> elements in your stylesheet and test individual templates by simplifying your source XML to isolate the problematic section.</p>
+                        </div>
+                    </details>
                 </div>
             </section>
 
