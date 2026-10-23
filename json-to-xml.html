@@ -5,15 +5,15 @@
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON to XML Converter Online Free | XML Tools</title>
-    <meta name="description" content="Convert JSON to XML online instantly. Free JSON to XML converter with proper formatting. Transform JSON data to XML format in seconds.">
-    <meta name="keywords" content="json to xml, convert json to xml, json xml converter, json to xml online, json parser, xml converter">
+    <title>JSON to XML Converter Online Free - Convert JSON to XML Instantly</title>
+    <meta name="description" content="Free online JSON to XML converter. Transform JSON data to XML format instantly with proper formatting and structure. Handles nested objects, arrays, all data types. No signup, 100% private, works offline.">
+    <meta name="keywords" content="json to xml, convert json to xml, json xml converter, json to xml online, json parser, xml converter, json to xml online free, json2xml, json to xml transformation, convert json file to xml, json xml conversion tool">
     
     <!-- Open Graph -->
     <meta property="og:title" content="JSON to XML Converter Online Free">
     <meta property="og:description" content="Convert JSON to XML online instantly. Free JSON to XML converter with proper formatting.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xmltools.github.io/json-to-xml.html">
+    <meta property="og:url" content="https://xmltools.github.io/json-to-xml">
     <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
     
     <!-- Twitter Card -->
@@ -36,7 +36,7 @@
         {
           "@type": "WebApplication",
           "name": "JSON to XML Converter",
-          "url": "https://xmltools.github.io/json-to-xml.html",
+          "url": "https://xmltools.github.io/json-to-xml",
           "description": "Free online JSON to XML converter tool. Convert JSON data to XML format instantly with proper formatting and structure.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "Any",
@@ -64,6 +64,92 @@
             "price": "0"
           },
           "description": "Professional JSON to XML conversion tool for developers"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I convert JSON to XML?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Paste your JSON into the input panel, optionally set a custom root element name, and click 'Convert to XML'. The tool parses your JSON and generates well-formed XML with properly indented structure, which you can copy or download."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this JSON to XML converter free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, completely free with no usage limits, no registration, and no hidden fees. All conversion happens in your browser so your JSON data never leaves your device."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How are JSON arrays converted to XML?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "JSON arrays are converted to repeated XML elements with the same name. For example, {\"items\": [1, 2, 3]} becomes <items>1</items><items>2</items><items>3</items>. Each array element becomes its own XML element with the property name."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How are JSON null values handled?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "JSON null values are converted to empty XML elements. For example, {\"name\": null} becomes <name></name> or <name/>. This preserves the structure while representing the absence of a value in valid XML syntax."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens to JSON keys with special characters?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "JSON property names that aren't valid XML element names (containing spaces, special characters, or starting with digits) are sanitized. Invalid characters are removed or replaced, and numeric-leading names are prefixed to make valid XML elements. XML special characters in text values are properly escaped as entities."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I customize the root element name?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The Root Element input field lets you specify any name for the top-level XML element. The default is 'root', but you can change it to match your target schema — for example, 'catalog', 'employees', or 'response'."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the converter handle large JSON files?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, up to your device's available memory. Most JSON files process instantly. Extremely large files (tens of megabytes) may take a few seconds. There are no artificial file size limits — the constraint is browser memory."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my JSON data sent to any server?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All JSON to XML conversion happens entirely inside your browser using JavaScript. Your data is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "XML Tools",
+              "item": "https://xmltools.github.io"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "JSON to XML Converter",
+              "item": "https://xmltools.github.io/json-to-xml"
+            }
+          ]
         }
       ]
     }
@@ -78,7 +164,7 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">🔄 JSON to XML Converter</h1>
-                <p class="page-subtitle">Convert JSON data to XML format instantly</p>
+                <p class="page-subtitle">Convert JSON data to XML format instantly — free, private, and browser-based</p>
             </div>
 
             <!-- Tool Interface -->
@@ -116,29 +202,78 @@
                 <div id="error-message" class="error-message" style="display: none;"></div>
             </div>
 
+            <!-- Why Section -->
+            <section class="why-section">
+                <h2 class="section-title"><span class="title-accent">WHY</span> USE THIS JSON TO XML CONVERTER</h2>
+                <div class="why-grid">
+                    <div class="why-card why-card--blue">
+                        <div class="why-icon">⚡</div>
+                        <h3>Instant Conversion</h3>
+                        <p>Transform JSON to XML in milliseconds. No server round-trips — parsing and conversion run natively in your browser.</p>
+                    </div>
+                    <div class="why-card why-card--green">
+                        <div class="why-icon">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>Your JSON data never leaves your machine. All conversion runs locally in JavaScript — zero uploads, zero logging, zero data collection.</p>
+                    </div>
+                    <div class="why-card why-card--yellow">
+                        <div class="why-icon">🎯</div>
+                        <h3>Structure Preserved</h3>
+                        <p>Nested objects, arrays, mixed types, and null values — every JSON construct is mapped to valid, well-formed XML with correct hierarchy.</p>
+                    </div>
+                    <div class="why-card why-card--red">
+                        <div class="why-icon">🔧</div>
+                        <h3>Custom Root Element</h3>
+                        <p>Choose any name for the top-level XML element. Match your target schema — 'catalog', 'employees', 'response', or whatever your consumer expects.</p>
+                    </div>
+                    <div class="why-card why-card--purple">
+                        <div class="why-icon">📊</div>
+                        <h3>Complex JSON Support</h3>
+                        <p>Handles deeply nested structures, arrays of objects, arrays of primitives, and special characters requiring XML escaping.</p>
+                    </div>
+                    <div class="why-card why-card--pink">
+                        <div class="why-icon">💾</div>
+                        <h3>Copy & Download</h3>
+                        <p>Copy the XML output to your clipboard with one click or download it as a .xml file. No intermediate steps.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- How To Section -->
-            <section class="content-section">
-                <h2 class="section-title">How to Convert JSON to XML</h2>
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Input JSON</h3>
-                        <p>Paste or type your JSON data into the input textarea on the left side.</p>
+            <section class="howto-section">
+                <h2 class="section-title"><span class="title-accent">HOW</span> TO CONVERT JSON TO XML</h2>
+                <div class="howto-steps">
+                    <div class="howto-step">
+                        <div class="howto-number">01</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Paste Your JSON</h3>
+                            <p>Paste or type your JSON data into the input textarea. The tool accepts objects, arrays, and nested structures of any depth.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Set Root Element</h3>
-                        <p>Choose a name for the root XML element (default is "root").</p>
+                    <div class="howto-step">
+                        <div class="howto-number">02</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Set Root Element Name</h3>
+                            <p>Optionally change the root XML element name from the default 'root' to match your target schema. The root wraps your entire JSON structure.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Convert</h3>
-                        <p>Click "Convert to XML" button to transform your JSON data to XML format.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">03</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Convert</h3>
+                            <p>Click "Convert to XML". The tool parses your JSON and generates well-formed XML with proper indentation, escaping, and hierarchy.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h3>Use Result</h3>
-                        <p>Copy the XML output or download it as a .xml file for your application.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">04</div>
+                        <div class="howto-connector howto-connector--last" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Copy or Download</h3>
+                            <p>Use the Copy button to grab the XML to your clipboard, or Download to save it as a .xml file. No account, no confirmation dialogs.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -180,6 +315,68 @@
                 </div>
             </section>
 
+            <!-- Use Cases Section -->
+            <section class="usecases-section">
+                <h2 class="section-title"><span class="title-accent">USE</span> CASES FOR JSON TO XML CONVERSION</h2>
+                <p class="usecases-intro">JSON and XML dominate different worlds — here's where this converter bridges them.</p>
+                <div class="usecases-grid">
+                    <div class="usecase-card" data-accent="blue">
+                        <span class="usecase-tag">LEGACY INTEGRATION</span>
+                        <h3>Modern to Enterprise Bridge</h3>
+                        <p>Connect modern JSON-based microservices with legacy enterprise systems that only accept XML. Convert API responses to XML before feeding them into older SOAP services or ESBs.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-formatter" class="usecase-tool-link">Formatter</a>
+                            <a href="/xml-validator" class="usecase-tool-link">Validator</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="green">
+                        <span class="usecase-tag">SOAP APIS</span>
+                        <h3>Build SOAP Requests</h3>
+                        <p>SOAP web services exclusively use XML for requests and responses. Convert JSON payloads from your app to XML before calling SOAP endpoints.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-schema-validator" class="usecase-tool-link">Schema Validator</a>
+                            <a href="/xslt-transformer" class="usecase-tool-link">XSLT Transformer</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="purple">
+                        <span class="usecase-tag">CONFIG MANAGEMENT</span>
+                        <h3>JSON Configs to XML</h3>
+                        <p>Some applications and build tools require XML configuration. Convert your JSON-based config to XML before deployment to satisfy tooling requirements.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-beautifier" class="usecase-tool-link">Beautifier</a>
+                            <a href="/xml-diff" class="usecase-tool-link">Diff Tool</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="red">
+                        <span class="usecase-tag">DATA MIGRATION</span>
+                        <h3>JSON to XML Databases</h3>
+                        <p>Migrate data from JSON sources to XML-based databases, content management systems, or document stores that expect XML imports.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-splitter" class="usecase-tool-link">Splitter</a>
+                            <a href="/xml-merger" class="usecase-tool-link">Merger</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="yellow">
+                        <span class="usecase-tag">REPORTING</span>
+                        <h3>Feed XML Report Engines</h3>
+                        <p>XML-based reporting tools like BIRT and JasperReports consume XML data sources. Convert JSON API responses into the XML format those tools expect.</p>
+                        <div class="usecase-tools">
+                            <a href="/xpath-tester" class="usecase-tool-link">XPath Tester</a>
+                            <a href="/xml-viewer" class="usecase-tool-link">Tree Viewer</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="pink">
+                        <span class="usecase-tag">PUBLISHING</span>
+                        <h3>Content Syndication</h3>
+                        <p>Convert JSON content from headless CMS platforms to XML for RSS feeds, sitemaps, or Atom content syndication.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-sorter" class="usecase-tool-link">Sorter</a>
+                            <a href="/xml-editor" class="usecase-tool-link">Editor</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Long Description -->
             <section class="content-section">
                 <h2 class="section-title">About JSON to XML Converter</h2>
@@ -189,11 +386,14 @@
                     <h3>Why Convert JSON to XML?</h3>
                     <p>Converting JSON to XML is necessary in many scenarios. Legacy system integration often requires XML format for enterprise applications and older web services. SOAP web services exclusively use XML for requests and responses. Some configuration management systems expect XML format for settings and parameters. Data interchange with systems that only accept XML input requires conversion. Enterprise messaging systems and ESBs (Enterprise Service Buses) commonly use XML as their standard format.</p>
                     
+                    <h3>JSON vs XML: Key Differences</h3>
+                    <p>JSON and XML solve similar problems — representing structured data — but with different trade-offs. JSON is compact, human-readable, and natively supported by JavaScript. It supports objects, arrays, strings, numbers, booleans, and null. XML is more verbose but supports attributes, namespaces, mixed content, and schema validation. XML can represent data relationships that JSON cannot express directly — attributes, processing instructions, comments, and mixed text/element content. Understanding these differences helps you anticipate how a JSON document will map to XML, and vice versa.</p>
+                    
                     <h3>Common Use Cases</h3>
                     <p>Our JSON to XML converter serves various practical applications. Enterprise integration projects use it to bridge modern microservices (JSON) with legacy enterprise systems (XML). SOAP API clients convert JSON payloads to XML for SOAP service calls. Configuration file management transforms JSON configs to XML for applications that require XML format. Data migration projects convert JSON databases or exports to XML for import into XML-based systems. XML-based reporting tools receive data from JSON APIs by converting the data first.</p>
                     
-                    <h3>Conversion Process</h3>
-                    <p>Our converter uses an intelligent algorithm to transform JSON structure into valid XML. JSON objects become XML elements with child elements for each property. JSON arrays are converted to repeated XML elements with the same name. JSON primitive values (strings, numbers, booleans) become text content within XML elements. Null values are converted to empty XML elements. Nested JSON structures are converted to nested XML elements, preserving the hierarchy.</p>
+                    <h3>Conversion Rules</h3>
+                    <p>Our converter follows a consistent mapping from JSON to XML. JSON objects become XML elements with child elements for each property. JSON arrays are converted to repeated XML elements with the same name. JSON primitive values (strings, numbers, booleans) become text content within XML elements. Null values are converted to empty XML elements. Nested JSON structures are converted to nested XML elements, preserving the hierarchy. This mapping is deterministic and predictable — the same JSON input always produces the same XML output.</p>
                     
                     <h3>Handling Complex JSON</h3>
                     <p>The tool handles various JSON complexities including deeply nested objects and arrays, mixed data types within arrays, special characters that need XML escaping, empty objects and arrays, and very large JSON files. The converter ensures that all output XML is well-formed and valid according to XML standards.</p>
@@ -201,11 +401,145 @@
                     <h3>XML Element Naming</h3>
                     <p>Since JSON allows property names that aren't valid XML element names, our converter handles these edge cases intelligently. Property names with spaces or special characters are sanitized to create valid XML element names. Numeric property names are prefixed to make them valid XML elements. Reserved XML characters in property names are properly escaped or replaced.</p>
                     
+                    <h3>Round-Trip Limitations</h3>
+                    <p>Converting JSON to XML is not always perfectly reversible. XML supports features that JSON cannot express — attributes, namespaces, comments, processing instructions, and mixed content (text interleaved with elements). When XML is converted to JSON and back to XML (or vice versa), these features are typically lost or transformed. For applications requiring exact round-trip fidelity, consider using a serialization format that preserves the full structure, or store the original XML alongside its JSON representation.</p>
+                    
                     <h3>Performance and Limitations</h3>
                     <p>The converter processes JSON files of various sizes efficiently, handling most typical JSON files instantly. However, extremely large files (several megabytes) may take a few seconds to process. The conversion is performed entirely in your browser, so performance depends on your device's capabilities. There are no file size limits imposed by our tool.</p>
                     
                     <h3>Security and Privacy</h3>
                     <p>All JSON to XML conversion happens entirely within your web browser using JavaScript. No data is uploaded to servers, transmitted over networks, or stored anywhere. This client-side approach ensures complete privacy and security for sensitive JSON data, making it safe for use with confidential information, proprietary data, and enterprise applications.</p>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-marquee-wrap" aria-hidden="true">
+                    <div class="stats-marquee-track">
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">CUSTOM ROOT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COPY & DOWNLOAD &nbsp;★&nbsp;</span>
+                        <!-- duplicate for seamless loop -->
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">CUSTOM ROOT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COPY & DOWNLOAD &nbsp;★&nbsp;</span>
+                    </div>
+                </div>
+                <div class="stats-numbers">
+                    <div class="stat-block stat-block--blue">
+                        <span class="stat-block-value">6<span class="stat-block-plus">+</span></span>
+                        <span class="stat-block-label">JSON TYPES</span>
+                    </div>
+                    <div class="stat-block stat-block--green">
+                        <span class="stat-block-value">0<span class="stat-block-unit">ms</span></span>
+                        <span class="stat-block-label">SERVER LATENCY</span>
+                    </div>
+                    <div class="stat-block stat-block--red">
+                        <span class="stat-block-value">$0</span>
+                        <span class="stat-block-label">COST FOREVER</span>
+                    </div>
+                    <div class="stat-block stat-block--yellow">
+                        <span class="stat-block-value">100<span class="stat-block-unit">%</span></span>
+                        <span class="stat-block-label">IN-BROWSER</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title"><span class="title-accent">FAQ</span> — JSON TO XML QUESTIONS</h2>
+                <p class="faq-intro">Common questions about JSON to XML conversion — answered straight.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How do I convert JSON to XML?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Paste your JSON into the input panel, optionally set a custom root element name, and click "Convert to XML". The tool parses your JSON and generates well-formed XML with properly indented structure, which you can copy or download.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is this JSON to XML converter free?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, completely free with no usage limits, no registration, and no hidden fees. All conversion happens in your browser so your JSON data never leaves your device.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How are JSON arrays converted to XML?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>JSON arrays are converted to repeated XML elements with the same name. For example, <code>{"items": [1, 2, 3]}</code> becomes <code>&lt;items&gt;1&lt;/items&gt;&lt;items&gt;2&lt;/items&gt;&lt;items&gt;3&lt;/items&gt;</code>. Each array element becomes its own XML element with the property name.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How are JSON null values handled?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>JSON null values are converted to empty XML elements. For example, <code>{"name": null}</code> becomes <code>&lt;name&gt;&lt;/name&gt;</code> or <code>&lt;name/&gt;</code>. This preserves the structure while representing the absence of a value in valid XML syntax.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What happens to JSON keys with special characters?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>JSON property names that aren't valid XML element names (containing spaces, special characters, or starting with digits) are sanitized. Invalid characters are removed or replaced, and numeric-leading names are prefixed to make valid XML elements. XML special characters in text values are properly escaped as entities.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Can I customize the root element name?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. The Root Element input field lets you specify any name for the top-level XML element. The default is "root", but you can change it to match your target schema — for example, "catalog", "employees", or "response".</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Does the converter handle large JSON files?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, up to your device's available memory. Most JSON files process instantly. Extremely large files (tens of megabytes) may take a few seconds. There are no artificial file size limits — the constraint is browser memory.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is my JSON data sent to any server?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. All JSON to XML conversion happens entirely inside your browser using JavaScript. Your data is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab.</p>
+                        </div>
+                    </details>
                 </div>
             </section>
 
