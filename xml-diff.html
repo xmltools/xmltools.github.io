@@ -14,15 +14,21 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML Diff Online - Compare Two XML Files</title>
-    <meta name="description" content="Free online XML diff tool. Compare two XML documents side-by-side to find differences in structure, elements, and attributes instantly.">
-    <meta name="keywords" content="xml diff, compare xml, xml difference, xml comparison tool, online xml diff, compare two xml files">
+    <title>XML Diff Online Free - Compare Two XML Files Side-by-Side</title>
+    <meta name="description" content="Free online XML diff tool. Compare two XML documents side-by-side to find differences in structure, elements, and attributes instantly. Highlight added and removed lines. No signup, 100% private, works offline.">
+    <meta name="keywords" content="xml diff, compare xml, xml difference, xml comparison tool, online xml diff, compare two xml files, xml diff online free, xml compare tool, xml file comparison, xml diff checker, xml side-by-side compare">
     
     <meta property="og:title" content="XML Diff Online - Compare Two XML Files Side-by-Side">
     <meta property="og:description" content="Find differences between two XML documents instantly with our free online comparison tool.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xmltools.github.io/xml-diff.html">
+    <meta property="og:url" content="https://xmltools.github.io/xml-diff">
     <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XML Diff Online Free - Compare Two XML Files">
+    <meta name="twitter:description" content="Find differences between two XML documents instantly with our free online comparison tool.">
+    <meta name="twitter:image" content="https://xmltools.github.io/assets/logo.jpg">
     
     <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
@@ -36,7 +42,7 @@
         {
           "@type": "WebApplication",
           "name": "XML Diff Tool",
-          "url": "https://xmltools.github.io/xml-diff.html",
+          "url": "https://xmltools.github.io/xml-diff",
           "description": "An online utility to compare two XML files and highlight differences in their content and structure.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "Any",
@@ -51,6 +57,103 @@
             "Structure-aware diffing",
             "Browser-based processing",
             "Free to use"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "XML Comparison Tool",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Professional XML diff tool for comparing XML documents side-by-side"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an XML diff tool?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An XML diff tool compares two XML documents and highlights the differences between them — added lines, removed lines, and changed content. It's used to review changes, track modifications, verify refactoring, and detect unintended edits in XML files."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I compare two XML files?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Paste the original XML into the left panel and the modified XML into the right panel, then click 'Compare XML'. The tool highlights lines that were added, removed, or changed, showing the differences in a structured diff view."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this XML diff tool free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, completely free with no usage limits, no registration, and no hidden fees. All comparison happens in your browser so your XML data never leaves your device."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the tool compare XML structurally or textually?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The tool performs a line-by-line textual comparison of the XML documents. For best results, format both XML files first using the XML Formatter so that indentation and line breaks are consistent — this makes structural changes easier to spot and reduces false positives from formatting differences."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between a line diff and a semantic XML diff?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A line diff (what this tool does) compares the text content line by line — simple, fast, and predictable. A semantic XML diff compares the parsed tree structure, ignoring insignificant whitespace, attribute order, and namespace prefixes. Semantic diff is more accurate but slower. For most day-to-day use cases, a line diff on formatted XML is sufficient."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I format the XML before comparing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, strongly recommended. If one XML file is minified and the other is formatted, every line will appear different even if the data is identical. Run both documents through the XML Formatter first to normalize their formatting, then compare — you'll get a much more meaningful diff."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I compare very large XML files?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, up to your device's available memory. Most XML files compare instantly. Extremely large files (tens of megabytes) may take a few seconds. There are no artificial file size limits — the constraint is browser memory."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my XML data sent to any server?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All XML comparison happens entirely inside your browser using JavaScript. Your data is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "XML Tools",
+              "item": "https://xmltools.github.io"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "XML Diff",
+              "item": "https://xmltools.github.io/xml-diff"
+            }
           ]
         }
       ]
@@ -80,7 +183,7 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">⚖️ XML Diff</h1>
-                <p class="page-subtitle">Compare two XML files and identify changes</p>
+                <p class="page-subtitle">Compare two XML files and identify changes — free, private, and browser-based</p>
             </div>
 
             <div class="tool-interface">
@@ -113,24 +216,308 @@
                 <div id="error-message" class="error-message" style="display: none;"></div>
             </div>
 
+            <!-- Why Section -->
+            <section class="why-section">
+                <h2 class="section-title"><span class="title-accent">WHY</span> USE THIS XML DIFF TOOL</h2>
+                <div class="why-grid">
+                    <div class="why-card why-card--blue">
+                        <div class="why-icon">⚖️</div>
+                        <h3>Side-by-Side Comparison</h3>
+                        <p>See both XML documents next to each other with differences highlighted. Added lines are green, removed lines are red — instantly visible at a glance.</p>
+                    </div>
+                    <div class="why-card why-card--green">
+                        <div class="why-icon">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>Your XML data never leaves your machine. All comparison runs locally in JavaScript — zero uploads, zero logging, zero data collection.</p>
+                    </div>
+                    <div class="why-card why-card--yellow">
+                        <div class="why-icon">⚡</div>
+                        <h3>Instant Results</h3>
+                        <p>Compare two XML files in milliseconds. No server round-trips, no waiting — the diff appears as soon as you click Compare.</p>
+                    </div>
+                    <div class="why-card why-card--red">
+                        <div class="why-icon">🎯</div>
+                        <h3>Line-by-Line Diff</h3>
+                        <p>Clear, predictable line-by-line comparison. Every added, removed, and changed line is identified so you can review changes without missing details.</p>
+                    </div>
+                    <div class="why-card why-card--purple">
+                        <div class="why-icon">📋</div>
+                        <h3>Structure-Aware</h3>
+                        <p>Works best with formatted XML. Run both files through the XML Formatter first to normalize indentation, then compare for a clean structural diff.</p>
+                    </div>
+                    <div class="why-card why-card--pink">
+                        <div class="why-icon">📱</div>
+                        <h3>Works Everywhere</h3>
+                        <p>Fully responsive and touch-friendly. On mobile, the two panels stack vertically for easy reading. Works on desktop, tablet, and phone.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How To Section -->
+            <section class="howto-section">
+                <h2 class="section-title"><span class="title-accent">HOW</span> TO USE XML DIFF</h2>
+                <div class="howto-steps">
+                    <div class="howto-step">
+                        <div class="howto-number">01</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Paste the Original XML</h3>
+                            <p>Paste your base XML document into the left editor. This is the reference — typically the "before" version from version control, a previous API response, or a baseline config.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">02</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Paste the Modified XML</h3>
+                            <p>Paste the version you want to compare into the right editor. This is the "after" version — a changed file, an updated response, or a proposed modification.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">03</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Compare</h3>
+                            <p>Click "Compare XML". The tool highlights every line that was added, removed, or changed between the two documents, showing the differences in a structured diff view.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">04</div>
+                        <div class="howto-connector howto-connector--last" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Review the Changes</h3>
+                            <p>Scan the diff output to see what changed. Review each modification in context, verify that the changes are intentional, and use the results to update your code, tests, or documentation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases Section -->
+            <section class="usecases-section">
+                <h2 class="section-title"><span class="title-accent">USE</span> CASES FOR XML DIFF</h2>
+                <p class="usecases-intro">Comparing XML documents is essential in many developer workflows — here's where this tool fits in yours.</p>
+                <div class="usecases-grid">
+                    <div class="usecase-card" data-accent="blue">
+                        <span class="usecase-tag">CODE REVIEW</span>
+                        <h3>Review Config Changes</h3>
+                        <p>Before merging a PR that changes XML configuration files (Maven POM, Spring config, Ant build), compare the before and after versions to verify the intended changes and spot unintended edits.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-formatter" class="usecase-tool-link">Formatter</a>
+                            <a href="/xml-validator" class="usecase-tool-link">Validator</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="green">
+                        <span class="usecase-tag">API MONITORING</span>
+                        <h3>Detect Response Changes</h3>
+                        <p>Compare XML API responses over time to detect schema changes, field additions, and value shifts. Useful for monitoring third-party integrations where the API silently changes.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-viewer" class="usecase-tool-link">Tree Viewer</a>
+                            <a href="/xml-editor" class="usecase-tool-link">Editor</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="purple">
+                        <span class="usecase-tag">DATA VALIDATION</span>
+                        <h3>Verify Data Transformations</h3>
+                        <p>After running an XSLT transformation or XML-to-XML conversion, compare input and output to verify the transformation made only the intended changes. Catch bugs before they ship.</p>
+                        <div class="usecase-tools">
+                            <a href="/xslt-transformer" class="usecase-tool-link">XSLT Transformer</a>
+                            <a href="/xml-schema-validator" class="usecase-tool-link">Schema Validator</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="red">
+                        <span class="usecase-tag">TESTING</span>
+                        <h3>Assert Expected Output</h3>
+                        <p>Write XML comparison into your testing workflow. Compare expected fixtures to actual outputs to verify unit tests. Provides a clearer view than raw string assertion failures.</p>
+                        <div class="usecase-tools">
+                            <a href="/xpath-tester" class="usecase-tool-link">XPath Tester</a>
+                            <a href="/xml-sorter" class="usecase-tool-link">Sorter</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="yellow">
+                        <span class="usecase-tag">MIGRATION</span>
+                        <h3>Verify Data Migrations</h3>
+                        <p>During XML data migrations, compare exports before and after to ensure no records were lost, truncated, or malformed. Essential for enterprise data moves.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-splitter" class="usecase-tool-link">Splitter</a>
+                            <a href="/xml-merger" class="usecase-tool-link">Merger</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="pink">
+                        <span class="usecase-tag">DEBUGGING</span>
+                        <h3>Isolate Unexpected Changes</h3>
+                        <p>When XML behaves unexpectedly, compare a working version against a failing one. The diff isolates exactly what changed — turning a hard debugging session into a quick fix.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-to-json" class="usecase-tool-link">XML → JSON</a>
+                            <a href="/xml-to-csv" class="usecase-tool-link">XML → CSV</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long Description -->
             <section class="content-section">
-                <h2 class="section-title">How to use XML Diff</h2>
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Input Originals</h3>
-                        <p>Paste your base XML code into the left editor.</p>
+                <h2 class="section-title">About XML Diff Tool</h2>
+                <div class="description-content">
+                    <p>The XML Diff tool compares two XML documents side-by-side and highlights the differences between them. Whether you're reviewing a configuration change, debugging a broken API integration, or verifying a data migration, seeing exactly what changed between two XML files is often the fastest path to understanding. Our diff tool makes that comparison instant, visual, and private — all in your browser.</p>
+                    
+                    <h3>Why Compare XML Files?</h3>
+                    <p>XML files change frequently in real-world projects — configuration values drift, API responses evolve, data migrations transform content, and refactoring alters structure. When something goes wrong, the first question is usually "what changed?" A diff tool answers that question directly. Without diffing, you'd have to read both files line by line, mentally tracking what's different — slow, error-prone, and impractical for anything more than a few dozen lines.</p>
+                    
+                    <h3>Line Diff vs Semantic XML Diff</h3>
+                    <p>There are two fundamental approaches to comparing XML: textual (line-by-line) diff and semantic (tree-based) diff. <strong>Line diff</strong> compares the text content of the two files line by line. It's fast, predictable, and easy to understand — a line either matches or it doesn't. <strong>Semantic diff</strong> parses both files into XML trees and compares the structure: elements, attributes, text content, and children. It's more accurate because it ignores insignificant differences (whitespace, attribute order, namespace prefixes) — but it's slower and more complex.</p>
+                    
+                    <p>Our tool performs a line diff, which covers the vast majority of real-world use cases. For most developers reviewing XML changes, line diff is faster and clearer than semantic diff — you see exactly what was edited, in the order it appears. Semantic diff shines in specialized cases like comparing semantically equivalent XML that was generated by different tools with different formatting, but for day-to-day change review, line diff is the right level of abstraction.</p>
+                    
+                    <h3>Why Format Before Comparing?</h3>
+                    <p>A critical best practice for XML diffing: <strong>format both files first</strong>. If one document is pretty-printed with 4-space indentation and the other is minified, every line appears different — even if the underlying data is identical. The diff output becomes a wall of red and green noise where no real changes are visible.</p>
+                    
+                    <p>The solution is simple: run both files through the <a href="/xml-formatter" class="faq-link">XML Formatter</a> with the same indentation setting, then compare. Normalized formatting means the diff only shows meaningful changes — the actual edits you care about. Do this as standard practice any time you're comparing XML that came from different sources or was processed by different tools.</p>
+                    
+                    <h3>Common Scenarios</h3>
+                    <p>XML diff is used in many practical scenarios. Version control review: before committing changes to an XML config file, diff it against the working copy to confirm the intended changes. API response monitoring: compare today's response to yesterday's to detect schema drift in a third-party API. Data migration verification: compare source XML to migrated XML to ensure nothing was lost or corrupted. Testing: compare actual test output against an expected fixture to isolate failures. Debugging: compare a known-good XML file against a failing one to find the regression.</p>
+                    
+                    <h3>Reading a Diff Output</h3>
+                    <p>Standard diff notation uses specific markers. Lines prefixed with <code>+</code> are additions — present in the new file but not the old. Lines prefixed with <code>-</code> are removals — present in the old file but not the new. Lines without a prefix are unchanged context. Some diff formats show surrounding context lines (usually 3 before and after each change) so you can see the changes in context. Our tool uses color-coded highlighting — green for additions, red for removals — making the changes visually obvious.</p>
+                    
+                    <h3>XML Diff vs Text Diff</h3>
+                    <p>Since XML is text, any text diff tool can compare two XML files. But XML has specific structure that makes XML-aware diffing more useful. Attribute order doesn't matter semantically but appears as changes in a line diff. Whitespace between elements is insignificant but appears as changes. XML-aware diff tools normalize these differences. If you're comparing two XML files generated by the same tool with the same formatting, a line diff is effectively equivalent to a semantic diff. If they came from different sources, formatting first (then line diff) gives you most of the benefit of semantic diff without the complexity.</p>
+                    
+                    <h3>Git and XML Diff</h3>
+                    <p>Git itself does line-by-line diffing, which means XML changes show up as textual diffs in <code>git diff</code> output. This is generally fine for small changes, but XML formatting inconsistencies can create large, noisy diffs. Some projects configure Git to use a custom XML diff driver that parses XML first — but for most projects, the simplest fix is enforcing consistent formatting (via pre-commit hooks or editorconfig) and diffing locally with a tool that highlights changes clearly. Our tool serves as a quick, no-install alternative for ad-hoc review.</p>
+                    
+                    <h3>Security and Privacy</h3>
+                    <p>All XML comparison is performed entirely within your browser using JavaScript. No data is uploaded to servers, transmitted over networks, or stored anywhere. This client-side approach ensures complete privacy and security for sensitive XML data — configuration files with credentials, API responses with tokens, and confidential business documents can be compared safely.</p>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-marquee-wrap" aria-hidden="true">
+                    <div class="stats-marquee-track">
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">SIDE-BY-SIDE &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">LINE-BY-LINE &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COLOR HIGHLIGHTS &nbsp;★&nbsp;</span>
+                        <!-- duplicate for seamless loop -->
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">SIDE-BY-SIDE &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">LINE-BY-LINE &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COLOR HIGHLIGHTS &nbsp;★&nbsp;</span>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Input Modified</h3>
-                        <p>Paste the version you want to compare into the right editor.</p>
+                </div>
+                <div class="stats-numbers">
+                    <div class="stat-block stat-block--blue">
+                        <span class="stat-block-value">2<span class="stat-block-plus">+</span></span>
+                        <span class="stat-block-label">PANELS</span>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Analyze</h3>
-                        <p>Click "Compare XML" to see added, removed, or changed lines.</p>
+                    <div class="stat-block stat-block--green">
+                        <span class="stat-block-value">0<span class="stat-block-unit">ms</span></span>
+                        <span class="stat-block-label">SERVER LATENCY</span>
                     </div>
+                    <div class="stat-block stat-block--red">
+                        <span class="stat-block-value">$0</span>
+                        <span class="stat-block-label">COST FOREVER</span>
+                    </div>
+                    <div class="stat-block stat-block--yellow">
+                        <span class="stat-block-value">100<span class="stat-block-unit">%</span></span>
+                        <span class="stat-block-label">IN-BROWSER</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title"><span class="title-accent">FAQ</span> — XML DIFF QUESTIONS</h2>
+                <p class="faq-intro">Common questions about comparing XML files — answered straight.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What is an XML diff tool?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>An XML diff tool compares two XML documents and highlights the differences between them — added lines, removed lines, and changed content. It's used to review changes, track modifications, verify refactoring, and detect unintended edits in XML files.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">How do I compare two XML files?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Paste the original XML into the left panel and the modified XML into the right panel, then click "Compare XML". The tool highlights lines that were added, removed, or changed, showing the differences in a structured diff view.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is this XML diff tool free?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, completely free with no usage limits, no registration, and no hidden fees. All comparison happens in your browser so your XML data never leaves your device.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Does the tool compare XML structurally or textually?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The tool performs a <strong>line-by-line textual comparison</strong> of the XML documents. For best results, format both XML files first using the <a href="/xml-formatter" class="faq-link">XML Formatter</a> so that indentation and line breaks are consistent — this makes structural changes easier to spot and reduces false positives from formatting differences.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What is the difference between a line diff and a semantic XML diff?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>A <strong>line diff</strong> (what this tool does) compares the text content line by line — simple, fast, and predictable. A <strong>semantic XML diff</strong> compares the parsed tree structure, ignoring insignificant whitespace, attribute order, and namespace prefixes. Semantic diff is more accurate but slower. For most day-to-day use cases, a line diff on formatted XML is sufficient.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Should I format the XML before comparing?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, strongly recommended. If one XML file is minified and the other is formatted, every line will appear different even if the data is identical. Run both documents through the <a href="/xml-formatter" class="faq-link">XML Formatter</a> first to normalize their formatting, then compare — you'll get a much more meaningful diff.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Can I compare very large XML files?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, up to your device's available memory. Most XML files compare instantly. Extremely large files (tens of megabytes) may take a few seconds. There are no artificial file size limits — the constraint is browser memory.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is my XML data sent to any server?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. All XML comparison happens entirely inside your browser using JavaScript. Your data is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab.</p>
+                        </div>
+                    </details>
                 </div>
             </section>
 
