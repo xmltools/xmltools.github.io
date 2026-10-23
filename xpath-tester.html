@@ -14,15 +14,21 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XPath Tester Online - Evaluate XPath Expressions</title>
-    <meta name="description" content="Free online XPath tester and evaluator. Test your XPath expressions against XML documents instantly. Supports multiple result types and error highlighting.">
-    <meta name="keywords" content="xpath tester, xpath evaluator, test xpath, xml xpath, online xpath tool, xpath query">
+    <title>XPath Tester Online Free - Evaluate XPath Expressions Instantly</title>
+    <meta name="description" content="Free online XPath tester and evaluator. Test your XPath expressions against XML documents instantly. Supports nodes, attributes, functions and error highlighting. No signup, 100% private, works offline.">
+    <meta name="keywords" content="xpath tester, xpath evaluator, test xpath, xml xpath, online xpath tool, xpath query, xpath online, xpath tester online free, xpath evaluator online, test xpath expression, xpath playground, xpath debugger, xpath checker">
     
     <meta property="og:title" content="XPath Tester Online - Evaluate XPath Expressions">
     <meta property="og:description" content="Test and evaluate your XPath queries against XML data instantly with our free online tool.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xmltools.github.io/xpath-tester.html">
+    <meta property="og:url" content="https://xmltools.github.io/xpath-tester">
     <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XPath Tester Online Free">
+    <meta name="twitter:description" content="Evaluate XPath expressions against XML documents instantly in your browser.">
+    <meta name="twitter:image" content="https://xmltools.github.io/assets/logo.jpg">
     
     <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg">
@@ -36,7 +42,7 @@
         {
           "@type": "WebApplication",
           "name": "XPath Tester",
-          "url": "https://xmltools.github.io/xpath-tester.html",
+          "url": "https://xmltools.github.io/xpath-tester",
           "description": "An online utility to test and evaluate XPath expressions against XML documents with real-time results.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "Any",
@@ -52,6 +58,103 @@
             "Error highlighting",
             "One-click result copying"
           ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "XPath Online Evaluator",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Professional XPath testing tool for evaluating XPath expressions online"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an XPath tester?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An XPath tester is a tool that evaluates XPath expressions against an XML document and shows you which nodes, attributes, or values match. It's used to build and debug XPath queries before embedding them in XSLT stylesheets, code, or query engines."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is XPath?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "XPath (XML Path Language) is a query language for selecting nodes from an XML document. It uses path-like syntax similar to file system paths — for example, /bookstore/book/title selects all title elements inside book elements inside bookstore. XPath is used in XSLT, XQuery, and many XML APIs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this XPath tester free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, completely free with no usage limits, no registration, and no hidden fees. All XPath evaluation happens in your browser so your XML data never leaves your device."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What XPath version is supported?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "This tool uses your browser's native XPath engine, which supports XPath 1.0. That includes all core axes, node tests, predicates, and the standard XPath 1.0 function library. For XPath 2.0 or 3.0 features (regular expressions, sequences, higher-order functions), a server-side processor like Saxon is required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between absolute and relative XPath?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolute XPath starts with a single slash (/) and specifies the full path from the document root — for example, /bookstore/book/title. Relative XPath starts with a double slash (//) and matches anywhere in the document — for example, //title. Relative paths are shorter but can match unintended nodes; absolute paths are longer but more precise."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I test XPath with namespaces?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. When your XML uses namespaces, XPath expressions must reference those namespaces using prefixes. The tester respects namespace declarations in your XML source, but you'll typically need to use the local-name() or name() functions for convenient matching without declaring prefixes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why do I get an empty result from my XPath query?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An empty result usually means the XPath expression doesn't match any nodes. Common causes include typos in element names (XPath is case-sensitive), namespace prefixes not being declared, incorrect predicate logic, or referencing paths that don't exist in the document. Try simplifying the expression step by step to isolate the issue."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my XML data sent to any server?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All XPath evaluation happens entirely inside your browser using the native document.evaluate() API. Your XML is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "XML Tools",
+              "item": "https://xmltools.github.io"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "XPath Tester",
+              "item": "https://xmltools.github.io/xpath-tester"
+            }
+          ]
         }
       ]
     }
@@ -66,7 +169,7 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">🔍 XPath Tester</h1>
-                <p class="page-subtitle">Test and evaluate XPath expressions against your XML data</p>
+                <p class="page-subtitle">Test and evaluate XPath expressions against your XML data — free, private, and browser-based</p>
             </div>
 
             <div class="tool-interface">
@@ -100,34 +203,347 @@
                 <div id="error-message" class="error-message" style="display: none;"></div>
             </div>
 
-            <section class="content-section">
-                <h2 class="section-title">How to Test XPath</h2>
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Input XML</h3>
-                        <p>Paste your source XML document into the input area.</p>
+            <!-- Why Section -->
+            <section class="why-section">
+                <h2 class="section-title"><span class="title-accent">WHY</span> USE THIS XPATH TESTER</h2>
+                <div class="why-grid">
+                    <div class="why-card why-card--blue">
+                        <div class="why-icon">⚡</div>
+                        <h3>Instant Evaluation</h3>
+                        <p>Evaluate XPath expressions against XML documents in milliseconds. No server round-trips — the query runs natively in your browser using document.evaluate().</p>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Enter Query</h3>
-                        <p>Type your XPath expression in the top input field.</p>
+                    <div class="why-card why-card--green">
+                        <div class="why-icon">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>Your XML data never leaves your machine. All XPath evaluation is local — zero uploads, zero logging, zero data collection.</p>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Evaluate</h3>
-                        <p>Click "Test XPath" to find all nodes or values matching your query.</p>
+                    <div class="why-card why-card--yellow">
+                        <div class="why-icon">🆓</div>
+                        <h3>Always Free</h3>
+                        <p>No premium tier, no credit card, no trial period. The XPath tester is free forever with no usage limits or watermarks.</p>
+                    </div>
+                    <div class="why-card why-card--red">
+                        <div class="why-icon">🎯</div>
+                        <h3>XPath 1.0 Support</h3>
+                        <p>Full support for all XPath 1.0 axes, node tests, predicates, and the standard function library including string, number, and boolean functions.</p>
+                    </div>
+                    <div class="why-card why-card--purple">
+                        <div class="why-icon">⚠️</div>
+                        <h3>Error Reporting</h3>
+                        <p>Clear error messages help you identify syntax errors in your XPath expression and debug why queries return unexpected results.</p>
+                    </div>
+                    <div class="why-card why-card--pink">
+                        <div class="why-icon">📱</div>
+                        <h3>Works Everywhere</h3>
+                        <p>Fully responsive and touch-friendly. Test XPath on desktop, tablet, or phone in any modern browser — no installs required.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- How To Section -->
+            <section class="howto-section">
+                <h2 class="section-title"><span class="title-accent">HOW</span> TO USE THE XPATH TESTER</h2>
+                <div class="howto-steps">
+                    <div class="howto-step">
+                        <div class="howto-number">01</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Paste Your XML</h3>
+                            <p>Paste your source XML document into the input area. The tester parses it into a DOM tree ready for XPath evaluation.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">02</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Enter Your XPath Expression</h3>
+                            <p>Type your XPath query in the top input field — for example, <code>//book[price > 35]/title</code> or <code>/bookstore/book[1]/author</code>.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">03</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Evaluate</h3>
+                            <p>Click "Test XPath" to find all nodes or values matching your query. The result panel shows every match, or a clear message if nothing was found.</p>
+                        </div>
+                    </div>
+                    <div class="howto-step">
+                        <div class="howto-number">04</div>
+                        <div class="howto-connector howto-connector--last" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Copy Results</h3>
+                            <p>Use the Copy button to grab the result output to your clipboard. Paste it into your code, tests, or documentation. No account, no confirmation dialogs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="content-section">
+                <h2 class="section-title">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>XPath 1.0 Evaluation</h3>
+                        <p>Evaluates expressions using the browser's native document.evaluate() API — full support for axes, node tests, and predicates.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Node & Attribute Support</h3>
+                        <p>Matches elements, attributes, text nodes, comments, and processing instructions. Results show node names, paths, and values.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Real-Time Parsing</h3>
+                        <p>Parses source XML into a DOM tree instantly. No server round-trips — evaluation happens as fast as you can type.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚠️</div>
+                        <h3>Error Highlighting</h3>
+                        <p>Clear error messages pinpoint syntax issues in your XPath expression, helping you fix queries quickly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>All evaluation happens in your browser. Your XML is never uploaded, logged, or transmitted to any server.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>One-Click Copy</h3>
+                        <p>Copy results to your clipboard with a single click for easy pasting into code, tests, or documentation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases Section -->
+            <section class="usecases-section">
+                <h2 class="section-title"><span class="title-accent">USE</span> CASES FOR XPATH TESTING</h2>
+                <p class="usecases-intro">XPath is used across many XML workflows — here's where this tester fits in yours.</p>
+                <div class="usecases-grid">
+                    <div class="usecase-card" data-accent="blue">
+                        <span class="usecase-tag">XSLT DEVELOPMENT</span>
+                        <h3>Prototype Template Selectors</h3>
+                        <p>Test the XPath expressions you'll use in xsl:apply-templates, xsl:value-of, and xsl:for-each before embedding them in a stylesheet. Verify selectors match the right nodes.</p>
+                        <div class="usecase-tools">
+                            <a href="/xslt-transformer" class="usecase-tool-link">XSLT Transformer</a>
+                            <a href="/xml-formatter" class="usecase-tool-link">Formatter</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="green">
+                        <span class="usecase-tag">WEB SCRAPING</span>
+                        <h3>Build Scraper Selectors</h3>
+                        <p>Web scrapers and browser automation tools often use XPath to locate elements. Test your expressions against sample HTML/XML to make sure they match the right nodes.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-viewer" class="usecase-tool-link">Tree Viewer</a>
+                            <a href="/xml-editor" class="usecase-tool-link">Editor</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="purple">
+                        <span class="usecase-tag">TESTING</span>
+                        <h3>Automated Test Assertions</h3>
+                        <p>Unit and integration tests often assert XPath expressions against XML responses. Verify that your queries return expected nodes before writing assertion code.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-validator" class="usecase-tool-link">Validator</a>
+                            <a href="/xml-diff" class="usecase-tool-link">Diff Tool</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="red">
+                        <span class="usecase-tag">DATA EXTRACTION</span>
+                        <h3>Pull Values from XML</h3>
+                        <p>Extract specific values from large XML datasets using XPath. Use the tester to confirm your query matches only the nodes you care about.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-to-json" class="usecase-tool-link">XML → JSON</a>
+                            <a href="/xml-to-csv" class="usecase-tool-link">XML → CSV</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="yellow">
+                        <span class="usecase-tag">CONFIG VALIDATION</span>
+                        <h3>Check POM & Spring Configs</h3>
+                        <p>Query Maven POM files, Spring configs, and other XML configuration to verify settings. XPath is a quick way to inspect deeply nested values.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-schema-validator" class="usecase-tool-link">Schema Validator</a>
+                            <a href="/xml-sorter" class="usecase-tool-link">Sorter</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="pink">
+                        <span class="usecase-tag">LEARNING</span>
+                        <h3>Learn XPath Syntax</h3>
+                        <p>New to XPath? Test expressions step by step against real XML to see what each axis, predicate, and function does. The fastest way to learn by experimentation.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-beautifier" class="usecase-tool-link">Beautifier</a>
+                            <a href="/xml-splitter" class="usecase-tool-link">Splitter</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Long Description -->
             <section class="content-section">
                 <h2 class="section-title">About XPath Evaluation</h2>
                 <div class="description-content">
-                    <p>XPath (XML Path Language) is a major element in the XSLT standard. It is used to navigate through elements and attributes in an XML document. Our <strong>XPath Tester</strong> allows you to verify your queries instantly without writing any code.</p>
+                    <p>The XPath Tester is a free online tool for evaluating XPath expressions against XML documents. XPath (XML Path Language) is a major element in the XSLT standard, used to navigate through elements and attributes in an XML document. Our tool lets you verify queries instantly without writing any code — perfect for prototyping, debugging, and learning XPath syntax.</p>
+                    
+                    <h3>What is XPath?</h3>
+                    <p>XPath is a query language for selecting nodes from an XML document. Its syntax resembles file system paths: <code>/bookstore/book/title</code> selects all title elements inside book elements inside the bookstore root. XPath is used throughout the XML ecosystem — in XSLT stylesheets, XQuery expressions, XML Schema identity constraints, and many XML processing APIs. Mastery of XPath unlocks the ability to work with XML at a much deeper level than simply reading tags.</p>
+                    
+                    <h3>XPath Axes and Node Tests</h3>
+                    <p>XPath expressions combine axes, node tests, and predicates. Axes define the direction of navigation — <code>child</code>, <code>parent</code>, <code>ancestor</code>, <code>descendant</code>, <code>following-sibling</code>, and others. Node tests filter by type — <code>node()</code>, <code>text()</code>, <code>comment()</code>, or a specific element name. Predicates refine the match with conditions like <code>[price &gt; 35]</code> or <code>[1]</code> for position. Understanding these three components is the key to writing effective XPath queries.</p>
+                    
+                    <h3>Absolute vs Relative XPath</h3>
+                    <p>Absolute XPath begins with a single slash (<code>/</code>) and specifies the full path from the document root — e.g., <code>/bookstore/book/title</code>. Relative XPath begins with a double slash (<code>//</code>) and matches nodes anywhere in the document — e.g., <code>//title</code>. Absolute paths are more precise but brittle to structural changes. Relative paths are shorter and more resilient but can match unintended nodes if the same element name appears in multiple places.</p>
+                    
+                    <h3>XPath Functions</h3>
+                    <p>XPath 1.0 provides a rich function library. String functions like <code>concat()</code>, <code>substring()</code>, <code>contains()</code>, and <code>starts-with()</code> manipulate text values. Numeric functions like <code>sum()</code>, <code>round()</code>, and <code>floor()</code> operate on numbers. Boolean functions like <code>not()</code> and <code>boolean()</code> handle logic. Node functions like <code>count()</code>, <code>name()</code>, and <code>local-name()</code> inspect node properties. These functions turn XPath from a simple selector into a full query language.</p>
+                    
+                    <h3>XPath and Namespaces</h3>
+                    <p>When XML uses namespaces, XPath expressions must reference elements with their qualified names. If your XML declares <code>xmlns:ns="http://example.com/ns"</code>, then <code>//ns:element</code> selects that element — but only if the XPath engine knows the <code>ns</code> prefix. In many tools, you must explicitly register prefixes before they can be used in queries. When prefix registration is inconvenient, the <code>local-name()</code> function provides a namespace-agnostic workaround: <code>//*[local-name()='element']</code>.</p>
+                    
+                    <h3>Common XPath Mistakes</h3>
+                    <p>Several issues cause XPath queries to silently return empty results. Case sensitivity is a frequent culprit — <code>//Book</code> does not match <code>&lt;book&gt;</code>. Another common mistake is using <code>//book</code> when the root element is itself a book — relative paths starting with <code>//</code> match all descendants, including the root. A third is forgetting that predicates attach to the node before them, so <code>//book/title[1]</code> means the first title of each book, not the title of the first book. To express the latter, write <code>(//book)[1]/title</code>.</p>
+                    
+                    <h3>XPath 1.0 vs 2.0 vs 3.0</h3>
+                    <p>This tool uses your browser's native XPath engine, which supports XPath 1.0. XPath 2.0 and 3.0 add significant capabilities — regular expression functions (<code>matches()</code>, <code>replace()</code>), sequence types, <code>for</code> and <code>some</code>/<code>every</code> expressions, and richer type system. For those features, a server-side processor like Saxon is required. If your production code uses XPath 2.0 or 3.0, test your expressions in the same engine that will run them.</p>
+                    
+                    <h3>Debugging Empty Results</h3>
+                    <p>When an XPath query returns nothing, debugging is usually a matter of simplification. Start with the simplest possible expression (<code>//*</code>) and verify it returns something. Add one path segment at a time until the result goes empty — that step is where the mismatch occurs. Check element names for typos, verify nesting depth in the formatted XML, and confirm namespace handling. Our XPath Tester shows clear "no matches" feedback so you can iterate quickly.</p>
+                    
+                    <h3>XPath vs XSLT vs XQuery</h3>
+                    <p>XPath, XSLT, and XQuery are three XML languages that work together. XPath selects nodes from a single XML document. XSLT uses XPath to navigate and transform XML into other formats. XQuery uses XPath syntax to query and combine data from multiple XML sources. If you're learning XML technologies, XPath is the foundational skill — and this tester is a focused environment for practicing it.</p>
                     
                     <h3>Privacy & Processing</h3>
-                    <p>Just like our other tools, all XPath evaluation happens locally in your browser. Your data is never transmitted to any server.</p>
+                    <p>Just like our other tools, all XPath evaluation happens locally in your browser. Your XML data is parsed with DOMParser, and expressions are evaluated with the native <code>document.evaluate()</code> API. Your data is never transmitted to any server, making the tool safe for confidential XML and internal business data.</p>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-marquee-wrap" aria-hidden="true">
+                    <div class="stats-marquee-track">
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">XPATH 1.0 &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">ERROR REPORTING &nbsp;★&nbsp;</span>
+                        <!-- duplicate for seamless loop -->
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">XPATH 1.0 &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">ERROR REPORTING &nbsp;★&nbsp;</span>
+                    </div>
+                </div>
+                <div class="stats-numbers">
+                    <div class="stat-block stat-block--blue">
+                        <span class="stat-block-value">1.0<span class="stat-block-plus">+</span></span>
+                        <span class="stat-block-label">XPATH VERSION</span>
+                    </div>
+                    <div class="stat-block stat-block--green">
+                        <span class="stat-block-value">0<span class="stat-block-unit">ms</span></span>
+                        <span class="stat-block-label">SERVER LATENCY</span>
+                    </div>
+                    <div class="stat-block stat-block--red">
+                        <span class="stat-block-value">$0</span>
+                        <span class="stat-block-label">COST FOREVER</span>
+                    </div>
+                    <div class="stat-block stat-block--yellow">
+                        <span class="stat-block-value">100<span class="stat-block-unit">%</span></span>
+                        <span class="stat-block-label">IN-BROWSER</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title"><span class="title-accent">FAQ</span> — XPATH TESTING QUESTIONS</h2>
+                <p class="faq-intro">Common questions about XPath testing — answered straight.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What is an XPath tester?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>An XPath tester is a tool that evaluates XPath expressions against an XML document and shows you which nodes, attributes, or values match. It's used to build and debug XPath queries before embedding them in XSLT stylesheets, code, or query engines.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What is XPath?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>XPath (XML Path Language) is a query language for selecting nodes from an XML document. It uses path-like syntax similar to file system paths — for example, <code>/bookstore/book/title</code> selects all title elements inside book elements inside bookstore. XPath is used in XSLT, XQuery, and many XML APIs.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is this XPath tester free?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, completely free with no usage limits, no registration, and no hidden fees. All XPath evaluation happens in your browser so your XML data never leaves your device.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What XPath version is supported?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>This tool uses your browser's native XPath engine, which supports <strong>XPath 1.0</strong>. That includes all core axes, node tests, predicates, and the standard XPath 1.0 function library. For XPath 2.0 or 3.0 features (regular expressions, sequences, higher-order functions), a server-side processor like Saxon is required.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What is the difference between absolute and relative XPath?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p><strong>Absolute XPath</strong> starts with a single slash (<code>/</code>) and specifies the full path from the document root — for example, <code>/bookstore/book/title</code>. <strong>Relative XPath</strong> starts with a double slash (<code>//</code>) and matches anywhere in the document — for example, <code>//title</code>. Relative paths are shorter but can match unintended nodes; absolute paths are longer but more precise.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Can I test XPath with namespaces?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. When your XML uses namespaces, XPath expressions must reference those namespaces using prefixes. The tester respects namespace declarations in your XML source, but you'll typically need to use the <code>local-name()</code> or <code>name()</code> functions for convenient matching without declaring prefixes.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Why do I get an empty result from my XPath query?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>An empty result usually means the XPath expression doesn't match any nodes. Common causes include typos in element names (XPath is case-sensitive), namespace prefixes not being declared, incorrect predicate logic, or referencing paths that don't exist in the document. Try simplifying the expression step by step to isolate the issue.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is my XML data sent to any server?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. All XPath evaluation happens entirely inside your browser using the native <code>document.evaluate()</code> API. Your XML is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab.</p>
+                        </div>
+                    </details>
                 </div>
             </section>
 
