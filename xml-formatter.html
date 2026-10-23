@@ -14,15 +14,15 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML Formatter Online - Format & Beautify XML Free | XML Tools</title>
-    <meta name="description" content="Free online XML formatter and beautifier. Format, beautify and indent XML code instantly. Clean up messy XML with proper indentation and structure.">
-    <meta name="keywords" content="xml formatter, xml beautifier, format xml, beautify xml, xml pretty print, xml indent, xml online tool">
+    <title>XML Formatter Online Free - Format & Beautify XML Instantly</title>
+    <meta name="description" content="Free online XML formatter and beautifier. Format, beautify and indent XML code instantly. Clean up messy XML with proper indentation. No signup, 100% private, works offline.">
+    <meta name="keywords" content="xml formatter, xml beautifier, format xml, beautify xml, xml pretty print, xml indent, xml online tool, xml formatter online free, xml pretty printer, format xml online, xml code formatter, xml tidy, xml structure viewer">
     
     <!-- Open Graph -->
     <meta property="og:title" content="XML Formatter Online - Format & Beautify XML Free">
     <meta property="og:description" content="Free online XML formatter and beautifier. Format, beautify and indent XML code instantly.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xmltools.github.io/xml-formatter.html">
+    <meta property="og:url" content="https://xmltools.github.io/xml-formatter">
     <meta property="og:image" content="https://xmltools.github.io/assets/logo.jpg">
     
     <!-- Twitter Card -->
@@ -45,7 +45,7 @@
         {
           "@type": "WebApplication",
           "name": "XML Formatter",
-          "url": "https://xmltools.github.io/xml-formatter.html",
+          "url": "https://xmltools.github.io/xml-formatter",
           "description": "Free online XML formatter and beautifier tool to format, beautify and indent XML code instantly with proper structure.",
           "applicationCategory": "DeveloperApplication",
           "operatingSystem": "Any",
@@ -73,6 +73,92 @@
             "price": "0"
           },
           "description": "Professional XML formatting tool for developers"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an XML formatter?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An XML formatter is a tool that takes unformatted or minified XML code and reformats it with proper indentation, line breaks, and structure. This makes the XML readable and easier to debug, edit, and maintain — without changing the underlying data or semantics."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does formatting XML change the data?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. XML formatting only adds whitespace (spaces, tabs, and newlines) between elements for readability. The actual data, element names, attributes, and text content remain unchanged. Most XML parsers ignore insignificant whitespace, so formatted XML is semantically identical to the original."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this XML formatter free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, completely free with no usage limits, no registration, and no hidden fees. All formatting happens in your browser so your XML data never leaves your device."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What indentation options are available?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The XML formatter supports three indentation styles: 2 spaces (compact, common in web development), 4 spaces (verbose, common in Java and enterprise projects), and tab characters (configurable width in most editors)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I format very large XML files?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, up to your device's available memory. Since formatting runs in the browser, files up to approximately 50MB work smoothly on most modern devices. For extremely large XML files (100MB+), consider using the XML Splitter tool to break them into smaller chunks first."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What's the difference between XML Formatter and XML Beautifier?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "They produce the same result — properly indented, human-readable XML. The XML Formatter lets you customize the indentation style (spaces vs tabs, indent size), while the XML Beautifier applies sensible defaults in one click. Use Beautifier for quick cleanups and Formatter when you need precise control."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the formatter validate XML?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The formatter checks that your XML is well-formed (properly nested tags, closed elements, escaped special characters, valid attribute quotes). For full validation against an XSD schema, use the dedicated XML Schema Validator tool."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my XML data sent to any server?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All formatting happens entirely inside your browser using JavaScript. Your XML is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab — you'll see zero outbound requests when using the formatter."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "XML Tools",
+              "item": "https://xmltools.github.io"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "XML Formatter",
+              "item": "https://xmltools.github.io/xml-formatter"
+            }
+          ]
         }
       ]
     }
@@ -87,7 +173,7 @@
         <main class="main-content">
             <div class="tool-header">
                 <h1 class="page-title">🎨 XML Formatter</h1>
-                <p class="page-subtitle">Format and beautify your XML code with proper indentation</p>
+                <p class="page-subtitle">Format and beautify your XML code with proper indentation — free, private, and browser-based</p>
             </div>
 
             <!-- Tool Interface -->
@@ -129,29 +215,78 @@
                 <div id="error-message" class="error-message" style="display: none;"></div>
             </div>
 
+            <!-- Why Section -->
+            <section class="why-section">
+                <h2 class="section-title"><span class="title-accent">WHY</span> USE THIS XML FORMATTER</h2>
+                <div class="why-grid">
+                    <div class="why-card why-card--blue">
+                        <div class="why-icon">⚡</div>
+                        <h3>Instant Formatting</h3>
+                        <p>Format thousands of lines of XML in milliseconds. The formatter uses a fast tree-based algorithm that handles large documents without breaking a sweat.</p>
+                    </div>
+                    <div class="why-card why-card--green">
+                        <div class="why-icon">🔒</div>
+                        <h3>100% Private</h3>
+                        <p>Your XML data never leaves your machine. All formatting runs locally in JavaScript — zero uploads, zero logging, zero data collection.</p>
+                    </div>
+                    <div class="why-card why-card--yellow">
+                        <div class="why-icon">🎯</div>
+                        <h3>Smart Indentation</h3>
+                        <p>Automatically detects nesting depth and applies consistent indentation to every element. No manual cleanup required.</p>
+                    </div>
+                    <div class="why-card why-card--red">
+                        <div class="why-icon">🔧</div>
+                        <h3>Customizable</h3>
+                        <p>Choose between 2 spaces, 4 spaces, or tab indentation to match your team's coding style and editor configuration.</p>
+                    </div>
+                    <div class="why-card why-card--purple">
+                        <div class="why-icon">📋</div>
+                        <h3>One-Click Copy</h3>
+                        <p>Copy formatted XML to your clipboard instantly. Perfect for pasting into code editors, tickets, or documentation.</p>
+                    </div>
+                    <div class="why-card why-card--pink">
+                        <div class="why-icon">💾</div>
+                        <h3>Download as File</h3>
+                        <p>Save your formatted XML as a .xml file directly to your computer with a single click. No intermediate steps.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- How To Section -->
-            <section class="content-section">
-                <h2 class="section-title">How to Use XML Formatter</h2>
-                <div class="steps-container">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Paste XML</h3>
-                        <p>Copy your unformatted or messy XML code and paste it into the input textarea above.</p>
+            <section class="howto-section">
+                <h2 class="section-title"><span class="title-accent">HOW</span> TO USE THE XML FORMATTER</h2>
+                <div class="howto-steps">
+                    <div class="howto-step">
+                        <div class="howto-number">01</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Paste Your XML</h3>
+                            <p>Copy your unformatted, minified, or messy XML and paste it into the input textarea. You can also type directly or paste from the clipboard using the Paste button.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Choose Indent</h3>
-                        <p>Select your preferred indentation size (2 spaces, 4 spaces, or tab) from the dropdown menu.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">02</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Choose Your Indentation</h3>
+                            <p>Select your preferred indentation size from the dropdown — 2 spaces for compact code, 4 spaces for verbose projects, or tabs to match your editor's tab width.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Format</h3>
-                        <p>Click the "Format XML" button to instantly beautify and structure your XML code.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">03</div>
+                        <div class="howto-connector" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Format Your XML</h3>
+                            <p>Click the "Format XML" button. The tool parses your XML, validates that it's well-formed, and rewrites it with consistent indentation and line breaks.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h3>Copy or Download</h3>
-                        <p>Copy the formatted XML to clipboard or download it as a file for later use.</p>
+                    <div class="howto-step">
+                        <div class="howto-number">04</div>
+                        <div class="howto-connector howto-connector--last" aria-hidden="true"></div>
+                        <div class="howto-body">
+                            <h3>Copy or Download</h3>
+                            <p>Use the Copy button to grab the result to your clipboard, or Download to save it as a .xml file. No account, no confirmation dialogs.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -193,6 +328,68 @@
                 </div>
             </section>
 
+            <!-- Use Cases Section -->
+            <section class="usecases-section">
+                <h2 class="section-title"><span class="title-accent">USE</span> CASES FOR XML FORMATTING</h2>
+                <p class="usecases-intro">XML formatting is essential in many developer workflows — here's where this tool fits in yours.</p>
+                <div class="usecases-grid">
+                    <div class="usecase-card" data-accent="blue">
+                        <span class="usecase-tag">API DEBUGGING</span>
+                        <h3>Read API Responses</h3>
+                        <p>Paste minified XML API responses and format them into readable, indented code. Instantly spot the structure, values, and nesting depth of your data.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-validator" class="usecase-tool-link">Validator</a>
+                            <a href="/xml-viewer" class="usecase-tool-link">Tree Viewer</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="green">
+                        <span class="usecase-tag">CONFIG FILES</span>
+                        <h3>Maven, Spring & Ant</h3>
+                        <p>Format Maven POM files, Spring configuration, and Ant build scripts. Clean indentation makes it easier to spot misconfigurations before they break your build.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-schema-validator" class="usecase-tool-link">Schema Validator</a>
+                            <a href="/xml-diff" class="usecase-tool-link">Diff Tool</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="purple">
+                        <span class="usecase-tag">DATA EXPORTS</span>
+                        <h3>Database & ETL Output</h3>
+                        <p>Database exports and ETL tools often produce single-line XML. Format them into structured code for review, documentation, or debugging.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-to-json" class="usecase-tool-link">XML → JSON</a>
+                            <a href="/xml-to-csv" class="usecase-tool-link">XML → CSV</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="red">
+                        <span class="usecase-tag">CODE REVIEW</span>
+                        <h3>Team Collaboration</h3>
+                        <p>Consistently formatted XML makes code reviews faster and version control diffs more meaningful. Standardize formatting across your team before committing.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-editor" class="usecase-tool-link">Editor</a>
+                            <a href="/xml-beautifier" class="usecase-tool-link">Beautifier</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="yellow">
+                        <span class="usecase-tag">DOCUMENTATION</span>
+                        <h3>Technical Docs & Tutorials</h3>
+                        <p>Format XML snippets for documentation, tutorials, and blog posts. Properly indented examples are easier to read and understand.</p>
+                        <div class="usecase-tools">
+                            <a href="/xslt-transformer" class="usecase-tool-link">XSLT Transformer</a>
+                            <a href="/xpath-tester" class="usecase-tool-link">XPath Tester</a>
+                        </div>
+                    </div>
+                    <div class="usecase-card" data-accent="pink">
+                        <span class="usecase-tag">LEARNING</span>
+                        <h3>Understand XML Structure</h3>
+                        <p>New to XML? Format a messy document to see the hierarchical tree clearly. Formatting is the fastest way to understand complex XML structures.</p>
+                        <div class="usecase-tools">
+                            <a href="/xml-splitter" class="usecase-tool-link">Splitter</a>
+                            <a href="/xml-merger" class="usecase-tool-link">Merger</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Long Description -->
             <section class="content-section">
                 <h2 class="section-title">About XML Formatter</h2>
@@ -204,17 +401,162 @@
                     
                     <p>Second, formatted XML is crucial for collaboration. When working in teams, having consistently formatted XML files ensures that everyone can easily read and understand the code. It also makes version control systems like Git more effective, as properly formatted files show meaningful diffs when changes are made.</p>
                     
+                    <h3>What Happens During Formatting?</h3>
+                    <p>Formatting XML involves parsing the document into a tree structure, then serializing it back out with controlled whitespace. The formatter walks through each element, calculates its nesting depth, and inserts indentation (spaces or tabs) at the start of each line. Text content is preserved exactly as-is, and inline elements are kept on the same line where sensible. The result is XML that preserves all data but is dramatically easier to read.</p>
+                    
+                    <p>Importantly, formatting does not change the data. XML parsers generally ignore insignificant whitespace, so a formatted document is semantically identical to its minified counterpart. The only case where formatting can affect meaning is inside elements with <code>xml:space="preserve"</code> — our formatter respects this attribute and leaves such content untouched.</p>
+                    
                     <h3>Who Uses XML Formatters?</h3>
                     <p>XML formatters are used by a wide range of professionals including software developers working with web services and APIs, database administrators handling XML data exports, system administrators managing configuration files, data analysts processing XML datasets, and technical writers creating documentation.</p>
                     
                     <h3>Key Benefits</h3>
                     <p>Our XML formatter offers several advantages over manual formatting. It saves time by instantly formatting thousands of lines of XML code, ensures consistency by applying uniform indentation rules throughout the document, reduces errors by maintaining proper XML structure, and enhances debugging by making it easier to spot issues in the XML hierarchy.</p>
                     
+                    <h3>Indentation Best Practices</h3>
+                    <p>Most organizations standardize on one indentation style. <strong>2 spaces</strong> is common in web development and compact configurations. <strong>4 spaces</strong> is the standard in Java and enterprise projects — the same as Java code style conventions. <strong>Tabs</strong> allow each developer to set their preferred visual width without changing the file. Whatever you choose, be consistent within a project — mixed indentation is a common source of merge conflicts and noisy diffs.</p>
+                    
+                    <h3>Well-Formedness vs Validity</h3>
+                    <p>Our formatter requires well-formed XML. That means every element must have a closing tag, attribute values must be quoted, special characters must be escaped, and there must be exactly one root element. If your XML is not well-formed, the formatter will report a parse error with a description of the problem. Note that well-formedness is not the same as <em>validity</em> — validating against a schema (XSD) is a separate check performed by our <a href="/xml-schema-validator" class="faq-link">XML Schema Validator</a>.</p>
+                    
+                    <h3>Formatting vs Minifying</h3>
+                    <p>Formatting and minifying are opposite operations. Formatting adds whitespace for human readability — great for development, debugging, and documentation. Minifying removes all insignificant whitespace to reduce file size — great for production delivery where bandwidth matters. Our <a href="/xml-minifier" class="faq-link">XML Minifier</a> handles the minification side if you need to shrink XML before shipping it.</p>
+                    
                     <h3>Privacy and Security</h3>
                     <p>We take your data privacy seriously. All XML formatting happens entirely in your browser using JavaScript. Your XML data is never uploaded to our servers, stored, or transmitted anywhere. This client-side processing ensures complete privacy and security for sensitive XML documents, making our tool safe for enterprise and personal use.</p>
                     
                     <h3>Best Practices</h3>
                     <p>When formatting XML, it's recommended to use consistent indentation (either 2 or 4 spaces is standard in most organizations), maintain proper element nesting, use meaningful element and attribute names, and include comments for complex sections. Our formatter helps you achieve all these best practices automatically.</p>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-marquee-wrap" aria-hidden="true">
+                    <div class="stats-marquee-track">
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">2 / 4 SPACE INDENT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COPY & DOWNLOAD &nbsp;★&nbsp;</span>
+                        <!-- duplicate for seamless loop -->
+                        <span class="stats-marquee-item">FREE FOREVER &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">NO SIGNUP &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">BROWSER-BASED &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">INSTANT OUTPUT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">2 / 4 SPACE INDENT &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">PRIVACY FIRST &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">MOBILE READY &nbsp;★&nbsp;</span>
+                        <span class="stats-marquee-item">COPY & DOWNLOAD &nbsp;★&nbsp;</span>
+                    </div>
+                </div>
+                <div class="stats-numbers">
+                    <div class="stat-block stat-block--blue">
+                        <span class="stat-block-value">3<span class="stat-block-plus">+</span></span>
+                        <span class="stat-block-label">INDENT STYLES</span>
+                    </div>
+                    <div class="stat-block stat-block--green">
+                        <span class="stat-block-value">0<span class="stat-block-unit">ms</span></span>
+                        <span class="stat-block-label">SERVER LATENCY</span>
+                    </div>
+                    <div class="stat-block stat-block--red">
+                        <span class="stat-block-value">$0</span>
+                        <span class="stat-block-label">COST FOREVER</span>
+                    </div>
+                    <div class="stat-block stat-block--yellow">
+                        <span class="stat-block-value">100<span class="stat-block-unit">%</span></span>
+                        <span class="stat-block-label">IN-BROWSER</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title"><span class="title-accent">FAQ</span> — XML FORMATTING QUESTIONS</h2>
+                <p class="faq-intro">Common questions about XML formatting — answered straight.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What is an XML formatter?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>An XML formatter is a tool that takes unformatted or minified XML code and reformats it with proper indentation, line breaks, and structure. This makes the XML readable and easier to debug, edit, and maintain — without changing the underlying data or semantics.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Does formatting XML change the data?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. XML formatting only adds whitespace (spaces, tabs, and newlines) between elements for readability. The actual data, element names, attributes, and text content remain unchanged. Most XML parsers ignore insignificant whitespace, so formatted XML is semantically identical to the original.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is this XML formatter free?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, completely free with no usage limits, no registration, and no hidden fees. All formatting happens in your browser so your XML data never leaves your device.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What indentation options are available?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The XML formatter supports three indentation styles: <strong>2 spaces</strong> (compact, common in web development), <strong>4 spaces</strong> (verbose, common in Java and enterprise projects), and <strong>tab characters</strong> (configurable width in most editors).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Can I format very large XML files?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, up to your device's available memory. Since formatting runs in the browser, files up to approximately 50MB work smoothly on most modern devices. For extremely large XML files (100MB+), consider using the <a href="/xml-splitter" class="faq-link">XML Splitter</a> tool to break them into smaller chunks first.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">What's the difference between XML Formatter and XML Beautifier?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>They produce the same result — properly indented, human-readable XML. The <strong>XML Formatter</strong> lets you customize the indentation style (spaces vs tabs, indent size), while the <strong>XML Beautifier</strong> applies sensible defaults in one click. Use Beautifier for quick cleanups and Formatter when you need precise control.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Does the formatter validate XML?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The formatter checks that your XML is well-formed (properly nested tags, closed elements, escaped special characters, valid attribute quotes). For full validation against an XSD schema, use the dedicated <a href="/xml-schema-validator" class="faq-link">XML Schema Validator</a> tool.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span class="faq-q-text">Is my XML data sent to any server?</span>
+                            <span class="faq-arrow" aria-hidden="true">↓</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No. All formatting happens entirely inside your browser using JavaScript. Your XML is never uploaded, logged, or transmitted anywhere. You can verify by opening your browser's network tab — you'll see zero outbound requests when using the formatter.</p>
+                        </div>
+                    </details>
                 </div>
             </section>
 
